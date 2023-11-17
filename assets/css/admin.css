@@ -525,13 +525,20 @@ table tbody tr {
     #table-user{
         width:200%;
     }
+    #table-order{
+        width:180%;
+    }
 }
 @media(max-width:480px){
-   table{
-        width: 210%;
-    }
+ 
+ #table-adminstrator{
+    width: 220%;
+}
     #table-user{
         width: 320%;
+    }
+    #table-order{
+        width:320%;
     }
 }
 @media(width>768px){
@@ -617,15 +624,7 @@ width: 9%;
    #table-adminstrator td:nth-child(4){
     width: 28%;
    }
-   #table-order th:nth-child(1){
-width: 12%;
-   } 
-    #table-order th:nth-child(2),#table-order th:nth-child(3){
-    width: 30%;
-       }
-       #table-order th:nth-child(4){
-        width: 28%;
-       }
+  
        .image-product-admin{
 
        }
@@ -653,13 +652,33 @@ width: 23%;
   #table-product td{
 
   }
+  
+
+  #table-order th:nth-child(1){
+    width: 11%;
+       } 
+        #table-order th:nth-child(2){
+        width: 24%;
+           }
+           #table-order th:nth-child(3){
+            width: 20%;
+           }
+           #table-order th:nth-child(4){
+            width: 20%;
+           }
+           #table-order th:nth-child(5){
+            width:15%;
+           }
+           #table-order th:nth-child(6){
+            width: 10%;
+           }
   @media(width <= 768px){
     #table-product td:nth-child(4),#table-product td:nth-child(5){
         width: 18.5%;
-        text-align: center;
+  
     }
     #table-product{
-        width: 210%;
+        width: 280%;
     }
   }
   @media(768px < width <= 1000px){

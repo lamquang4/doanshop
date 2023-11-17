@@ -2157,7 +2157,7 @@ box-shadow: 0.35em 0.32em;
   transition: all 0.5s ease;
   }
 #product12{
-
+margin-top: 120px;
   text-align: center;
   margin-bottom: 20px;
   }
@@ -2238,6 +2238,11 @@ box-shadow: 0.35em 0.32em;
   
   
   @media(max-width:480px){
+
+    #product12{
+      margin-top: 60px;
+      
+        }
     #product12 .pro-container2 {
   
   padding: 10px 10px 0px 10px;
