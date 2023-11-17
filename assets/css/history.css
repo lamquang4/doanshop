@@ -14,8 +14,8 @@ body{
     }
     table th {
     font-weight: 500;
-        background-color: #eeecfd !important;
-        font-size: 15px;
+        background-color: #E9EDF2 !important;
+        font-size: 14px;
         color: black;
     }
     .container{
@@ -31,7 +31,7 @@ align-items: center;
         border: none;
       
     }
-    table tr{
+    table td{
         cursor: pointer;
     }
 

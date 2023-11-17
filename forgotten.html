@@ -334,92 +334,13 @@ else{
    }
 }
 );
-   </script>
-  
-  <script type="module">
-
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-    import { getAuth, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
-     const firebaseConfig = {
-       apiKey: "AIzaSyDUV6L_qj2zNb4eGJbpA1RLPgwf5DIfnbE",
-       authDomain: "login-a56a0.firebaseapp.com",
-       projectId: "login-a56a0",
-       storageBucket: "login-a56a0.appspot.com",
-       messagingSenderId: "1031631190852",
-       appId: "1:1031631190852:web:f988981b7a1098a9867511"
-     };
-   
-     const app = initializeApp(firebaseConfig);
-   const auth = getAuth(app);
-
-    document.getElementById("submit").onclick = function(){
-      const foremail = document.getElementById("email").value;
-      sendPasswordResetEmail(auth, foremail)
-  .then(() => {
-    popup.classList.add("open-popup");
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-  
-  });
-    }
- 
-
-
-    const form = document.getElementById('form');
-    const email = document.getElementById('email');
-    form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    validateInputs();
-});
-
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success')
-}
-
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = '';
-
-    inputControl.classList.remove('error');
-};
-
-const isValidEmail = email => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-const eye=document.getElementById("eye");
-const validateInputs = () => {
-    
-    const emailValue = email.value.trim();
-  
-
-  
-    if(emailValue === '') {
-        setError(email, 'Email is required');
-    } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Provide a valid email address');
-    } else {
-        setSuccess(email);
-    }
-}
-
 
 const search = () => {
     if (event.keyCode === 13) {
 window.location.href='shop.html';
     }};
    </script>
-   
+  
 
    <style>
     .input-field1.success  {
