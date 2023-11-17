@@ -42,8 +42,8 @@
                                     
                                       <h5 class="font-size-16 mb-1">Shipping Info </h5>
                                     
-                                      <div class="mb-3">
-                                          <form>
+                                      <div class="mb-3" >
+                                          <form id="address-info">
                                               <div>
                                               
   
@@ -99,10 +99,10 @@
                                      
                                       <div class="mb-3">
                                           <div class="row">
-                                              <div class="col-lg-4 col-sm-6">
-                                                  <div data-bs-toggle="collapse">
+                                              <div class="col-lg-4 col-sm-6" >
+                                                  <div data-bs-toggle="collapse" id="address-pay" >
                                                       <label class="card-radio-label mb-0">
-                                                          <input type="radio" name="address" id="info-address1" class="card-radio-input" >
+                                                          <input type="radio" name="address" id="info-address1" class="card-radio-input">
                                                           <div class="card-radio text-truncate p-3">
                                                               <span class="fs-14 mb-4 d-block">Your Account Address</span>
                                                               <span class="fs-14 mb-2 d-block">USA</span>
@@ -111,18 +111,14 @@
                                                               <span class="text-muted fw-normal d-block" style="visibility: hidden;">Mo. 012-345-6789</span>
                                                           </div>
                                                       </label>
-                                                      <div class="edit-btn bg-light  rounded">
-                                                          <a href="#" data-bs-toggle="tooltip" data-placement="top" title="" data-bs-original-title="Edit">
-                                                              <i class="bx bx-pencil font-size-16"></i>
-                                                          </a>
-                                                      </div>
+                                                
                                                   </div>
                                               </div>
   
-                                              <div class="col-lg-4 col-sm-6">
-                                                  <div>
+                                              <div class="col-lg-4 col-sm-6" >
+                                                  <div id="address-add">
                                                       <label class="card-radio-label mb-0">
-                                                          <input type="radio" name="address" id="info-address2" class="card-radio-input">
+                                                          <input type="radio" name="address" id="info-address2" class="card-radio-input" checked="">
                                                           <div class="card-radio text-truncate p-3" >
                                                               <span class="fs-14 mb-4 d-block">Add Adress</span>
                                            
@@ -131,11 +127,7 @@
                                                     
                                                           </div>
                                                       </label>
-                                                      <div class="edit-btn bg-light  rounded">
-                                                          <a href="#" data-bs-toggle="tooltip" data-placement="top" title="" data-bs-original-title="Edit">
-                                                              <i class="bx bx-pencil font-size-16"></i>
-                                                          </a>
-                                                      </div>
+                                                 
                                                   </div>
                                               </div>
                                           </div>
@@ -366,6 +358,7 @@ cod.addEventListener('click',()=>{
 </script>
 
 <script>
+
 const billingAddressInput = document.getElementById('billing-address');
 const billingCityInput = document.getElementById('billing-city');
 const zipCodeInput = document.getElementById('zip-code');
@@ -375,9 +368,17 @@ const cvvInput = document.getElementById('cvv');
 const payButton = document.getElementById('btn-pay-buy');
 
 payButton.addEventListener('click', () => {
-  const billingAddress = billingAddressInput.value.trim();
-  const billingCity = billingCityInput.value.trim();
-  const zipCode = zipCodeInput.value.trim();
+
+
+  const isAddress1 = billingAddressInput.style.display !== 'none';
+  const billingAddress = isAddress1 ? billingAddressInput.value.trim() : '';
+
+  const isAddress2 = billingCityInput.style.display !== 'none';
+  const billingCity = isAddress2 ? billingCityInput.value.trim() : '';
+
+  const isAddress3 = zipCodeInput.style.display !== 'none';
+  const zipCode = isAddress3 ? zipCodeInput.value.trim() : '';
+
 
   const isCardNumberVisible = cardNumberInput.style.display !== 'none';
   const cardNumberip = isCardNumberVisible ? cardNumberInput.value.trim() : '';
@@ -388,7 +389,7 @@ payButton.addEventListener('click', () => {
   const isCvvVisible = cvvInput.style.display !== 'none';
   const cvvip = isCvvVisible ? cvvInput.value.trim() : '';
 
-  if (billingAddress === '' || billingCity === '' || zipCode === ''|| (isCardNumberVisible && cardNumberip === '') || (isExpiryDateVisible && expiryDateip === '') || (isCvvVisible && cvvip === '') ) {
+  if ((isAddress1 && billingAddress  === '')  || (isAddress2 && billingCity   === '') || (isAddress3 && zipCode   === '') || (isCardNumberVisible && cardNumberip === '') || (isExpiryDateVisible && expiryDateip === '') || (isCvvVisible && cvvip === '') ) {
     alert('Please fill in all required fields.');
     return;
   } else {
@@ -398,6 +399,24 @@ payButton.addEventListener('click', () => {
 });
  
 
+</script>
+
+<script>
+    const accountaddress=document.querySelector('#address-pay');
+    const addressadd=document.querySelector('#address-add');
+    const addressinfo=document.querySelector('#address-info');
+    accountaddress.onclick = function(){
+addressinfo.style.display="none";
+zipCodeInput.style.display="none";
+billingCityInput.style.display="none";
+billingAddressInput.style.display="none";
+    }
+    addressadd.onclick=function(){
+        addressinfo.style.display="block";
+        zipCodeInput.style.display="block";
+        billingCityInput.style.display="block";
+        billingAddressInput.style.display="block";
+    }
 </script>
 
 
