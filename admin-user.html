@@ -123,7 +123,7 @@ Full Name:<input type="text" name="fname" id="fname">
         <button onclick="addHtmlTableRow();">Add +</button>
                 <button onclick="editHtmlTbleSelectedRow();">Edit <span class="las la-edit"></span></button>
                 <button onclick="removeSelectedRow();">Delete <span class="las la-trash"></span></button>
-                <button onclick="blockRow();">Block <span class="las la-lock"></span></button>
+                <button id="blockButton" onclick="blockRow();">Block <span class="las la-lock"></span></button>
 </div>
 
             </div>
@@ -306,10 +306,7 @@ Normal
         // add Row
         function addHtmlTableRow()
         {
-            // get the table by id
-            // create a new row and cells
-            // get value from input text
-            // set the values into row cell's
+          
             if(!checkEmptyInput()){
             var newRow = table.insertRow(table.length),
                 cell1 = newRow.insertCell(0),
@@ -337,8 +334,25 @@ Normal
             selectedRowToInput();
         }
         }
-        
-        // display selected row data into input text
+
+        function blockUser() {
+  var currentRow = table.rows[rIndex];
+  var confirmation = confirm("Are you sure you want to block this user?");
+  if (confirmation) {
+    currentRow.cells[6].innerHTML = "Blocked";
+    currentRow.style.backgroundColor = "orange";
+
+  }
+  else {
+    currentRow.cells[6].innerHTML = "Normal";
+    alert('You decided not to block this user.');
+         event.preventDefault();
+         currentRow.style.backgroundColor = "#FFFFFF";
+       }
+}
+
+document.getElementById("blockButton").addEventListener("click", blockUser);
+
         function selectedRowToInput()
         {
             
@@ -384,14 +398,11 @@ Normal
         function removeSelectedRow()
         {
             if (rIndex > 0) {
-        // Prompt the user to confirm the deletion
         var result = confirm("Are you sure you want to delete?");
-    
-        // If the user confirms the deletion, then delete the row
         if (result == true) {
           table.deleteRow(rIndex);
         } else {
-          // If the user cancels the deletion, then prevent the default action
+         
           event.preventDefault();
         }
       }
@@ -404,6 +415,8 @@ Normal
             document.getElementById("address").value = "";
             document.getElementById("action").value = "";
         }
+
+        
     </script>
 
 
