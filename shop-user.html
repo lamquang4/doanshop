@@ -1205,7 +1205,8 @@ function removeClass(element, name){
  const page = document.querySelector('#containerpage');
   for (const button of back1) {
   button.addEventListener('click', () => {
-   
+    thisPage = 1; 
+        loadItem();
  page.style.visibility = "hidden";
     
   });
