@@ -817,9 +817,9 @@ thisPage=i;
 loadItem();
   }
 
- 
+
   const search = () => {
-   
+
   const searchbox = document.getElementById("search-item").value.toUpperCase();
   const storeitems = document.getElementById("product-list");
   const product = document.querySelectorAll(".pro1");
@@ -1187,20 +1187,17 @@ function removeClass(element, name){
 <script>
   const back1=document.querySelectorAll('#btnfil');
   const back2=document.getElementById('backnormal');
- 
+ const page = document.querySelector('#containerpage');
   for (const button of back1) {
   button.addEventListener('click', () => {
-    limit = 25;
-    thisPage = 1;
-    loadItem();
- 
+   
+ page.style.visibility = "hidden";
     
   });
 }
   back2.addEventListener('click',()=>{
-   limit=12;
-    thisPage=1
-    loadItem();
+
+    page.style.visibility = "visible";
   });
 
 
