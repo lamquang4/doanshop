@@ -827,17 +827,13 @@ loadItem();
   const ptype = document.getElementsByTagName("h2");
   const pprice = document.getElementsByTagName("h4");
 
-  // Split the search term into multiple words.
+
   const searchTerms = searchbox.split(" ");
 
-  // Loop through each product element.
-  
   for (var i = 0; i < pname.length; i++) {
     let match = product[i].getElementsByTagName("h5")[0];
     let matchType = product[i].getElementsByTagName("h2")[0];
     let matchPrice = product[i].getElementsByTagName("h4")[0];
-
-    // Check if the product name, type, and price match any of the search terms.
     let matches = 0;
     for (const searchTerm of searchTerms) {
       if (
@@ -848,25 +844,32 @@ loadItem();
       }
     }
 
-    // If all of the search terms match, display the product element. Otherwise, hide it.
     if (matches === searchTerms.length) {
      
       product[i].style.display = "";
-      limit=12;
-    thisPage=1;
-        loadItem();
+ 
   
     } else {
       product[i].style.display = "none";
-      limit=25;
-    thisPage=1;
-        loadItem();
+ 
        
     }
   
 }
+limit=25;
+      thisPage=1;
+        loadItem();
 };
 
+const searchbox = document.getElementById("search-item");
+
+searchbox.addEventListener("keyup", (event) => {
+  const searchTerm = searchbox.value.trim();
+  if (searchTerm === "") {
+    limit = 12;
+    loadItem();
+  }
+});
  
 let filterSelect = document.getElementById('filterselect');
 

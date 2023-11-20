@@ -845,51 +845,57 @@ loadItem();
 
  
   const search = () => {
-  
-  const searchbox = document.getElementById("search-item").value.toUpperCase();
-  const storeitems = document.getElementById("product-list");
-  const product = document.querySelectorAll(".pro1");
-  const pname = document.getElementsByTagName("h5");
-  const ptype = document.getElementsByTagName("h2");
-  const pprice = document.getElementsByTagName("h4");
 
-  // Split the search term into multiple words.
-  const searchTerms = searchbox.split(" ");
+const searchbox = document.getElementById("search-item").value.toUpperCase();
+const storeitems = document.getElementById("product-list");
+const product = document.querySelectorAll(".pro1");
+const pname = document.getElementsByTagName("h5");
+const ptype = document.getElementsByTagName("h2");
+const pprice = document.getElementsByTagName("h4");
 
-  // Loop through each product element.
-  for (var i = 0; i < pname.length; i++) {
-    let match = product[i].getElementsByTagName("h5")[0];
-    let matchType = product[i].getElementsByTagName("h2")[0];
-    let matchPrice = product[i].getElementsByTagName("h4")[0];
 
-    // Check if the product name, type, and price match any of the search terms.
-    let matches = 0;
-    for (const searchTerm of searchTerms) {
-      if (
-        match.textContent.toUpperCase().indexOf(searchTerm) > -1 ||
-        matchType.textContent.toUpperCase().indexOf(searchTerm) > -1 ||
-        matchPrice.textContent.toUpperCase().indexOf(searchTerm) > -1
-      ) {
-        matches++;
-      }
+const searchTerms = searchbox.split(" ");
+
+for (var i = 0; i < pname.length; i++) {
+  let match = product[i].getElementsByTagName("h5")[0];
+  let matchType = product[i].getElementsByTagName("h2")[0];
+  let matchPrice = product[i].getElementsByTagName("h4")[0];
+  let matches = 0;
+  for (const searchTerm of searchTerms) {
+    if (
+      match.textContent.toUpperCase().indexOf(searchTerm) > -1
+    
+    ) {
+      matches++;
     }
+  }
 
-    // If all of the search terms match, display the product element. Otherwise, hide it.
-    if (matches === searchTerms.length) {
-      product[i].style.display = "";
-      limit=12;
-    thisPage=1;
-        loadItem();
-    } else {
-      product[i].style.display = "none";
-      limit=25;
-    thisPage=1;
-        loadItem();
-    }
+  if (matches === searchTerms.length) {
+   
+    product[i].style.display = "";
+
+
+  } else {
+    product[i].style.display = "none";
+
+     
+  }
 
 }
+limit=25;
+    thisPage=1;
+      loadItem();
 };
 
+const searchbox = document.getElementById("search-item");
+
+searchbox.addEventListener("keyup", (event) => {
+const searchTerm = searchbox.value.trim();
+if (searchTerm === "") {
+  limit = 12;
+  loadItem();
+}
+});
  
 let filterSelect = document.getElementById('filterselect');
 
