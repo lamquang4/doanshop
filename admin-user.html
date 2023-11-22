@@ -119,11 +119,12 @@ Full Name:<input type="text" name="fname" id="fname">
           </div>
            
 
-<div>
-        <button onclick="addHtmlTableRow();">Add +</button>
-                <button onclick="editHtmlTbleSelectedRow();">Edit <span class="las la-edit"></span></button>
-                <button onclick="removeSelectedRow();">Delete <span class="las la-trash"></span></button>
-                <button id="blockButton" onclick="blockRow();">Block <span class="las la-lock"></span></button>
+<div >
+        <button style="margin-bottom: 8px;" onclick="addHtmlTableRow();">Add +</button>
+                <button style="margin-bottom: 8px;" onclick="editHtmlTbleSelectedRow();">Edit <span class="las la-edit"></span></button>
+                <button style="margin-bottom: 8px;" onclick="removeSelectedRow();">Delete <span class="las la-trash"></span></button>
+                <button style="margin-bottom: 8px;" id="blockButton" onclick="blockRow();">Block <span class="las la-lock"></span></button>
+                <button style="margin-bottom: 8px;" id="blockButton1" onclick="unblockRow();">Unblock <span class="las la-unlock"></span></button>
 </div>
 
             </div>
@@ -263,8 +264,7 @@ Normal
     
         var rIndex,
             table = document.getElementById("table-user");
-        
-        // check the empty input
+
         function checkEmptyInput()
         {
             var isEmpty = false,
@@ -302,8 +302,7 @@ Normal
          
             return isEmpty;
         }
-        
-        // add Row
+
         function addHtmlTableRow()
         {
           
@@ -330,10 +329,11 @@ Normal
             cell5.innerHTML = birth;
             cell6.innerHTML = address;
             cell7.innerHTML = action;
-            // call the function to set the event to the new row
+    
             selectedRowToInput();
         }
         }
+
 
         function blockUser() {
   var currentRow = table.rows[rIndex];
@@ -344,23 +344,38 @@ Normal
 
   }
   else {
-    currentRow.cells[6].innerHTML = "Normal";
-    alert('You decided not to block this user.');
          event.preventDefault();
-         currentRow.style.backgroundColor = "#FFFFFF";
+       
        }
 }
 
 document.getElementById("blockButton").addEventListener("click", blockUser);
 
-        function selectedRowToInput()
+function unblockUser() {
+  var currentRow = table.rows[rIndex];
+  var confirmation = confirm("Are you sure you want to unblock this user?");
+  if (confirmation) {
+    currentRow.cells[6].innerHTML = "Normal";
+    currentRow.style.backgroundColor = "#FFFFFF";
+
+  }
+  else { 
+         event.preventDefault();     
+       }
+}
+document.getElementById("blockButton1").addEventListener("click", unblockUser);
+ 
+
+
+
+function selectedRowToInput()
         {
             
             for(var i = 1; i < table.rows.length; i++)
             {
                 table.rows[i].onclick = function()
                 {
-                  // get the seected row index
+            
                   rIndex = this.rowIndex;
                   document.getElementById("id-user").value = this.cells[0].innerHTML;
                   document.getElementById("fname").value = this.cells[1].innerHTML;
@@ -406,7 +421,7 @@ document.getElementById("blockButton").addEventListener("click", blockUser);
           event.preventDefault();
         }
       }
-            // clear input text
+        
             document.getElementById("id-user").value = "";
             document.getElementById("fname").value = "";
             document.getElementById("money").value = "";
