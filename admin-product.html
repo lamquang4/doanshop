@@ -369,6 +369,7 @@ Coca Original
         // call the function to set the event to the new row
         selectedRowToInput1();
     }
+    resetForm();
     }
     
     // display selected row data into input text
@@ -388,10 +389,14 @@ Coca Original
               document.getElementById("quantity").value = this.cells[3].innerHTML;
               document.getElementById("dateadd").value = this.cells[4].innerHTML;
               document.getElementById("price").value = this.cells[5].innerHTML;
-           
+              const addButton = document.querySelector('button[onclick="addHtmlTableRow1();"]');
+      if (!addButton.disabled) {
+        addButton.disabled = true;
+                };
              
             };
         }
+        
     }
     selectedRowToInput1();
     
@@ -413,6 +418,11 @@ Coca Original
         table1.rows[rIndex].cells[5].innerHTML = price;
       
       }
+      resetForm();
+          const addButton = document.querySelector('button[onclick="addHtmlTableRow1();"]');
+      if (addButton.disabled) {
+        addButton.disabled = false;
+                };
     }
     
     function removeSelectedRow1() {
@@ -430,7 +440,6 @@ Coca Original
     }
   }
 
-  // Clear input text
   document.getElementById("id-product").value = "";
   document.getElementById("fimage").value = "";
   document.getElementById("fproduct").value = "";
@@ -439,6 +448,16 @@ Coca Original
   document.getElementById("price").value = "";
 }
 
+function resetForm() {
+  document.getElementById("id-product").value = "";
+  document.getElementById("fimage").value = "";
+  document.getElementById("fproduct").value = "";
+  document.getElementById("quantity").value = "";
+  document.getElementById("dateadd").value = "";
+  document.getElementById("price").value = "";
+     
+  
+}
 </script>
 
 <script>

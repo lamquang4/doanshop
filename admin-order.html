@@ -111,9 +111,10 @@
                     <thead>
                         <tr>
                             <th>ID ORDER</th>                          
-                            <th><span class="las la-sort"></span> CUSTOMER'S NAME</th>
+                            <th><span class="las la-sort"></span> ORDER'S NAME</th>
                             <th><span class="las la-sort"></span> ADDRESS</th>
                             <th><span class="las la-sort"></span> ORDER DATE</th>
+                            <th><span class="las la-sort"></span>TOTAL</th>
                             <th><span class="las la-sort"></span> ORDER STATUS</th>
                             <th><span class="las la-sort"></span> ACTION</th>
                           
@@ -140,7 +141,9 @@
 <td>
   25 April, 2022
 </td>
-
+<td>
+  $50.00
+</td>
                             <td>
                             <select>
                               <option selected>Processed</option>
@@ -149,7 +152,7 @@
                             </select>
                             </td>
                             <td>
-                                <a href="">Learn more</a>
+                                <a href="">Details</a>
                             </td>
                          
                           
@@ -175,7 +178,9 @@
                             <td>
                               22 November, 2021
                             </td>
-
+                            <td>
+                              $64.00
+                            </td>
                             <td>
                               <select>
                                 <option >Processed</option>
@@ -184,7 +189,7 @@
                               </select>
                             </td>
                             <td>
-                                <a href="order-detail-admin.html">Learn more</a>
+                                <a href="order-detail-admin.html">Details</a>
                             </td>
                         
                        
@@ -209,7 +214,9 @@
                             <td>
                               25 May, 2022
                             </td>
-
+                            <td>
+                              $42.00
+                            </td>
                             <td>
                               <select>
                                 <option selected>Processed</option>
@@ -218,7 +225,7 @@
                               </select>
                             </td>
                             <td>
-                                <a href="">Learn more</a>
+                                <a href="">Details</a>
                             </td>
                           
                      
@@ -244,7 +251,9 @@
                             <td>
                               19 April, 2002
                             </td>
-
+                            <td>
+                              $32.00
+                            </td>
                             <td>
                               <select>
                                 <option selected>Processed</option>
@@ -253,7 +262,7 @@
                               </select>
                             </td>
                             <td>
-                                <a href="">Learn more</a>
+                                <a href="">Details</a>
                             </td>
                          
                          
@@ -279,7 +288,9 @@
                             <td>
                               1 April, 2022
                             </td>
-
+                            <td>
+                              $60.00
+                            </td>
                             <td>
                               <select>
                                 <option selected>Processed</option>
@@ -288,7 +299,7 @@
                               </select>
                             </td>
                             <td>
-                                <a href="">Learn more</a>
+                                <a href="">Details</a>
                             </td>
                          
                          
@@ -396,11 +407,11 @@ barChart.render();
 const areaChartOptions = {
   series: [
     {
-      name: 'Purchase Orders',
+      name: 'Coca Orders',
       data: [31, 40, 28, 51, 42, 109, 100],
     },
     {
-      name: 'Sales Orders',
+      name: 'Pepsi Orders',
       data: [11, 32, 45, 32, 34, 52, 41],
     },
   ],
@@ -431,7 +442,7 @@ const areaChartOptions = {
     {
       opposite: true,
       title: {
-        text: 'Sales Orders',
+        text: 'Product Orders',
       },
     },
   ],

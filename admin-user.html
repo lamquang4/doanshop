@@ -121,8 +121,8 @@ Full Name:<input type="text" name="fname" id="fname">
 
 <div >
         <button style="margin-bottom: 8px;" onclick="addHtmlTableRow();">Add +</button>
-                <button style="margin-bottom: 8px;" onclick="editHtmlTbleSelectedRow();">Edit <span class="las la-edit"></span></button>
-                <button style="margin-bottom: 8px;" onclick="removeSelectedRow();">Delete <span class="las la-trash"></span></button>
+                <button style="margin-bottom: 8px;" onclick="editHtmlTbleSelectedRow();"  >Edit <span class="las la-edit"></span></button>
+               
                 <button style="margin-bottom: 8px;" id="blockButton" onclick="blockRow();">Block <span class="las la-lock"></span></button>
                 <button style="margin-bottom: 8px;" id="blockButton1" onclick="unblockRow();">Unblock <span class="las la-unlock"></span></button>
 </div>
@@ -332,6 +332,7 @@ Normal
     
             selectedRowToInput();
         }
+        resetForm();
         }
 
 
@@ -384,10 +385,13 @@ function selectedRowToInput()
                   document.getElementById("birth").value = this.cells[4].innerHTML;
                   document.getElementById("address").value = this.cells[5].innerHTML;
                  
-                  
+                  const addButton = document.querySelector('button[onclick="addHtmlTableRow();"]');
+      if (!addButton.disabled) {
+        addButton.disabled = true;
                 };
             }
         }
+    }
         selectedRowToInput();
         
         function editHtmlTbleSelectedRow()
@@ -408,6 +412,11 @@ function selectedRowToInput()
             table.rows[rIndex].cells[5].innerHTML = address;
             
           }
+          resetForm();
+          const addButton = document.querySelector('button[onclick="addHtmlTableRow();"]');
+      if (addButton.disabled) {
+        addButton.disabled = false;
+                };
         }
         
         function removeSelectedRow()
@@ -430,7 +439,16 @@ function selectedRowToInput()
             document.getElementById("address").value = "";
             document.getElementById("action").value = "";
         }
-
+        function resetForm() {
+            document.getElementById("id-user").value = "";
+            document.getElementById("fname").value = "";
+            document.getElementById("money").value = "";
+            document.getElementById("pname").value = "";
+            document.getElementById("birth").value = "";
+            document.getElementById("address").value = "";
+     
+  
+}
         
     </script>
 
