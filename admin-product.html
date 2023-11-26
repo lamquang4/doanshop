@@ -117,7 +117,7 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
 
        <div>
         <button onclick="addHtmlTableRow1();">Add +</button>
-                <button onclick="editHtmlTbleSelectedRow1();">Edit <span class="las la-edit"></span></button>
+                <button id="editButton" onclick="editHtmlTbleSelectedRow1();">Edit <span class="las la-edit"></span></button>
                 <button onclick="removeSelectedRow1();">Delete <span class="las la-trash"></span></button>
 </div>
 
@@ -338,8 +338,7 @@ Coca Original
       
         return isEmpty;
     }
-    
-    // add Row
+  
     function addHtmlTableRow1()
     {
    
@@ -366,13 +365,13 @@ Coca Original
         cell5.innerHTML = dateadd;
         cell6.innerHTML = price;
        
-        // call the function to set the event to the new row
+
         selectedRowToInput1();
     }
     resetForm();
     }
     
-    // display selected row data into input text
+
     function selectedRowToInput1()
     {
         
@@ -393,7 +392,9 @@ Coca Original
       if (!addButton.disabled) {
         addButton.disabled = true;
                 };
-             
+                const editButton = document.getElementById('editButton');
+              
+      editButton.innerHTML = 'Update <span class="las la-check"></span>';    
             };
         }
         
@@ -423,19 +424,23 @@ Coca Original
       if (addButton.disabled) {
         addButton.disabled = false;
                 };
+                       const editButton = document.getElementById('editButton');
+              
+      editButton.innerHTML = 'Edit <span class="las la-edit"></span>';    
+            
     }
     
     function removeSelectedRow1() {
-  // Check if the row index is greater than 0
+
   if (rIndex > 0) {
-    // Prompt the user to confirm the deletion
+ 
     var result = confirm("Are you sure you want to delete?");
 
-    // If the user confirms the deletion, then delete the row
+  
     if (result == true) {
       table1.deleteRow(rIndex);
     } else {
-      // If the user cancels the deletion, then prevent the default action
+
       event.preventDefault();
     }
   }
@@ -461,32 +466,6 @@ function resetForm() {
 </script>
 
 <script>
-    const fileInputs = document.querySelectorAll('input[type="file"]');
- 
- // Add a change event listener to each file input element
- fileInputs.forEach(fileInput => {
-   fileInput.addEventListener('change', function(event) {
-     // Get the image element associated with the file input element
-     const img = event.target.closest('.client').querySelector('img');
- 
-     // Get the new image file
-     const newImageFile = event.target.files[0];
- 
-     // Create a new FileReader object
-     const reader = new FileReader();
- 
-     // Load the new image file
-     reader.onload = function() {
-       // Set the src attribute of the image element to the new image file
-       img.src = reader.result;
-     };
- 
-     // Read the new image file
-     reader.readAsDataURL(newImageFile);
-   });
- });
- 
-
 
  const imageProductAdminDivs = document.querySelectorAll('.image-product-admin');
 

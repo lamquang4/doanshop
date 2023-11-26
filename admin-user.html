@@ -121,7 +121,7 @@ Full Name:<input type="text" name="fname" id="fname">
 
 <div >
         <button style="margin-bottom: 8px;" onclick="addHtmlTableRow();">Add +</button>
-                <button style="margin-bottom: 8px;" onclick="editHtmlTbleSelectedRow();"  >Edit <span class="las la-edit"></span></button>
+                <button id="editButton" style="margin-bottom: 8px;" onclick="editHtmlTbleSelectedRow();"  >Edit <span class="las la-edit"></span></button>
                
                 <button style="margin-bottom: 8px;" id="blockButton" onclick="blockRow();">Block <span class="las la-lock"></span></button>
                 <button style="margin-bottom: 8px;" id="blockButton1" onclick="unblockRow();">Unblock <span class="las la-unlock"></span></button>
@@ -389,6 +389,9 @@ function selectedRowToInput()
       if (!addButton.disabled) {
         addButton.disabled = true;
                 };
+                const editButton = document.getElementById('editButton');
+              
+              editButton.innerHTML = 'Update <span class="las la-check"></span>'; 
             }
         }
     }
@@ -417,6 +420,9 @@ function selectedRowToInput()
       if (addButton.disabled) {
         addButton.disabled = false;
                 };
+                const editButton = document.getElementById('editButton');
+              
+              editButton.innerHTML = 'Edit <span class="las la-edit"></span>'; 
         }
         
         function removeSelectedRow()
