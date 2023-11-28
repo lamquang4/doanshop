@@ -36,7 +36,7 @@
                 <li >
                    <a href="admin-user.html">
                         <span class="las la-user-alt"></span>
-                        <small>Customer</small>
+                        <small>Customers</small>
                     </a>
                 </li>
              
@@ -52,6 +52,12 @@
                         <small>Orders</small>
                     </a>
                 </li>
+                <li>
+                  <a href="admin-chart.html">
+                       <span class="las la-balance-scale"></span>
+                       <small>Statistics</small>
+                   </a>
+               </li>
                 </ul>
             </div>
         </div>
@@ -88,41 +94,40 @@
         
     <h1 style="padding: 1.3rem 0rem;color: #74767d;" id="product">Product</h1>
     <div class="user-tab">
+
         <div class="user-input">
-             ID:<input type="text" name="id-product" id="id-product" > 
-             
+             ID:<input type="text" name="id-product" id="id-product" >         
         </div>
+
         <div class="user-input" >
-           
           Product's Image:<input type="file" name="fimage1" id="fimage1" >
                 </div>
+
         <div class="user-input" style="display: none;">
-           
            Product's Url:<input type="text" name="fimage" id="fimage" >
                  </div>
+
         <div class="user-input">
-           
 Product Name:<input type="text" name="fproduct" id="fproduct">
      </div>
+
   <div class="user-input">
-       Price:<input type="text" name="quantity" id="quantity">
-       
+       Price:<input type="text" name="quantity" id="quantity">     
   </div>
+
   <div class="user-input">
     Quantity:<input type="number" name="dateadd" id="dateadd">
-
 </div>
-       <div class="user-input">
-        Date Add:<input type="text" name="price" id="price">
 
+<div class="user-input">
+        Date Add:<input type="text" name="price" id="price">
        </div>
 
-   
-
        <div>
+
         <button onclick="addHtmlTableRow1();">Add +</button>
-                <button id="editButton" onclick="editHtmlTbleSelectedRow1();">Edit <span class="las la-edit"></span></button>
-                <button onclick="removeSelectedRow1();">Delete <span class="las la-trash"></span></button>
+                <button id="editButton" onclick="editHtmlTbleSelectedRow1();" disabled>Edit <span class="las la-edit"></span></button>
+                <button  onclick="removeSelectedRow1();" >Delete <span class="las la-trash"></span></button>
 </div>
 
     </div>
@@ -408,12 +413,14 @@ window.addEventListener("DOMContentLoaded", function() {
               document.getElementById("quantity").value = this.cells[3].innerHTML;
               document.getElementById("dateadd").value = this.cells[4].innerHTML;
               document.getElementById("price").value = this.cells[5].innerHTML;
+
+              
               const addButton = document.querySelector('button[onclick="addHtmlTableRow1();"]');
       if (!addButton.disabled) {
         addButton.disabled = true;
                 };
                 const editButton = document.getElementById('editButton');
-              
+                editButton.disabled = false;
       editButton.innerHTML = 'Update <span class="las la-check"></span>';    
             };
             
@@ -447,7 +454,7 @@ window.addEventListener("DOMContentLoaded", function() {
         addButton.disabled = false;
                 };
                        const editButton = document.getElementById('editButton');
-              
+                       editButton.disabled = true; 
       editButton.innerHTML = 'Edit <span class="las la-edit"></span>';    
             
     }
@@ -468,21 +475,28 @@ window.addEventListener("DOMContentLoaded", function() {
   }
 
   document.getElementById("id-product").value = "";
-
+  document.getElementById("fimage1").value = "";
   document.getElementById("fproduct").value = "";
   document.getElementById("quantity").value = "";
   document.getElementById("dateadd").value = "";
   document.getElementById("price").value = "";
+
+  editButton.disabled = true; 
+  editButton.innerHTML = 'Edit <span class="las la-edit"></span>';  
+  const addButton = document.querySelector('button[onclick="addHtmlTableRow1();"]');
+      if (addButton.disabled) {
+        addButton.disabled = false;
+                };
 }
 
 function resetForm() {
   document.getElementById("id-product").value = "";
-
+  document.getElementById("fimage1").value = "";
   document.getElementById("fproduct").value = "";
   document.getElementById("quantity").value = "";
   document.getElementById("dateadd").value = "";
   document.getElementById("price").value = "";
-     
+
   
 }
 

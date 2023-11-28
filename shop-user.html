@@ -294,19 +294,7 @@
 
 </div>
 
- <div class="cartegory" style="display: none;">
-  
- <div class="filter-sort">
- 
-  <select name="" id="filterselect">
 
-    <option value="Default">Filter</option>
-  <option value="LowToHigh">PRICE (LOW - HIGH)</option>
-  <option value="HighToLow">PRICE (HIGH - LOW)</option>
-
-  </select>
- </div>
-</div>
 
 <div class="pro-container1" id="product-list" >
 
@@ -898,43 +886,7 @@ if (searchTerm === "") {
 }
 });
  
-let filterSelect = document.getElementById('filterselect');
 
-// Add event listener to the select element
-filterSelect.addEventListener('change', function() {
-  let sortValue = this.value;
-  let productList = document.querySelectorAll('.pro-container1 .pro1');
-  let sortedList;
-
-  // Sort the product list based on the selected value
-  if (sortValue === 'LowToHigh' || sortValue === 'HighToLow') {
-    limit = 25;
-thisPage=1;
-    sortedList = Array.from(productList).sort((a, b) => {
-      let priceA = parseFloat(a.querySelector('.product-price').innerText.replace('$', ''));
-      let priceB = parseFloat(b.querySelector('.product-price').innerText.replace('$', ''));
-      return sortValue === 'LowToHigh' ? priceA - priceB : priceB - priceA;
-    });
-  } else {
-    limit = 12;
-
-    sortedList = productList;
-  }
-
-  // Remove the existing products from the container
-  let proContainer = document.querySelector('.pro-container1');
-  while (proContainer.firstChild) {
-    proContainer.removeChild(proContainer.firstChild);
-  }
-
-  // Add the sorted products back to the container
-  sortedList.forEach(product => {
-    proContainer.appendChild(product);
-  });
-
-  // Reload the items with the updated limit
-  loadItem();
-});
 
 </script>
 

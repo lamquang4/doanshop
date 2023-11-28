@@ -37,7 +37,7 @@
                     <li >
                        <a href="admin-user.html">
                             <span class="las la-user-alt"></span>
-                            <small>Customer</small>
+                            <small>Customers</small>
                         </a>
                     </li>
                  
@@ -53,6 +53,12 @@
                             <small>Orders</small>
                         </a>
                     </li>
+                    <li>
+                        <a href="admin-chart.html">
+                             <span class="las la-balance-scale"></span>
+                             <small>Statistics</small>
+                         </a>
+                     </li>
               
                 </ul>
             </div>
@@ -121,10 +127,10 @@ Full Name:<input type="text" name="fname" id="fname">
 
 <div >
         <button style="margin-bottom: 8px;" onclick="addHtmlTableRow();">Add +</button>
-                <button id="editButton" style="margin-bottom: 8px;" onclick="editHtmlTbleSelectedRow();"  >Edit <span class="las la-edit"></span></button>
+                <button id="editButton" style="margin-bottom: 8px;" onclick="editHtmlTbleSelectedRow();" disabled >Edit <span class="las la-edit"></span></button>
                
-                <button style="margin-bottom: 8px;" id="blockButton" onclick="blockRow();">Block <span class="las la-lock"></span></button>
-                <button style="margin-bottom: 8px;" id="blockButton1" onclick="unblockRow();">Unblock <span class="las la-unlock"></span></button>
+                <button style="margin-bottom: 8px;" id="blockButton" onclick="blockRow();" disabled>Block <span class="las la-lock"></span></button>
+                <button style="margin-bottom: 8px;" id="blockButton1" onclick="unblockRow();" disabled>Unblock <span class="las la-unlock"></span></button>
 </div>
 
             </div>
@@ -342,7 +348,15 @@ Normal
   if (confirmation) {
     currentRow.cells[6].innerHTML = "Blocked";
     currentRow.style.backgroundColor = "red";
-
+    editButton.innerHTML = 'Edit <span class="las la-edit"></span>'; 
+    const addButton = document.querySelector('button[onclick="addHtmlTableRow();"]');
+      if (addButton.disabled) {
+        addButton.disabled = false;
+                };
+                editButton.disabled = true; 
+                document.getElementById("blockButton").disabled=true;
+                document.getElementById("blockButton1").disabled=true;
+    resetForm();
   }
   else {
          event.preventDefault();
@@ -358,7 +372,15 @@ function unblockUser() {
   if (confirmation) {
     currentRow.cells[6].innerHTML = "Normal";
     currentRow.style.backgroundColor = "#FFFFFF";
-
+    editButton.innerHTML = 'Edit <span class="las la-edit"></span>'; 
+    const addButton = document.querySelector('button[onclick="addHtmlTableRow();"]');
+      if (addButton.disabled) {
+        addButton.disabled = false;
+                };
+                editButton.disabled = true; 
+                document.getElementById("blockButton").disabled=true;
+                document.getElementById("blockButton1").disabled=true;
+    resetForm();
   }
   else { 
          event.preventDefault();     
@@ -390,7 +412,9 @@ function selectedRowToInput()
         addButton.disabled = true;
                 };
                 const editButton = document.getElementById('editButton');
-              
+                editButton.disabled = false; 
+                document.getElementById("blockButton").disabled=false;
+                document.getElementById("blockButton1").disabled=false;
               editButton.innerHTML = 'Update <span class="las la-check"></span>'; 
             }
         }
@@ -423,6 +447,9 @@ function selectedRowToInput()
                 const editButton = document.getElementById('editButton');
               
               editButton.innerHTML = 'Edit <span class="las la-edit"></span>'; 
+              editButton.disabled = true; 
+                document.getElementById("blockButton").disabled=true;
+                document.getElementById("blockButton1").disabled=true;
         }
         
         function removeSelectedRow()
