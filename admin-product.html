@@ -127,7 +127,7 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
 
         <button onclick="addHtmlTableRow1();">Add +</button>
                 <button id="editButton" onclick="editHtmlTbleSelectedRow1();" disabled>Edit <span class="las la-edit"></span></button>
-                <button  onclick="removeSelectedRow1();" >Delete <span class="las la-trash"></span></button>
+                <button id="deleteButton" onclick="removeSelectedRow1();" disabled>Delete <span class="las la-trash"></span></button>
 </div>
 
     </div>
@@ -419,8 +419,10 @@ window.addEventListener("DOMContentLoaded", function() {
       if (!addButton.disabled) {
         addButton.disabled = true;
                 };
+                const deleteButton = document.getElementById('deleteButton');
                 const editButton = document.getElementById('editButton');
                 editButton.disabled = false;
+                deleteButton.disabled = false;
       editButton.innerHTML = 'Update <span class="las la-check"></span>';    
             };
             
@@ -455,6 +457,7 @@ window.addEventListener("DOMContentLoaded", function() {
                 };
                        const editButton = document.getElementById('editButton');
                        editButton.disabled = true; 
+                       deleteButton.disabled = true;
       editButton.innerHTML = 'Edit <span class="las la-edit"></span>';    
             
     }
@@ -480,7 +483,7 @@ window.addEventListener("DOMContentLoaded", function() {
   document.getElementById("quantity").value = "";
   document.getElementById("dateadd").value = "";
   document.getElementById("price").value = "";
-
+  deleteButton.disabled = true;
   editButton.disabled = true; 
   editButton.innerHTML = 'Edit <span class="las la-edit"></span>';  
   const addButton = document.querySelector('button[onclick="addHtmlTableRow1();"]');
