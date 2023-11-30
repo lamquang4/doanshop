@@ -1,29 +1,29 @@
 /* Google Font Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
+  font-family: 'Spartan', sans-serif;
 }
 body{
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-
+background-color: #F1F1F1;
   padding: 30px;
 }
 #logo-login{
     position: absolute;
-    top: -19px;
+    top: -25px;
     right:3px
  
 }
 .container{
   position: relative;
-  max-width: 800px;
-  height: 400px;
+  max-width: 790px;
+  height: 440px;
   width: 100%;
   background: #fff;
   padding: 40px 30px;
@@ -119,7 +119,7 @@ border-bottom-right-radius: 8px;
 .forms .form-content .title{
   position: relative;
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 600;
   color: #333;
 }
 form {
@@ -165,7 +165,7 @@ form {
 }
 .form-content .input-box i{
   position: absolute;
-  color: black;
+  color: #999999;
   font-size: 17px;
 }
 .forms .form-content .text{
