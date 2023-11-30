@@ -1,23 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-@font-face{
-font-family: Fasthand;
-src: url('/font/Fasthand-Regular.ttf');
-}
 
-@font-face{
-font-family:TTC;
-src: url('/font/TCCC-UnityHeadline\ Regular.ttf');
-}
-@font-face{
-font-family: Bacas;
-src: url('/font/BacasimeAntique-Regular.ttf');
-}
-@font-face{
-font-family: Noto;
-src: url('/font/NotoSans-Regular.ttf');
-}
 
 :root{
 
@@ -1786,31 +1770,28 @@ transform: translate(0,-10px);
   transition: all 1.5s ease;
   margin-left: 8.8%;
   
-  background-image: url(/assets/images/sp/commer4.png);
+
   }
   #b-banner1 .b-box1:nth-child(2){
   transition: all 2s ease;
-  
-  background-image: url(/assets/images/sp/commer15.png);
-  
+
   }
   
   #b-banner1 .b-box1:nth-child(3){
   transition: all 1.5s ease;
   margin-right: 8.8%;
-  
-  background-image: url(/assets/images//sp/commer12.png);
+
   }
   #b-banner1 .b-box1:nth-child(1):hover{
-  background-image: url(/assets/images/sp/commer5.png);
+  background-image: url('/assets/images/sp/commer5.png');
   
   }
   #b-banner1 .b-box1:nth-child(2):hover{
-  background-image: url(/assets/images/sp/spriteback.png);
+  background-image: url('/assets/images/sp/spriteback.png');
   
   }
   #b-banner1 .b-box1:nth-child(3):hover{
-  background-image: url(/assets/images/sp/commer13.png);
+  background-image: url('/assets/images/sp/commer13.png');
   
   }
   /*---------*/
