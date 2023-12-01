@@ -1,4 +1,4 @@
-/* Google Font Link */
+
 
 *{
   margin: 0;
@@ -14,12 +14,7 @@ body{
 background-color: #F1F1F1;
   padding: 30px;
 }
-#logo-login{
-    position: absolute;
-    top: -25px;
-    right:3px
- 
-}
+
 input::placeholder{
   font-size: 14px;
 }

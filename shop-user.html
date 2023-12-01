@@ -280,7 +280,12 @@
  <section id="product11" class="section-p11" class="shop container">
   <h2>FEATURED PRODUCTS</h2> 
 
-  <div class="search-container">
+  <div style="margin-top: 20px; margin-bottom: 15px;"> 
+    <h1 id="show-advan-searh-h1">Advanced Search </h1>
+    <i id="toggle-icon" class="fa-solid fa-chevron-up fa-rotate-180" ></i>
+  </div>
+
+  <div class="search-container" style="display: none;">
     <div id="search-advan-input">
     <label for="min-price">Min Price:</label>
     <input type="number" id="min-price" min="10" max="20">
@@ -1277,6 +1282,23 @@ cartadds.forEach((cartadd)=> {
   
     </script>
 
-
+<script>
+  var toggleIcon = document.getElementById('toggle-icon');
+   var searchContainer = document.querySelector('.search-container');
+ 
+   toggleIcon.addEventListener('click', function() {
+     if (searchContainer.style.display === 'none' || searchContainer.style.display === '') {
+       searchContainer.style.display = 'block';
+       toggleIcon.style.transform = 'rotate(0deg)';
+       toggleIcon.style.transition = '0.5s';
+     } else {
+       searchContainer.style.display = 'none';
+       toggleIcon.style.transform = 'rotate(180deg)';
+       toggleIcon.style.transition = '0.5s';
+     }
+   });
+ 
+ 
+ </script>
 
 
