@@ -1313,6 +1313,64 @@ margin-top: 30px;
 /*-----------*/
 
 /*shop.html*/
+.search-container{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#search-advan-input:nth-child(1){
+  margin-bottom: 20px;
+}
+#search-advan-input input{
+  margin-right: 12px;
+  width:130px;
+  padding: 2px 0px;
+  margin-left: 0;
+}
+#search-advan-input select{
+  margin-right: 10px;
+  width:140px;
+  padding: 2px 0px;
+  font-size: 14px;
+ 
+}
+#search-advan-input button{
+  padding: 6px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color:white;
+  background-color:black;
+  
+}
+
+#search-advan-input label{
+font-size: 17px;
+ font-weight: 600;
+}
+@media (width <= 715px){
+  #search-advan-input input{
+    margin-right: 10px;
+    width:65px;
+    padding: 2px 0px;
+  }
+  #search-advan-input select{
+    margin-right: 10px;
+    width:65px;
+    padding: 2px 0px;
+    font-size: 13px;
+   
+  }
+  #search-advan-input button{
+    margin-top: 15px;
+    padding: 6px 14px;
+    font-size: 14px;
+margin-bottom: 15px;
+
+    
+  }
+  #search-advan-input label{
+    font-size: 15px;
+  }
+}
 #containerpage{
 
   display: flex;

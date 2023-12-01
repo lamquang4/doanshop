@@ -280,6 +280,30 @@
  <section id="product11" class="section-p11" class="shop container">
   <h2>FEATURED PRODUCTS</h2> 
 
+  <div class="search-container">
+    <div id="search-advan-input">
+    <label for="min-price">Min Price:</label>
+    <input type="number" id="min-price">
+  
+    <label for="max-price">Max Price:</label>
+    <input type="number" id="max-price">
+  </div>
+  <div id="search-advan-input">
+      <label for="product-name"> Name:</label>
+    <input  type="text" id="product-name">
+    
+    <label for="product-type">Product Type:</label>
+    <select id="product-type"> 
+          <option value="all">All</option>
+      <option value="carbonated">Carbonated</option>
+      <option value="non-carbonated">Non-Carbonated</option>
+    </select>
+    <button class="learn-more" onclick="searchProducts()"> Search <i class="fa-solid fa-magnifying-glass"></i></button>
+  
+  </div>
+  
+  </div>
+
   <div  id="filter-buttons">
        
     <button class="btn on" id="backnormal" onclick="filterObjects('all')">Show all</button>
@@ -304,7 +328,7 @@
 
       
     <h5 class="product-title">Pepsi Original</h5>
-<h2 style="display: none;">Carbonated Pepsi</h2>
+<h2 style="display: none;">Co Pepsi</h2>
     <h4 class="product-price">$12.00</h4>
      
     <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
@@ -320,7 +344,7 @@
     <img class="product-img" src="assets/images/sp/pepsizero.png" alt=""></a>
    
       <h5 class="product-title">Pepsi Zero Calo </h5>
-      <h2 style="display: none;">Carbonated zero calories no calo Pepsi</h2>
+      <h2 style="display: none;">Co zero calories no calo Pepsi</h2>
      <h4 class="product-price">$10.00</h4>
         
       <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
@@ -336,7 +360,7 @@
       <img class="product-img" src="assets/images/sp/cocaori.png" alt=""></a>
      
         <h5 class="product-title">Coca Original </h5>
-        <h2 style="display: none;">Carbonated Coca</h2>
+        <h2 style="display: none;">Co Coca</h2>
         <h4 class="product-price">$13.00</h4>
         <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
       <div id="buttonshop">
@@ -350,7 +374,7 @@
       <img class="product-img" src="assets/images/sp/coca1.png" alt=""></a>
 
         <h5 class="product-title">Coca Zero Sugar</h5>
-        <h2 style="display: none;">Carbonated Coca</h2>
+        <h2 style="display: none;">Co Coca</h2>
         <h4 class="product-price">$10.00</h4>
         <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
  
@@ -364,7 +388,7 @@
         <img class="product-img" src="assets/images/sp/pepchanh.png" alt=""></a>
         
           <h5 class="product-title">Pepsi Lemon</h5>
-          <h2 style="display: none;">Carbonated zero calories no calo pepsi</h2>
+          <h2 style="display: none;">Co zero calories no calo pepsi</h2>
           <h4 class="product-price">$10.00</h4>
           <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
         <div id="buttonshop">
@@ -377,7 +401,7 @@
           <img class="product-img" src="assets/images/sp/pepnitro1.png" alt=""></a>
         
             <h5 class="product-title">Pepsi Nitro</h5>
-            <h2 style="display: none;">Carbonated pepsi</h2>
+            <h2 style="display: none;">Co pepsi</h2>
             <h4 class="product-price">$14.00</h4>
             <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
           <div id="buttonshop">
@@ -390,7 +414,7 @@
             <img class="product-img" src="assets/images/sp/coca3.png" alt=""></a>
            
               <h5 class="product-title">Coca Plus Fiber</h5>
-              <h2 style="display: none;">Carbonated sugar-free no sugar coca</h2>
+              <h2 style="display: none;">Co sugar-free no sugar coca</h2>
               <h4 class="product-price">$12.00</h4>
               <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
             <div id="buttonshop">
@@ -403,7 +427,7 @@
               <img class="product-img" src="assets/images/sp/fanta1.png" alt=""></a>
            
                 <h5 class="product-title">Fanta Orange</h5>
-                <h2 style="display: none;">Carbonated Fanta</h2>
+                <h2 style="display: none;">Co Fanta</h2>
                 <h4 class="product-price">$10.00</h4>
                 <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
               <div id="buttonshop">
@@ -416,7 +440,7 @@
                 <img class="product-img" src="assets/images/sp/fantanho.png" alt=""></a>
               
                   <h5 class="product-title">Fanta Grape</h5>
-                  <h2 style="display: none;">Carbonated Fanta</h2>
+                  <h2 style="display: none;">Co Fanta</h2>
                   <h4 class="product-price">$10.00</h4>
                   <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                 <div id="buttonshop">
@@ -429,7 +453,7 @@
                   <img class="product-img" src="assets/images/sp/fanta3.png" alt=""></a>
                
                     <h5 class="product-title">Fanta Sassafras</h5>
-                    <h2 style="display: none;">Carbonated Fanta</h2>
+                    <h2 style="display: none;">Co Fanta</h2>
                     <h4 class="product-price">$10.00</h4>
                     <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                   <div id="buttonshop">
@@ -442,7 +466,7 @@
                     <img class="product-img" src="assets/images/sp/coca2.png" alt=""></a>
                  
                       <h5 class="product-title">Coca Light </h5>
-                      <h2 style="display: none;">Carbonated sugar-free no sugar zero calories no calo Coca</h2>
+                      <h2 style="display: none;">Co sugar-free no sugar zero calories no calo Coca</h2>
                       <h4 class="product-price">$15.00</h4>
                       <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                     <div id="buttonshop">
@@ -455,7 +479,7 @@
                       <img class="product-img" src="assets/images/sp/fanta2.png" alt=""></a>
                     
                         <h5 class="product-title">Fanta Cream Soda </h5>
-                        <h2 style="display: none;">Carbonated Fanta</h2>
+                        <h2 style="display: none;">Co Fanta</h2>
                         <h4 class="product-price">$17.00</h4>
                         <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                       <div id="buttonshop">
@@ -469,7 +493,7 @@
           <img class="product-img" src="assets/images/sp/peach.png" alt=""></a>
        
             <h5 class="product-title">Peach Tea</h5>
-            <h2 style="display: none;">Non-carbonated Sweetened beverages Fuzetea</h2>
+            <h2 style="display: none;">Ko Sweetened beverages Fuzetea</h2>
             <h4 class="product-price">$16.00</h4>
             <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
           <div id="buttonshop">
@@ -482,7 +506,7 @@
               <img class="product-img" src="assets/images/sp/lemon.png" alt=""></a>
            
                 <h5 class="product-title">Lemon Tea</h5>
-                <h2 style="display: none;">Non-carbonated Sweetened beverages Fuzetea</h2>
+                <h2 style="display: none;">Ko Sweetened beverages Fuzetea</h2>
                 <h4 class="product-price">$16.00</h4>
                 <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
               <div id="buttonshop">
@@ -495,7 +519,7 @@
                   <img class="product-img" src="assets/images/sp/water2.png" alt=""></a>
                
                     <h5 class="product-title">Dasani Water</h5>
-                    <h2 style="display: none;">Non-carbonated Water Dansani</h2>
+                    <h2 style="display: none;">Ko Water Dansani</h2>
                     <h4 class="product-price">$14.00</h4>
                     <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                   <div id="buttonshop">
@@ -508,7 +532,7 @@
                     <img class="product-img" src="assets/images/sp/dasanimine.png" alt=""></a>
                    
                       <h5 class="product-title">Dasani Mineralized</h5>
-                      <h2 style="display: none;">Non-carbonated Mineral Dasani</h2>
+                      <h2 style="display: none;">Ko Mineral Dasani</h2>
                       <h4 class="product-price">$12.00</h4>
                       <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                     <div id="buttonshop">
@@ -523,7 +547,7 @@
                             <img class="product-img" src="assets/images/sp/thumbs1.png" alt=""></a>
                          
                               <h5 class="product-title">Thumbs Kiwi</h5>
-                              <h2 style="display: none;">Carbonated Thumbs up</h2>
+                              <h2 style="display: none;">Co Thumbs up</h2>
                               <h4 class="product-price">$10.00</h4>
                               <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                             <div id="buttonshop">
@@ -536,7 +560,7 @@
                               <img class="product-img" src="assets/images/sp/thumbs2.png" alt=""></a>
                            
                                 <h5 class="product-title">Thumbs Strawberry</h5>
-                                <h2 style="display: none;">Carbonated Thumps up</h2>
+                                <h2 style="display: none;">Co Thumps up</h2>
                                 <h4 class="product-price">$10.00</h4>
                                 <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                               <div id="buttonshop">
@@ -549,7 +573,7 @@
                                 <img class="product-img" src="assets/images/sp/aquariusgas.png" alt=""></a>
                              
                                   <h5 class="product-title">Aquarius Gas </h5>
-                                  <h2 style="display: none;">Carbonated Aquarius</h2>
+                                  <h2 style="display: none;">Co Aquarius</h2>
                                   <h4 class="product-price">$10.00</h4>
                                   <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                                 <div id="buttonshop">
@@ -562,7 +586,7 @@
                                   <img class="product-img" src="assets/images/sp/sprite2.png" alt=""></a>
                                 
                                     <h5 class="product-title">Sprite Bottle </h5>
-                                    <h2 style="display: none;">Carbonated Sprite</h2> 
+                                    <h2 style="display: none;">Co Sprite</h2> 
                                     <h4 class="product-price">$10.00</h4>
                                     <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                               
@@ -576,7 +600,7 @@
                                     <img class="product-img" src="assets/images/sp/nutricam.png" alt=""></a>
                                   
                                       <h5 class="product-title">Nutri Orange</h5>
-                                      <h2 style="display: none;">Non-carbonated Sweetened beverages Nutriboost</h2>
+                                      <h2 style="display: none;">Ko Sweetened beverages Nutriboost</h2>
                                       <h4 class="product-price">$10.00</h4>
                                       <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                                     <div id="buttonshop">
@@ -589,7 +613,7 @@
                                           <img class="product-img" src="assets/images/sp/melon.png" alt=""></a>
                                          
                                             <h5 class="product-title">Winter Melon</h5>
-                                            <h2 style="display: none;">Non-carbonated Fuzetea</h2>
+                                            <h2 style="display: none;">Ko Fuzetea</h2>
                                             <h4 class="product-price">$10.00</h4>
                                             <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                                           <div id="buttonshop">
@@ -603,7 +627,7 @@
                                           <img class="product-img" src="assets/images/sp/nutri1.png" alt=""></a>
                                         
                                             <h5 class="product-title">Nutri Greek Orange</h5>
-                                            <h2 style="display: none;">Non-carbonated Sweetened beverages Nutriboost</h2>
+                                            <h2 style="display: none;">Ko Sweetened beverages Nutriboost</h2>
                                             <h4 class="product-price">$15.00</h4>
                                             <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                                           <div id="buttonshop">
@@ -618,7 +642,7 @@
                                                   <img class="product-img" src="assets/images/sp/nutrikem.png" alt=""></a>
                                                 
                                                     <h5 class="product-title">Nutri Biscuits</h5>
-                                                    <h2 style="display: none;">Non-carbonated Sweetened beverages Nutriboost</h2>
+                                                    <h2 style="display: none;">Ko Sweetened beverages Nutriboost</h2>
                                                     <h4 class="product-price">$10.00</h4>
                                                     <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                                                   <div id="buttonshop">
@@ -631,7 +655,7 @@
                                                     <img class="product-img" src="assets/images/sp/passion.png" alt=""></a>
                                                 
                                                       <h5 class="product-title">Passion Tea</h5>
-                                                      <h2 style="display: none;">Non-carbonated Sweetened beverages Fuzetea</h2>
+                                                      <h2 style="display: none;">Ko Sweetened beverages Fuzetea</h2>
                                                       <h4 class="product-price">$14.00</h4>
                                                       <i id="cart-plus" class='bx bx-cart-add add-cart'></i>
                                                     <div id="buttonshop">
@@ -879,6 +903,10 @@ limit=25;
 const searchbox = document.getElementById("search-item");
 
 searchbox.addEventListener("keyup", (event) => {
+  document.getElementById("min-price").value = "";
+  document.getElementById("max-price").value = "";
+  document.getElementById("product-name").value = "";
+  document.getElementById("product-type").selectedIndex = 0;
 const searchTerm = searchbox.value.trim();
 if (searchTerm === "") {
   limit = 12;
@@ -1211,7 +1239,41 @@ cartadds.forEach((cartadd)=> {
   
   </script>
 
-
+<script>
+  function searchProducts() {
+    var minPrice = parseFloat(document.getElementById("min-price").value) || 0;
+    var maxPrice = parseFloat(document.getElementById("max-price").value) || Infinity;
+    var productName = document.getElementById("product-name").value.toLowerCase();
+    var productType = document.getElementById("product-type").value.toLowerCase();
+  
+  
+    var allInputsEmpty = minPrice === 0 && maxPrice === Infinity && productName === '' && productType === 'all';
+  
+    limit = allInputsEmpty ? 12 : 25;
+  
+    var productContainers = document.querySelectorAll('.pro1');
+  
+    productContainers.forEach(function (product) {
+      var price = parseFloat(product.querySelector('.product-price').textContent.replace('$', ''));
+      var name = product.querySelector('.product-title').textContent.toLowerCase();
+      var type = product.querySelector('h2').textContent.toLowerCase();
+  
+      var priceInRange = price >= minPrice && price <= maxPrice;
+      var nameMatches = name.includes(productName);
+      var typeMatches = productType === 'all' || (productType === 'carbonated' && type.includes('co')) || (productType === 'non-carbonated' && type.includes('ko'));
+  
+      if (priceInRange && nameMatches && typeMatches) {
+        product.style.display = '';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+    window.scrollTo(0, bBanner1.offsetTop);
+    thisPage = 1;
+    loadItem();
+  }
+  
+    </script>
 
 
 

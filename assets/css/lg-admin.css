@@ -20,6 +20,9 @@ background-color: #F1F1F1;
     right:3px
  
 }
+input::placeholder{
+  font-size: 14px;
+}
 .container{
   position: relative;
   max-width: 790px;
@@ -161,7 +164,7 @@ form {
 }
 .form-content .input-box input:focus,
 .form-content .input-box input:valid{
-  border-color: #418F47;
+  border-color: #50AEDF;
 }
 .form-content .input-box i{
   position: absolute;
@@ -185,14 +188,14 @@ form {
 }
 .forms .form-content .button input{
   color: #fff;
-  background: #418F47;
+  background: #50AEDF;
   border-radius: 6px;
   padding: 0;
   cursor: pointer;
   transition: all 0.4s ease;
 }
 .forms .form-content .button input:hover{
-  background: #418F47;
+  background: #50AEDF;
 }
 .forms .form-content label{
   color: #5b13b9;
