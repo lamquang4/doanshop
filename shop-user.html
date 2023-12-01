@@ -181,7 +181,7 @@
           <li id="menu"><a href="contact-user.html" class="choose"><span>Contact</span></a></li>
     
       <div class="group" id="search">
-      <input id="search-item" type="text" placeholder="Search" name="text" class="input" onkeyup="search()" onkeyup="searchgia()">
+      <input id="search-item" type="text" placeholder="Search" name="text" class="input" onkeyup="search()" >
     <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
       <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
   </svg>
@@ -283,10 +283,10 @@
   <div class="search-container">
     <div id="search-advan-input">
     <label for="min-price">Min Price:</label>
-    <input type="number" id="min-price">
+    <input type="number" id="min-price" min="10" max="20">
   
     <label for="max-price">Max Price:</label>
-    <input type="number" id="max-price">
+    <input type="number" id="max-price" min="10" max="20">
   </div>
   <div id="search-advan-input">
       <label for="product-name"> Name:</label>
@@ -1187,6 +1187,7 @@ function removeClass(element, name){
 </script>
 
 <script>
+  
   const back1=document.querySelectorAll('#btnfil');
   const back2=document.getElementById('backnormal');
  const page = document.querySelector('#containerpage');
@@ -1194,6 +1195,7 @@ function removeClass(element, name){
   button.addEventListener('click', () => {
     thisPage = 1; 
         loadItem();
+
  page.style.visibility = "hidden";
     
   });

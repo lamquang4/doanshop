@@ -260,10 +260,10 @@
 <div class="search-container">
   <div id="search-advan-input">
   <label for="min-price">Min Price:</label>
-  <input type="number" id="min-price">
+  <input type="number" id="min-price" min="10" max="20" >
 
   <label for="max-price">Max Price:</label>
-  <input type="number" id="max-price">
+  <input type="number" id="max-price" min="10" max="20" >
 </div>
 <div id="search-advan-input">
     <label for="product-name"> Name:</label>
@@ -1175,7 +1175,8 @@ function removeClass(element, name){
   button.addEventListener('click', () => {
     thisPage = 1; 
         loadItem();
-        
+
+
  page.style.visibility = "hidden";
     
   });
