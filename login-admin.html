@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="assets/images/pic/logo.png">
-    <link rel="stylesheet" href="assets/css/lg-admin.css">
-    <title>Login for admin</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body>
-  <div class="container">
-    <input type="checkbox" id="flip">
-    <div class="cover">
-      <div class="front">
-        <img src="assets/images/pic/working1.png" alt="">
-   
-      </div>
+    
 
-    </div>
-    <div class="forms">
-        <div class="form-content">
-          <div class="login-form">
-            <div class="title">Login For Admin </div>
-           
-          <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input id="username" type="text" placeholder="Enter your username" required>
-              </div>
-              <div class="input-box" style="margin-bottom: 55px;">
-                <i class="fas fa-lock"></i>
-                <input id="password" type="password" placeholder="Enter your password" required>
-              </div>
-          
-              <div class="button input-box">
-                <input type="submit" value="Sumbit" onclick="checkLogin()">
-              </div>
-      
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="assets/css/lg-admin.css">
+         
+    <title>Login For Admin</title> 
+</head>
+<body>
+    
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login For Admin</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input id="username" type="text" placeholder="Enter your username" required>
+                        <i class="uil uil-user icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input id="password" type="password" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        
+                    
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Login" onclick="checkLogin()">
+                    </div>
+                </form>
+
+        
             </div>
-        </form>
-      </div>
- 
+
+        
+        </div>
     </div>
-    </div>
-  </div>
+
+  
 </body>
 </html>
 
@@ -61,5 +68,42 @@
         alert('Incorrect username or password. Please try again.');
       }
     }
+</script>
+
+<script>
+  const container = document.querySelector(".container"),
+      pwShowHide = document.querySelectorAll(".showHidePw"),
+      pwFields = document.querySelectorAll(".password"),
+      signUp = document.querySelector(".signup-link"),
+      login = document.querySelector(".login-link");
+
+    //   js code to show/hide password and change icon
+    pwShowHide.forEach(eyeIcon =>{
+        eyeIcon.addEventListener("click", ()=>{
+            pwFields.forEach(pwField =>{
+                if(pwField.type ==="password"){
+                    pwField.type = "text";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    })
+                }else{
+                    pwField.type = "password";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    })
+                }
+            }) 
+        })
+    })
+
+    // js code to appear signup and login form
+    signUp.addEventListener("click", ( )=>{
+        container.classList.add("active");
+    });
+    login.addEventListener("click", ( )=>{
+        container.classList.remove("active");
+    });
 </script>
 
