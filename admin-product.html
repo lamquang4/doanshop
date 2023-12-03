@@ -87,7 +87,7 @@
         <main >
 <div class="page-content">
         
-    <h1 style="padding: 1.3rem 0rem;color: #74767d;" id="product">Product</h1>
+    <h1 style="padding: 1.3rem 0rem;color: #74767d;" id="product">Products</h1>
     <div class="user-tab">
 
         <div class="user-input">
@@ -117,7 +117,9 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
 <div class="user-input">
         Date Add:<input type="text" name="price" id="price">
        </div>
-
+       <div class="user-input">
+        Description:<input type="text" name="descrip" id="descrip">
+       </div>
        <div>
 
         <button onclick="addHtmlTableRow1();">Add +</button>
@@ -331,6 +333,7 @@ window.addEventListener("DOMContentLoaded", function() {
         fproduct = document.getElementById("fproduct").value,
             quantity = document.getElementById("quantity").value,
           dateadd = document.getElementById("dateadd").value,
+         descrip = document.getElementById("descrip").value,
             price= document.getElementById("price").value;
           
             if(idproduct === ""){
@@ -483,6 +486,7 @@ window.addEventListener("DOMContentLoaded", function() {
   document.getElementById("quantity").value = "";
   document.getElementById("dateadd").value = "";
   document.getElementById("price").value = "";
+
   deleteButton.disabled = true;
   editButton.disabled = true; 
   editButton.innerHTML = 'Edit <span class="las la-edit"></span>';  
