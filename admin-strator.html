@@ -109,16 +109,18 @@
                    </div>
               
              <div class="user-input" style="display: none;">
-                Action:<input type="text" name="action" id="action" ></input>
+                Status:<input type="text" name="status" id="status" ></input>
               </div>
                
-    
+              <div class="user-input" style="display: none;">
+                Action:<input type="text" name="action" id="action" ></input>
+              </div>
     <div >
             <button style="margin-bottom: 8px;" onclick="addHtmlTableRow();">Add +</button>
-                    <button id="editButton" style="margin-bottom: 8px;" onclick="editHtmlTbleSelectedRow();" disabled >Edit <span class="las la-edit"></span></button>
+                    <button id="editButton" style="margin-bottom: 8px; visibility: hidden;" onclick="editHtmlTbleSelectedRow();"  disabled >Edit <span class="las la-edit"></span></button>
                    
-                    <button style="margin-bottom: 8px;" id="blockButton" onclick="blockRow();" disabled>Block <span class="las la-lock"></span></button>
-                    <button style="margin-bottom: 8px;" id="blockButton1" onclick="unblockRow();" disabled>Unblock <span class="las la-unlock"></span></button>
+                    <button style="margin-bottom: 8px; visibility: hidden;" id="blockButton" onclick="blockRow();" disabled>Block <span class="las la-lock"></span></button>
+                    <button style="margin-bottom: 8px; visibility: hidden;" id="blockButton1" onclick="unblockRow();" disabled>Unblock <span class="las la-unlock"></span></button>
     </div>
     
                 </div>
@@ -126,19 +128,19 @@
             
             <div class="records table-responsive" >
                
-                <div class="record-header">
-                    <div class="add" style="visibility: hidden;">
-                        <span>Entries</span>
-                        <select name="" id="">
-                            <option value="">ID</option>
-                        </select>
-                        
-                    </div>
-
+                <div class="record-header">  
+                    
                     <div class="browse">
                        <input type="search" placeholder="Search" class="record-search">
                      
                     </div>
+                   
+                    <div class="add">
+                        <span style="font-size: 17px; color:#1a8cff;">Click a table row to edit</span>
+                   
+                        
+                    </div>
+            
                 </div>
 
                 <div>
@@ -318,13 +320,16 @@ QWERT48
 <script>
     window.addEventListener("DOMContentLoaded", function() {
       var predefinedContent = 'Normal';
-      document.getElementById("action").value = predefinedContent;
+      document.getElementById("status").value = predefinedContent;
     });
     window.addEventListener("DOMContentLoaded", function() {
       var predefinedContent = '<select><option selected>Customer management</option><option > Order management</option> <option > Product management</option></select>';
       document.getElementById("role").value = predefinedContent;
     });
-  
+    window.addEventListener("DOMContentLoaded", function() {
+      var predefinedContent = '<button id="btn-reset">Rest Password</button>';
+      document.getElementById("action").value = predefinedContent;
+    });
       var rIndex,
           table = document.getElementById("table-adminstrator");
 
@@ -333,7 +338,8 @@ QWERT48
           var isEmpty = false,
           email = document.getElementById("email").value,
           username = document.getElementById("username").value,
-             role = document.getElementById("role").value,           
+             role = document.getElementById("role").value,  
+             status = document.getElementById("status").value,            
               action= document.getElementById("action").value;
               if(email === ""){
                   alert("Please fill in");
@@ -357,14 +363,17 @@ QWERT48
               cell2 = newRow.insertCell(1),
               cell3 = newRow.insertCell(2),
               cell4 = newRow.insertCell(3),
+              cell5 = newRow.insertCell(4),
               email = document.getElementById("email").value,
               username = document.getElementById("username").value,
               role = document.getElementById("role").value,
+              status = document.getElementById("status").value, 
               action = document.getElementById("action").value;
               cell1.innerHTML = email;
               cell2.innerHTML = username;
               cell3.innerHTML = role;
-          cell4.innerHTML = action;
+              cell4.innerHTML=status;
+          cell5.innerHTML = action;
      
   
           selectedRowToInput();
@@ -384,9 +393,16 @@ if (confirmation) {
     if (addButton.disabled) {
       addButton.disabled = false;
               };
+              editButton.style.visibility = 'visible';
+              document.getElementById("blockButton").style.visibility= 'visible';
+              document.getElementById("blockButton1").style.visibility= 'visible';
               editButton.disabled = true; 
               document.getElementById("blockButton").disabled=true;
               document.getElementById("blockButton1").disabled=true;
+              addButton.style.visibility = 'visible';
+              editButton.style.visibility = 'hidden';
+              document.getElementById("blockButton").style.visibility= 'hidden';
+              document.getElementById("blockButton1").style.visibility= 'hidden';
   resetForm();
 }
 else {
@@ -411,6 +427,10 @@ if (confirmation) {
               editButton.disabled = true; 
               document.getElementById("blockButton").disabled=true;
               document.getElementById("blockButton1").disabled=true;
+              addButton.style.visibility = 'visible';
+              editButton.style.visibility = 'hidden';
+              document.getElementById("blockButton").style.visibility= 'hidden';
+              document.getElementById("blockButton1").style.visibility= 'hidden';
   resetForm();
 }
 else { 
@@ -439,6 +459,10 @@ function selectedRowToInput()
       addButton.disabled = true;
               };
               const editButton = document.getElementById('editButton');
+              addButton.style.visibility= 'hidden';
+              editButton.style.visibility = 'visible';
+              document.getElementById("blockButton").style.visibility= 'visible';
+              document.getElementById("blockButton1").style.visibility= 'visible';
               editButton.disabled = false; 
               document.getElementById("blockButton").disabled=false;
               document.getElementById("blockButton1").disabled=false;
@@ -453,6 +477,7 @@ function selectedRowToInput()
           var   email = document.getElementById("email").value,
           username = document.getElementById("username").value,
               role = document.getElementById("role").value,
+              status = document.getElementById("status").value,
              action = document.getElementById("action").value;
          if(!checkEmptyInput()){
           table.rows[rIndex].cells[0].innerHTML = email;
@@ -466,7 +491,10 @@ function selectedRowToInput()
       addButton.disabled = false;
               };
               const editButton = document.getElementById('editButton');
-            
+              addButton.style.visibility = 'visible';
+              editButton.style.visibility = 'hidden';
+              document.getElementById("blockButton").style.visibility= 'hidden';
+              document.getElementById("blockButton1").style.visibility= 'hidden';
             editButton.innerHTML = 'Edit <span class="las la-edit"></span>'; 
             editButton.disabled = true; 
               document.getElementById("blockButton").disabled=true;

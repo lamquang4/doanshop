@@ -122,10 +122,10 @@ Full Name:<input type="text" name="fname" id="fname">
 
 <div >
         <button style="margin-bottom: 8px;" onclick="addHtmlTableRow();">Add +</button>
-                <button id="editButton" style="margin-bottom: 8px;" onclick="editHtmlTbleSelectedRow();" disabled >Edit <span class="las la-edit"></span></button>
+                <button id="editButton" style="margin-bottom: 8px; visibility: hidden;" onclick="editHtmlTbleSelectedRow();" disabled >Edit <span class="las la-edit"></span></button>
                
-                <button style="margin-bottom: 8px;" id="blockButton" onclick="blockRow();" disabled>Block <span class="las la-lock"></span></button>
-                <button style="margin-bottom: 8px;" id="blockButton1" onclick="unblockRow();" disabled>Unblock <span class="las la-unlock"></span></button>
+                <button style="margin-bottom: 8px; visibility: hidden;" id="blockButton" onclick="blockRow();" disabled>Block <span class="las la-lock"></span></button>
+                <button style="margin-bottom: 8px; visibility: hidden;" id="blockButton1" onclick="unblockRow();" disabled>Unblock <span class="las la-unlock"></span></button>
 </div>
 
             </div>
@@ -134,18 +134,16 @@ Full Name:<input type="text" name="fname" id="fname">
             <div class="records table-responsive" >
            
                 <div class="record-header">
-                    <div class="add">
-                        <span>Entries</span>
-                        <select name="" id="">
-                            <option value="">ID</option>
-                        </select>
-                        
-                    </div>
 
                     <div class="browse">
                        <input type="search" placeholder="Search (#ID)" class="record-search">
                      
                     </div>
+
+                    <div class="add">
+                        <span style="font-size: 17px; color:#1a8cff;">Click a table row to edit</span>   
+                    </div>
+
                 </div>
 
                 <div>
@@ -351,6 +349,10 @@ Normal
                 editButton.disabled = true; 
                 document.getElementById("blockButton").disabled=true;
                 document.getElementById("blockButton1").disabled=true;
+                addButton.style.visibility = 'visible';
+              editButton.style.visibility = 'hidden';
+              document.getElementById("blockButton").style.visibility= 'hidden';
+              document.getElementById("blockButton1").style.visibility= 'hidden';
     resetForm();
   }
   else {
@@ -375,6 +377,10 @@ function unblockUser() {
                 editButton.disabled = true; 
                 document.getElementById("blockButton").disabled=true;
                 document.getElementById("blockButton1").disabled=true;
+                addButton.style.visibility = 'visible';
+              editButton.style.visibility = 'hidden';
+              document.getElementById("blockButton").style.visibility= 'hidden';
+              document.getElementById("blockButton1").style.visibility= 'hidden';
     resetForm();
   }
   else { 
@@ -407,6 +413,10 @@ function selectedRowToInput()
         addButton.disabled = true;
                 };
                 const editButton = document.getElementById('editButton');
+                addButton.style.visibility= 'hidden';
+              editButton.style.visibility = 'visible';
+              document.getElementById("blockButton").style.visibility= 'visible';
+              document.getElementById("blockButton1").style.visibility= 'visible';
                 editButton.disabled = false; 
                 document.getElementById("blockButton").disabled=false;
                 document.getElementById("blockButton1").disabled=false;
@@ -442,6 +452,10 @@ function selectedRowToInput()
                 const editButton = document.getElementById('editButton');
               
               editButton.innerHTML = 'Edit <span class="las la-edit"></span>'; 
+              addButton.style.visibility = 'visible';
+              editButton.style.visibility = 'hidden';
+              document.getElementById("blockButton").style.visibility= 'hidden';
+              document.getElementById("blockButton1").style.visibility= 'hidden';
               editButton.disabled = true; 
                 document.getElementById("blockButton").disabled=true;
                 document.getElementById("blockButton1").disabled=true;

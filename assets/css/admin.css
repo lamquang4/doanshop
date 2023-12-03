@@ -597,7 +597,7 @@
             display: flex;
             justify-content: space-between;
             margin-right: 10px;
-            margin-bottom: 12px;
+            margin-bottom: 18px;
         }
         .user-input input{
             margin-left: 5px;
@@ -700,4 +700,17 @@
         cursor: pointer;
         padding: 5px 12px;
         font-weight: 600;
+      }
+      .user-input input{
+    padding: 2px 0px;
+      }
+  
+      #table-order td:nth-child(6) select{
+padding: 3px 0;
+      }
+      #table-adminstrator td:nth-child(3) select{
+        padding: 3px 0;
+      }
+      #table-adminstrator td, #table-user td, #table-product td{
+        cursor: pointer;
       }

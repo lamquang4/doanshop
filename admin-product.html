@@ -111,7 +111,7 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
   </div>
 
   <div class="user-input">
-    Quantity:<input type="number" name="dateadd" id="dateadd">
+    Quantity:<input type="number" name="dateadd" id="dateadd" min="1" >
 </div>
 
 <div class="user-input">
@@ -121,8 +121,8 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
        <div>
 
         <button onclick="addHtmlTableRow1();">Add +</button>
-                <button id="editButton" onclick="editHtmlTbleSelectedRow1();" disabled>Edit <span class="las la-edit"></span></button>
-                <button id="deleteButton" onclick="removeSelectedRow1();" disabled>Delete <span class="las la-trash"></span></button>
+                <button id="editButton" onclick="editHtmlTbleSelectedRow1();" style="visibility: hidden;" disabled>Edit <span class="las la-edit"></span></button>
+                <button id="deleteButton" onclick="removeSelectedRow1();" style="visibility: hidden;" disabled>Delete <span class="las la-trash"></span></button>
 </div>
 
     </div>
@@ -131,18 +131,17 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
 <div class="records table-responsive" >
 
 <div class="record-header">
-<div class="add">
-<span>Entries</span>
-<select name="" id="">
-<option value="">ID</option>
-</select>
 
-</div>
 
 <div class="browse">
 <input type="search" placeholder="Search (#ID)" class="record-search">
 
 </div>
+
+<div class="add">
+  <span style="font-size: 17px; color:#1a8cff;">Click a table row to edit</span>
+
+  </div>
 </div>
 
 <div>
@@ -418,6 +417,9 @@ window.addEventListener("DOMContentLoaded", function() {
                 const editButton = document.getElementById('editButton');
                 editButton.disabled = false;
                 deleteButton.disabled = false;
+                addButton.style.visibility = 'hidden';
+                editButton.style.visibility = 'visible';
+                deleteButton.style.visibility = 'visible';
       editButton.innerHTML = 'Update <span class="las la-check"></span>';    
             };
             
@@ -451,6 +453,9 @@ window.addEventListener("DOMContentLoaded", function() {
         addButton.disabled = false;
                 };
                        const editButton = document.getElementById('editButton');
+                       addButton.style.visibility = 'visible';
+                editButton.style.visibility = 'hidden';
+                deleteButton.style.visibility = 'hidden';
                        editButton.disabled = true; 
                        deleteButton.disabled = true;
       editButton.innerHTML = 'Edit <span class="las la-edit"></span>';    
@@ -485,6 +490,9 @@ window.addEventListener("DOMContentLoaded", function() {
       if (addButton.disabled) {
         addButton.disabled = false;
                 };
+                addButton.style.visibility = 'visible';
+                editButton.style.visibility = 'hidden';
+                deleteButton.style.visibility = 'hidden';
 }
 
 function resetForm() {
