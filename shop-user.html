@@ -1200,13 +1200,13 @@ function removeClass(element, name){
   button.addEventListener('click', () => {
     thisPage = 1; 
         loadItem();
-
+        window.scrollTo(0, bBanner1.offsetTop);
  page.style.visibility = "hidden";
     
   });
 }
   back2.addEventListener('click',()=>{
-
+    window.scrollTo(0, bBanner1.offsetTop);
     page.style.visibility = "visible";
   });
 
