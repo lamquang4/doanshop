@@ -42,8 +42,8 @@
              
                 <li>
                    <a href="admin-product.html">
-                        <span class="las la-clipboard-list"></span>
-                        <small>Products</small>
+                        <span class="las la-clipboard-list" style="color: #fff;"></span>
+                        <small style="color: #fff;">Products</small>
                     </a>
                 </li>
                 <li>
@@ -70,7 +70,15 @@
                     <label for="">
                     
                     </label>
-                    
+                    <div class="notify-icon">
+                      <span class="las la-envelope"></span>
+                      <span class="notify">4</span>
+                  </div>
+                  
+                  <div class="notify-icon">
+                      <span class="las la-bell"></span>
+                      <span class="notify">3</span>
+                  </div>
                   
                     
                     <div class="user" style="margin-right: 8px;">
@@ -506,7 +514,7 @@ function resetForm() {
   document.getElementById("quantity").value = "";
   document.getElementById("dateadd").value = "";
   document.getElementById("price").value = "";
-
+  document.getElementById("descrip").value = "";
   
 }
 

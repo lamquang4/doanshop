@@ -131,7 +131,7 @@
     }
     
     .side-menu a span, .side-menu a small {
-        color: #fff;
+        color: #899DC1;
     }
     
     #menu-toggle:checked ~ .sidebar {
