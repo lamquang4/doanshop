@@ -115,7 +115,7 @@ Full Name:<input type="text" name="fname" id="fname">
                
           </div>
           <div class="user-input">
-           Birthday:<input type="text" name="birth" id="birth">
+           Birthday:<input type="date" name="birth" id="birth">
 
      </div>
                <div class="user-input">
@@ -174,7 +174,7 @@ Full Name:<input type="text" name="fname" id="fname">
 <td>Andrew Bruno</td>
 <td>bruno@crossover.org</td>
 <td>+17637740318</td>
-<td>19 April, 1999</td>
+<td>1999-05-19</td>
 <td>45 Beaver St</td>
 
                                 <td>
@@ -187,7 +187,7 @@ Normal
 <td>Exty Bruno</td>
 <td>exty@crossover.org</td>
 <td>+16304286014</td>
-<td>10 March, 1998</td>
+<td>2002-09-10</td>
 <td>95 Starrs Rd</td>
 
                                 <td>
@@ -200,7 +200,7 @@ Normal
 <td>Marilyn N. Relyea</td>
 <td>Majk@gmail.com</td>
 <td>+13465300116</td>
-<td>1 May, 2004</td>
+<td>2004-05-01</td>
 <td>16 Dietmar-Hopp-Allee </td>
 
                                 <td>
@@ -213,7 +213,7 @@ Normal
 <td>Christine K. Waddle</td>
 <td>Christine45@crossover.org</td>
 <td>+18152828564</td>
-<td>12 June, 1992</td>
+<td>1992-11-15</td>
 <td>257 Avenue</td>                      
                                 <td>
 Normal                              
@@ -224,7 +224,7 @@ Normal
 <td>Clarence A. Morgan</td>  
 <td>ClarMor1990@crossover.org</td>                                 
 <td>+12708181963</td>
-<td>19 May, 2001</td>                                    
+<td>2001-12-05</td>                                    
 <td>370 Memorial</td>                                        
                                                                                                     
                                 <td>
@@ -238,7 +238,7 @@ Normal
 <td>Michael L. Williams</td>
 <td>michael152004@crossover.org</td>
 <td>+14485486969 </td>                                    
-<td>30 April, 1990</td>                                        
+<td>1998-01-12</td>                                        
 <td>37 Royal Terrace</td>                                   
  
                                 <td>
@@ -348,7 +348,7 @@ Normal
   var confirmation = confirm("Are you sure you want to block this user?");
   if (confirmation) {
     currentRow.cells[6].innerHTML = "Blocked";
-    currentRow.style.backgroundColor = "red";
+    currentRow.cells[6].style.color = "red";
     editButton.innerHTML = 'Edit <span class="las la-edit"></span>'; 
     const addButton = document.querySelector('button[onclick="addHtmlTableRow();"]');
       if (addButton.disabled) {
@@ -376,8 +376,8 @@ function unblockUser() {
   var confirmation = confirm("Are you sure you want to unblock this user?");
   if (confirmation) {
     currentRow.cells[6].innerHTML = "Normal";
-    currentRow.style.backgroundColor = "#FFFFFF";
-    editButton.innerHTML = 'Edit <span class="las la-edit"></span>'; 
+    currentRow.cells[6].style.color = "black";
+
     const addButton = document.querySelector('button[onclick="addHtmlTableRow();"]');
       if (addButton.disabled) {
         addButton.disabled = false;
@@ -459,7 +459,6 @@ function selectedRowToInput()
                 };
                 const editButton = document.getElementById('editButton');
               
-              editButton.innerHTML = 'Edit <span class="las la-edit"></span>'; 
               addButton.style.visibility = 'visible';
               editButton.style.visibility = 'hidden';
               document.getElementById("blockButton").style.visibility= 'hidden';

@@ -109,7 +109,13 @@
         <div class="user-input" style="display: none;">
            Product's Url:<input type="text" name="fimage" id="fimage" >
                  </div>
-
+                 <div class="user-input">
+                  Product Type:<select style="padding: 2px 50px;">
+                    <option>Select Type</option>
+                    <option>Carbonated</option>
+                    <option>Non-carbonated</option>
+                  </select>
+                       </div>
         <div class="user-input">
 Product Name:<input type="text" name="fproduct" id="fproduct">
      </div>
@@ -123,10 +129,10 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
 </div>
 
 <div class="user-input">
-        Date Add:<input type="text" name="price" id="price">
+        Date Add:<input type="date" name="price" id="price">
        </div>
        <div class="user-input">
-        Description:<input type="text" name="descrip" id="descrip">
+        Description:<input type="text" name="descrip" id="descrip" >
        </div>
        <div>
 
@@ -177,9 +183,7 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
     <div>
    <img src="assets/images/sp/coca1.png" id="productImage">
     </div>
-    <div>
-      <input type="file" name="image5"  accept="image/png, image/jpeg, image/jpg" id="imageInput" style="visibility: hidden;">  
-    </div> 
+    
         
    </div>
  
@@ -191,7 +195,7 @@ Coca Zero Sugar
 </td>
 <td>$10.00</td>
 <td>120</td>
-<td>19 April, 2022</td>
+<td>2023-05-20</td>
 
 </tr>
 
@@ -203,9 +207,7 @@ Coca Zero Sugar
      <div>
     <img src="assets/images/sp/sprite1.png" id="productImage">
      </div>
-     <div>
-      <input type="file" name="image5"  accept="image/png, image/jpeg, image/jpg" id="imageInput" style="visibility: hidden;">  
-    </div> 
+ 
          
     </div>
   
@@ -218,7 +220,7 @@ Sprite
 </td>
 <td>$10.00</td>
 <td>100</td>
-<td>19 April, 2022</td>
+<td>2023-08-12</td>
 
 </tr>
 <tr>
@@ -229,9 +231,7 @@ Sprite
      <div>
     <img src="assets/images/sp/pepsi.png" id="productImage">
      </div>
-     <div>
-      <input type="file" name="image5"  accept="image/png, image/jpeg, image/jpg" id="imageInput" style="visibility: hidden;">  
-    </div> 
+
          
     </div>
   
@@ -241,7 +241,7 @@ Pepsi Original
 </td>
 <td>$12.00</td>
 <td>80</td>
-<td>19 April, 2022</td>
+<td>2023-06-01</td>
         
 
 </tr>
@@ -255,9 +255,7 @@ Pepsi Original
      <div>
     <img src="assets/images/sp/aquariusgas.png" id="productImage">
      </div>
-     <div>
-      <input type="file" name="image5"  accept="image/png, image/jpeg, image/jpg" id="imageInput" style="visibility: hidden;">  
-    </div> 
+
          
     </div>
   
@@ -267,7 +265,7 @@ Aquarius Gas
 </td>
 <td>$10.00</td>
 <td>50</td>
-<td>19 April, 2022</td>
+<td>2023-10-19</td>
 
       
  
@@ -281,9 +279,7 @@ Aquarius Gas
      <div>
     <img src="assets/images/sp/cocaori.png" id="productImage">
      </div>
-   <div>
-     <input type="file" name="image5"  accept="image/png, image/jpeg, image/jpg" id="imageInput" style="visibility: hidden;">  
-   </div>  
+
     </div>
   
  </td>
@@ -294,7 +290,7 @@ Coca Original
 </td>
 <td>$13.00</td>
 <td>50</td>
-<td>19 April, 2022</td>
+<td>2023-01-10</td>
 
 
 </tr>
@@ -310,7 +306,7 @@ Coca Original
 
 <script>
 window.addEventListener("DOMContentLoaded", function() {
-  var predefinedContent = '<div class="image-product-admin"><div><img src="assets/images/sp/cocaori.png" id="productImage"></div><div><input id="imageInput" type="file" name="image5" accept="image/png, image/jpeg, image/jpg" style="visibility:hidden;"></div></div>';
+  var predefinedContent = '<div class="image-product-admin"><div><img src="assets/images/sp/cocaori.png" id="productImage"></div></div>';
   document.getElementById("fimage").value = predefinedContent;
 
   const fileInput = document.getElementById('fimage1');
@@ -322,7 +318,7 @@ window.addEventListener("DOMContentLoaded", function() {
       reader.onload = (event) => {
         const dataURL = event.target.result;
   
-        document.getElementById('fimage').value = '<div class="image-product-admin"><div><img src="' + dataURL + '" id="productImage"></div><div><input id="imageInput" type="file" name="image5" accept="image/png, image/jpeg, image/jpg" style="visibility:hidden;"></div></div>';
+        document.getElementById('fimage').value = '<div class="image-product-admin"><div><img src="' + dataURL + '" id="productImage"></div></div>';
       };
       reader.readAsDataURL(selectedFile);
     }
