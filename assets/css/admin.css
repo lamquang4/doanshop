@@ -531,6 +531,9 @@
         #table-adminstrator{
             width: 180%;
         }
+        #table-product{
+            width: 180%;
+        }
     }
     @media(max-width:480px){
      
@@ -542,6 +545,9 @@
         }
         #table-order{
             width:320%;
+        }
+        #table-product{
+            width: 320%;
         }
     }
     @media(width>768px){
@@ -685,17 +691,7 @@
                #table-order th:nth-child(7){
                 width: 11%;
                }
-      @media(width <= 768px){
-      
-        #table-product{
-            width: 280%;
-        }
-      }
-      @media(768px < width <= 1000px){
-        #table-product{
-            width: 150%;
-        }
-      }
+   
 
       #btn-reset{
         background-color: white;
