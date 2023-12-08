@@ -1820,55 +1820,9 @@ justify-content: center;
 transform: translate(0,-10px);
 
 }
-#b-banner1 {
-  align-items: center;
-  margin-top: 30px;
-  display: flex;
-    justify-content: space-between;
-    flex-wrap:wrap;
-  margin-bottom: 10px;
-  margin-top: 190px;
-  }
-  #b-banner1 .b-box1{
-  width:410px;
-  height:490px;
-  color:white;
-  font-size: 17px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-position: center;
-  background-size: cover;
-  
-  }
 
-  #b-banner1 .b-box1:nth-child(1){
-  transition: all 1.5s ease;
-  margin-left: 8.8%;
+ 
   
-
-  }
-  #b-banner1 .b-box1:nth-child(2){
-  transition: all 2s ease;
-
-  }
-  
-  #b-banner1 .b-box1:nth-child(3){
-  transition: all 1.5s ease;
-  margin-right: 8.8%;
-
-  }
-  #b-banner1 .b-box1:nth-child(1):hover{
-  background-image: url('/assets/images/sp/commer5.png');
-  
-  }
-  #b-banner1 .b-box1:nth-child(2):hover{
-  background-image: url('/assets/images/sp/spriteback.png');
-  
-  }
-  #b-banner1 .b-box1:nth-child(3):hover{
-  background-image: url('/assets/images/sp/commer13.png');
-  
-  }
   /*---------*/
   
   /*contact*/
@@ -3110,87 +3064,9 @@ cursor: pointer;
 }
 
 
-.b-box:nth-child(1){
-margin-right: 0.6%;
-}
-.b-box:nth-child(3){
-margin-left: 0.6%;
-}
-#b-banner{
-flex-wrap: nowrap;
-gap:8px;
-}
-#b-banner .b-box{
-
-width:100%;
-height:182px;
-
-margin-top: 10px;
-margin-bottom: 10px;
-
-}
-#b-banner1{
-flex-wrap: nowrap;
-gap:8px;
-}
-#b-banner1 .b-box1{
-
-width:100%;
-height:182px;
-
-margin-top: 10px;
-margin-bottom: 10px;
 
 }
 
-
-
-}
-@media (max-width: 600px){
-#b-banner1{
-flex-wrap: nowrap;
-gap:8px;
-}
-#b-banner{
-flex-wrap: nowrap;
-gap:8px;
-}
-}
-
-@media(max-width: 800px){
-#b-banner1{
-flex-wrap: nowrap;
-gap:8px;
-
-}
-#b-banner{
-flex-wrap: nowrap;
-gap:8px;
-}
-}
-@media(max-width: 1024px){
-#b-banner1{
-flex-wrap: nowrap;
-gap:8px;
-
-}
-#b-banner{
-flex-wrap: nowrap;
-gap:8px;
-}
-}
-@media(min-width: 1025px ){
-#b-banner1{
-flex-wrap: nowrap;
-gap:8px;
-display: flex;
-    justify-content: center;
-}
-#b-banner{
-flex-wrap: nowrap;
-gap:8px;
-}
-}
 
 @media(769px <= width <= 1136px){
 #icons{
@@ -3298,3 +3174,232 @@ display: none;
   font-weight: 600;
 }
 }
+#slidersss-section{
+  margin-top: 185px;
+}
+.slidersss{
+ 
+  width: 1300px;
+  max-width: 100vw;
+  height: 650px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+
+}
+.slidersss .listsss{
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+.slidersss .listsss img{
+  width: 1300px;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.slidersss .buttonsss{
+  position: absolute;
+  top: 45%;
+  left: 4%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.slidersss .buttonsss button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+ font-size: 20px;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+.slidersss .dotsss{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.slidersss .dotsss li{
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.slidersss .dotsss li.activesss{
+  width: 30px;
+}
+@media (max-width:1200px){
+  .slidersss{
+    height: 520px;
+}
+.slidersss .buttonsss button{
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+}
+.slidersss .buttonsss{
+  position: absolute;
+  top: 42%;
+  left: 4%;
+  width: 90%;
+
+
+}
+
+}
+@media (max-width:1000px){
+  .slidersss{
+    height: 460px;
+}
+.slidersss .buttonsss button{
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+}
+.slidersss .buttonsss{
+  position: absolute;
+  top: 42%;
+  left: 4%;
+  width: 90%;
+
+
+}
+
+}
+@media (max-width:900px){
+  .slidersss{
+    height: 420px;
+}
+.slidersss .buttonsss button{
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+}
+.slidersss .buttonsss{
+  position: absolute;
+  top: 42%;
+  left: 4%;
+  width: 90%;
+
+
+}
+
+}
+@media (max-width:800px){
+  .slidersss{
+    height: 400px;
+}
+.slidersss .buttonsss button{
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+}
+.slidersss .buttonsss{
+  position: absolute;
+  top: 42%;
+  left: 4%;
+  width: 90%;
+
+
+}
+
+}
+@media (max-width:700px){
+  .slidersss{
+    height: 350px;
+}
+.slidersss .buttonsss button{
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+}
+.slidersss .buttonsss{
+  position: absolute;
+  top: 42%;
+  left: 4%;
+  width: 90%;
+
+
+}
+
+}
+
+@media (max-width:600px){
+  .slidersss{
+    height: 300px;
+}
+.slidersss .buttonsss button{
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+.slidersss .buttonsss{
+  position: absolute;
+  top: 42%;
+  left: 4%;
+  width: 90%;
+
+
+}
+
+}
+@media (max-width:480px){
+  #slidersss-section{
+    margin-top: 140px;
+  }
+  .slidersss{
+   
+    height: 210px;
+}
+.slidersss .buttonsss button{
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+.slidersss .buttonsss{
+  position: absolute;
+  top: 42%;
+  left: 4%;
+  width: 90%;
+
+
+}
+
+}
+@media (max-width:400px){
+  .slidersss{
+    height: 185px;
+}
+.slidersss .buttonsss button{
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+.slidersss .buttonsss{
+  position: absolute;
+  top: 42%;
+  left: 4%;
+  width: 90%;
+
+
+}
+
+}
+

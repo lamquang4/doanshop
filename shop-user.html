@@ -262,19 +262,31 @@
     <i class="fa-solid fa-x" id="cart-close"></i>
 </div>
 
-<section id="b-banner1" >
+<section id="slidersss-section">
+  <div class="slidersss">
+    <div class="listsss">
+  
+        <div class="itemsss">
+            <img src="assets/images/pic/coca-banner4.png" alt="">
+        </div>
+        <div class="itemsss">
+            <img src="assets/images/pic/pepsi-banner2.png" alt="">
+        </div>
     
-  <div class="b-box1" style="background-image: url('assets/images/sp/commer4.png');">
-   
-  </div>
-  <div class="b-box1" style="background-image: url('assets/images/sp/commer15.png');">
+    </div>
+    <div class="buttonsss">
+        <button id="prevsss"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="nextsss"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <ul class="dotsss">
+        <li class="activesss"></li>
+        <li></li>
+     
     
+    </ul>
   </div>
-  <div class="b-box1" style=" background-image: url('assets/images//sp/commer12.png');">
-   
-  </div>
+</section>
 
- </section> 
   
   
  <section id="product11" class="section-p11" class="shop container">
@@ -318,10 +330,7 @@
 
 </div>
 
-<div class="search-container">
- 
 
-</div>
 
 
 
@@ -1300,5 +1309,48 @@ cartadds.forEach((cartadd)=> {
  
  
  </script>
+ <script>
+  let slider = document.querySelector('.slidersss .listsss');
+let items = document.querySelectorAll('.slidersss .listsss .itemsss');
+let next = document.getElementById('nextsss');
+let prev = document.getElementById('prevsss');
+let dots = document.querySelectorAll('.slidersss .dotsss li');
+
+let lengthItems = items.length - 1;
+let active = 0;
+next.onclick = function(){
+    active = active + 1 <= lengthItems ? active + 1 : 0;
+    reloadSlider();
+}
+prev.onclick = function(){
+    active = active - 1 >= 0 ? active - 1 : lengthItems;
+    reloadSlider();
+}
+
+function reloadSlider(){
+    slider.style.left = -items[active].offsetLeft + 'px';
+    // 
+    let last_active_dot = document.querySelector('.slidersss .dotsss li.activesss');
+    last_active_dot.classList.remove('activesss');
+    dots[active].classList.add('activesss');
+
+    clearInterval(refreshInterval);
+   
+
+    
+}
+
+dots.forEach((li, key) => {
+    li.addEventListener('click', ()=>{
+         active = key;
+         reloadSlider();
+    })
+})
+window.onresize = function(event) {
+    reloadSlider();
+};
+
+
+</script>
 
 
