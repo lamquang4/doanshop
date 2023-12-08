@@ -141,6 +141,9 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
        <div class="user-input">
         Description:<input type="text" name="descrip" id="descrip" >
        </div>
+       <div class="user-input" style="display: none;">
+        Action:<input type="text" name="action" id="action" >
+       </div>
        <div>
 
         <button onclick="addHtmlTableRow1();">Add +</button>
@@ -163,8 +166,11 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
 </div>
 
 <div class="add">
-  <span style="font-size: 17px; color:#1a8cff;">Click a table row to edit</span>
 
+  <span>Entries</span>
+  <select name="" id="">
+      <option value="">ID</option>
+  </select>
   </div>
 </div>
 
@@ -178,7 +184,7 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
     <th><span class="las la-sort"></span> PRICE</th>
     <th ><span class="las la-sort"></span> QUANTITY</th>
     <th><span class="las la-sort"></span> DATE ADD</th>
-    
+    <th><span class="las la-sort"></span> ACTION</th>
    
 </tr>
 </thead>
@@ -204,7 +210,13 @@ Coca Zero Sugar
 <td>$10.00</td>
 <td>120</td>
 <td>2023-05-20</td>
-
+<td>
+  <div class="actions">
+      <span class="lab la-telegram-plane"></span>
+      <span class="las la-edit"></span>
+      <span class="las la-trash"></span>
+  </div>
+</td>
 </tr>
 
 <tr>
@@ -229,7 +241,13 @@ Sprite
 <td>$10.00</td>
 <td>100</td>
 <td>2023-08-12</td>
-
+<td>
+  <div class="actions">
+    <span class="lab la-telegram-plane"></span>
+    <span class="las la-edit"></span>
+    <span class="las la-trash"></span>
+</div>
+</td>
 </tr>
 <tr>
 <td>#SP03</td>
@@ -250,7 +268,13 @@ Pepsi Original
 <td>$12.00</td>
 <td>80</td>
 <td>2023-06-01</td>
-        
+<td>
+  <div class="actions">
+    <span class="lab la-telegram-plane"></span>
+    <span class="las la-edit"></span>
+    <span class="las la-trash"></span>
+</div>
+</td>      
 
 </tr>
 
@@ -274,7 +298,13 @@ Aquarius Gas
 <td>$10.00</td>
 <td>50</td>
 <td>2023-10-19</td>
-
+<td>
+  <div class="actions">
+    <span class="lab la-telegram-plane"></span>
+    <span class="las la-edit"></span>
+    <span class="las la-trash"></span>
+</div>
+</td>
       
  
 </tr>
@@ -299,7 +329,13 @@ Coca Original
 <td>$13.00</td>
 <td>50</td>
 <td>2023-01-10</td>
-
+<td>
+  <div class="actions">
+    <span class="lab la-telegram-plane"></span>
+    <span class="las la-edit"></span>
+    <span class="las la-trash"></span>
+</div>
+</td>
 
 </tr>
 
@@ -313,6 +349,10 @@ Coca Original
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <script>
+
+var predefinedContent = '<div class="actions"><span class="lab la-telegram-plane"></span><span class="las la-edit"></span><span class="las la-trash"></span></div>';
+  document.getElementById("action").value = predefinedContent;
+
 window.addEventListener("DOMContentLoaded", function() {
   var predefinedContent = '<div class="image-product-admin"><div><img src="assets/images/sp/cocaori.png" id="productImage"></div></div>';
   document.getElementById("fimage").value = predefinedContent;
@@ -383,12 +423,13 @@ window.addEventListener("DOMContentLoaded", function() {
             cell4 = newRow.insertCell(3),
             cell5 = newRow.insertCell(4),
             cell6 = newRow.insertCell(5),
-          
+          cell7 = newRow.insertCell(6),
             idproduct = document.getElementById("id-product").value,
             fimage=document.getElementById("fimage").value,
             fproduct = document.getElementById("fproduct").value,
             quantity = document.getElementById("quantity").value,
            dateadd = document.getElementById("dateadd").value,
+           action = document.getElementById("action").value,
             price = document.getElementById("price").value;
            
             cell1.innerHTML = idproduct;
@@ -397,7 +438,7 @@ window.addEventListener("DOMContentLoaded", function() {
         cell4.innerHTML = quantity;
         cell5.innerHTML = dateadd;
         cell6.innerHTML = price;
-       
+       cell7.innerHTML = action;
 
         selectedRowToInput1();
     }
@@ -422,7 +463,7 @@ window.addEventListener("DOMContentLoaded", function() {
               document.getElementById("quantity").value = this.cells[3].innerHTML;
               document.getElementById("dateadd").value = this.cells[4].innerHTML;
               document.getElementById("price").value = this.cells[5].innerHTML;
-
+              document.getElementById("action").value = this.cells[6].innerHTML;
               
               const addButton = document.querySelector('button[onclick="addHtmlTableRow1();"]');
       if (!addButton.disabled) {
@@ -498,6 +539,7 @@ window.addEventListener("DOMContentLoaded", function() {
   document.getElementById("quantity").value = "";
   document.getElementById("dateadd").value = "";
   document.getElementById("price").value = "";
+ 
   resetImage();
   deleteButton.disabled = true;
   editButton.disabled = true; 

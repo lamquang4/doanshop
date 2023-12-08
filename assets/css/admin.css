@@ -568,6 +568,9 @@
             
         background: #F1F4F9;
           }
+          #table-user th:nth-child(1){
+            width: 11%;
+        }
           #table-user td:nth-child(2) {
            
       width: 15%;
@@ -580,15 +583,13 @@
           width: 15%;   
         }
         #table-user th:nth-child(6){
-            width: 16%;
+            width: 12%;
         } 
         #table-user th:nth-child(7) {
-    width: 9%;
+    width:12%;
         }
         
-        #table-user th:nth-child(1){
-            width: 10%;
-        }
+       
     
         #table-user td{
           
@@ -644,27 +645,30 @@
     }
     
     #table-product td:nth-child(1){
-        width: 17%;
+        width: 14%;
     }
     #table-product td:nth-child(2){
-        width:18%;
+        width:14%;
       }
     #table-product td:nth-child(3){
-        width: 18%;
+        width: 16%;
       
       }
     
     #table-product td:nth-child(4){
-        width: 16%;
+        width: 15%;
       
     }
     #table-product td:nth-child(5){
-        width: 16%;
+        width: 15%;
     }
 
       #table-product td:nth-child(6){
     width: 15%;
       }
+      #table-product td:nth-child(7){
+        width: 11%;
+          }
       #table-product td{
     
       }
