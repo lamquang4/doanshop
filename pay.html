@@ -41,8 +41,55 @@
                                   <div>
                                     
                                       <h5 class="font-size-16 mb-1">Shipping Info </h5>
-                                    
-                                      <div class="mb-3" >
+                                      <div class="feed-item-list">
+                                        <div>
+                                           
+                                           
+                                            <div class="mb-3">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-sm-6" >
+                                                        <div data-bs-toggle="collapse" id="address-pay" >
+                                                            <label class="card-radio-label mb-0">
+                                                                <input type="radio" name="address" id="info-address1" class="card-radio-input">
+                                                                <div class="card-radio text-truncate p-3">
+                                                                    <span class="fs-14 mb-4 d-block">Your Account Address</span>
+                                                                    <span class="fs-14 mb-2 d-block">USA</span>
+                                                                    <span class="text-muted fw-normal text-wrap mb-1 d-block">109 Clarksburg Park Road Show Low, AZ 85901</span>
+                                                                   
+                                                                    <span class="text-muted fw-normal d-block">+17637745710</span>
+                                                                </div>
+                                                            </label>
+                                                      
+                                                        </div>
+                                                    </div>
+        
+                                                    <div class="col-lg-4 col-sm-6" >
+                                                        <div id="address-add">
+                                                            <label class="card-radio-label mb-0">
+                                                                <input type="radio" name="address" id="info-address2" class="card-radio-input" checked="">
+                                                                <div class="card-radio text-truncate p-3" >
+                                                                    <span class="fs-14 mb-4 d-block">Add Adress</span>
+                                                 
+                                                                  
+                                                                    <span style=" display: flex; align-items: center; justify-content: center;margin: 48px 0px ; font-size: 35px;"><i class="fa-sharp fa-regular fa-plus"></i></span>
+                                                          
+                                                                </div>
+                                                            </label>
+                                                       
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                      
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="checkout-item">
+                           
+                          <div class="mb-3" id="disappear-add-address">
                                           <form id="address-info">
                                               <div>
                                               
@@ -84,56 +131,6 @@
                                               </div>
                                           </form>
                                       </div>
-                                  </div>
-                              </div>
-                          </li>
-                          <li class="checkout-item">
-                              <div class="avatar checkout-icon p-1">
-                                  <div class="avatar-title rounded-circle bg-primary">
-                                      <i class="bx bxs-truck text-white font-size-20"></i>
-                                  </div>
-                              </div>
-                              <div class="feed-item-list">
-                                  <div>
-                                     
-                                     
-                                      <div class="mb-3">
-                                          <div class="row">
-                                              <div class="col-lg-4 col-sm-6" >
-                                                  <div data-bs-toggle="collapse" id="address-pay" >
-                                                      <label class="card-radio-label mb-0">
-                                                          <input type="radio" name="address" id="info-address1" class="card-radio-input">
-                                                          <div class="card-radio text-truncate p-3">
-                                                              <span class="fs-14 mb-4 d-block">Your Account Address</span>
-                                                              <span class="fs-14 mb-2 d-block">USA</span>
-                                                              <span class="text-muted fw-normal text-wrap mb-1 d-block">109 Clarksburg Park Road Show Low, AZ 85901</span>
-                                                             
-                                                              <span class="text-muted fw-normal d-block">+17637745710</span>
-                                                          </div>
-                                                      </label>
-                                                
-                                                  </div>
-                                              </div>
-  
-                                              <div class="col-lg-4 col-sm-6" >
-                                                  <div id="address-add">
-                                                      <label class="card-radio-label mb-0">
-                                                          <input type="radio" name="address" id="info-address2" class="card-radio-input" checked="">
-                                                          <div class="card-radio text-truncate p-3" >
-                                                              <span class="fs-14 mb-4 d-block">Add Adress</span>
-                                           
-                                                            
-                                                              <span style=" display: flex; align-items: center; justify-content: center;margin: 48px 0px ; font-size: 35px;"><i class="fa-sharp fa-regular fa-plus"></i></span>
-                                                    
-                                                          </div>
-                                                      </label>
-                                                 
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
                           </li>
 
                           <li class="checkout-item">
@@ -149,10 +146,21 @@
                                   </div>
                                   <div>
                                       <h5 class="font-size-14 mb-3">Payment method :</h5>
+
                                       <div class="row">
-                                    
-                                   
-                                          
+                                   <div class="col-lg-3 col-sm-6" style="margin-bottom: 8px;">
+                                              <div>
+                                                  <label class="card-radio-label">
+                                                      <input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input" checked="">
+  
+                                                      <span class="card-radio py-3 text-center text-truncate">
+                                                          <i class="bx bx-money d-block h2 mb-3"></i>
+                                                          <span>Cash On Delivery</span>
+                                                      </span>
+                                                  </label>
+                                              </div>
+                                          </div>
+
                                           <div class="col-lg-3 col-sm-6" style="margin-bottom: 8px;">
                                               <div>
                                                   <label class="card-radio-label">
@@ -165,18 +173,7 @@
                                               </div>
                                           </div>
   
-                                          <div class="col-lg-3 col-sm-6" style="margin-bottom: 8px;">
-                                              <div>
-                                                  <label class="card-radio-label">
-                                                      <input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input" checked="">
-  
-                                                      <span class="card-radio py-3 text-center text-truncate">
-                                                          <i class="bx bx-money d-block h2 mb-3"></i>
-                                                          <span>Cash On Delivery</span>
-                                                      </span>
-                                                  </label>
-                                              </div>
-                                          </div>
+                                       
                                           
                                       </div>
 
@@ -364,65 +361,28 @@ cod.addEventListener('click',()=>{
 
 </script>
 
-<script>
 
-const billingAddressInput = document.getElementById('billing-address');
-const billingCityInput = document.getElementById('billing-city');
-const zipCodeInput = document.getElementById('zip-code');
-const cardNumberInput = document.getElementById('card-number');
-const expiryDateInput = document.getElementById('expiry-date');
-const cvvInput = document.getElementById('cvv');
-const payButton = document.getElementById('btn-pay-buy');
-
-payButton.addEventListener('click', () => {
-
-
-  const isAddress1 = billingAddressInput.style.display !== 'none';
-  const billingAddress = isAddress1 ? billingAddressInput.value.trim() : '';
-
-  const isAddress2 = billingCityInput.style.display !== 'none';
-  const billingCity = isAddress2 ? billingCityInput.value.trim() : '';
-
-  const isAddress3 = zipCodeInput.style.display !== 'none';
-  const zipCode = isAddress3 ? zipCodeInput.value.trim() : '';
-
-
-  const isCardNumberVisible = cardNumberInput.style.display !== 'none';
-  const cardNumberip = isCardNumberVisible ? cardNumberInput.value.trim() : '';
-
-  const isExpiryDateVisible = expiryDateInput.style.display !== 'none';
-  const expiryDateip = isExpiryDateVisible ? expiryDateInput.value.trim() : '';
-
-  const isCvvVisible = cvvInput.style.display !== 'none';
-  const cvvip = isCvvVisible ? cvvInput.value.trim() : '';
-
-  if ((isAddress1 && billingAddress  === '')  || (isAddress2 && billingCity   === '') || (isAddress3 && zipCode   === '') || (isCardNumberVisible && cardNumberip === '') || (isExpiryDateVisible && expiryDateip === '') || (isCvvVisible && cvvip === '') ) {
-    alert('Please fill in all required fields.');
-    return;
-  } else {
-    alert('Payment successful.');
-    window.location.href = 'shop-user.html';
-  }
-});
- 
-
-</script>
 
 <script>
     const accountaddress=document.querySelector('#address-pay');
     const addressadd=document.querySelector('#address-add');
     const addressinfo=document.querySelector('#address-info');
+    const disappearaddress=document.querySelector('#disappear-add-address');
     accountaddress.onclick = function(){
 addressinfo.style.display="none";
-zipCodeInput.style.display="none";
-billingCityInput.style.display="none";
-billingAddressInput.style.display="none";
+disappearaddress.style.display="none";
+
     }
     addressadd.onclick=function(){
         addressinfo.style.display="block";
-        zipCodeInput.style.display="block";
-        billingCityInput.style.display="block";
-        billingAddressInput.style.display="block";
+        disappearaddress.style.display="block";
+    
+    }
+
+    const btnbuy = document.querySelector('#btn-pay-buy');
+    btnbuy.onclick=function(){
+        alert('Successful payment');
+        window.location.href='shop-user.html';
     }
 </script>
 
