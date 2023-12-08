@@ -103,8 +103,15 @@
         </div>
 
         <div class="user-input" >
-          Product's Image:<input type="file" name="fimage1" id="fimage1" >
+          Product's Image:<input type="file" name="fimage1" id="fimage1" onchange="previewImage()">
+        
                 </div>
+
+            
+
+                 
+                  <img id="preview-image" src="" alt="Preview Image" width="30%" style="display: none; margin-bottom: 5px;">
+              
 
         <div class="user-input" style="display: none;">
            Product's Url:<input type="text" name="fimage" id="fimage" >
@@ -137,6 +144,7 @@ Product Name:<input type="text" name="fproduct" id="fproduct">
        <div>
 
         <button onclick="addHtmlTableRow1();">Add +</button>
+        
                 <button id="editButton" onclick="editHtmlTbleSelectedRow1();" style="visibility: hidden;" disabled>Edit <span class="las la-edit"></span></button>
                 <button id="deleteButton" onclick="removeSelectedRow1();" style="visibility: hidden;" disabled>Delete <span class="las la-trash"></span></button>
 </div>
@@ -490,7 +498,7 @@ window.addEventListener("DOMContentLoaded", function() {
   document.getElementById("quantity").value = "";
   document.getElementById("dateadd").value = "";
   document.getElementById("price").value = "";
-
+  resetImage();
   deleteButton.disabled = true;
   editButton.disabled = true; 
   editButton.innerHTML = 'Edit <span class="las la-edit"></span>';  
@@ -511,7 +519,7 @@ function resetForm() {
   document.getElementById("dateadd").value = "";
   document.getElementById("price").value = "";
   document.getElementById("descrip").value = "";
-  
+  resetImage();
 }
 
 </script>
@@ -563,6 +571,40 @@ keyword = keyword.toUpperCase();
   }
 });
 
+
+</script>
+<script>
+ function previewImage() {
+    var input = document.getElementById('fimage1');
+    var preview = document.getElementById('preview-image');
+
+    
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+       
+        preview.src = e.target.result;
+        
+        preview.style.display = 'block';
+      };
+
+      reader.readAsDataURL(input.files[0]); 
+    } else {
+  
+      preview.style.display = 'none';
+    }
+  }
+  function resetImage() {
+    var input = document.getElementById('fimage1');
+    var preview = document.getElementById('preview-image');
+
+  
+    input.value = '';
+
+ 
+    preview.style.display = 'none';
+  }
 
 </script>
 
