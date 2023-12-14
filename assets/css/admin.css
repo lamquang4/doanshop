@@ -716,3 +716,26 @@ padding: 3px 0;
       #table-adminstrator td, #table-user td, #table-product td{
         cursor: pointer;
       }
+
+      .pagination {
+        margin-top: 20px;
+        display: flex;
+      justify-content: center;
+        list-style: none;
+        padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .pagination li {
+        padding: 8px 12px;
+        border: 1px solid #808080;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .pagination li.active {
+        font-weight: bold;
+     
+        background-color: #066DFF;
+        color: white;
+    }
