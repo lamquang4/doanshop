@@ -15,11 +15,9 @@
         list-style-type: none;
         box-sizing: border-box;
         font-family: 'Merriweather', sans-serif;
-    }
-    html{
         scroll-behavior: smooth;
-      
     }
+  
     
     a{
         cursor: pointer;
@@ -736,6 +734,6 @@ padding: 3px 0;
     .pagination li.active {
         font-weight: bold;
      
-        background-color: #066DFF;
+        background-color: #076FFE;
         color: white;
     }

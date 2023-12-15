@@ -922,6 +922,8 @@ keyword = keyword.toUpperCase();
               updatePagination();
           };
           pagination.appendChild(li);
+          const bBanner1 = document.querySelector('.add');
+  window.scrollTo(0, bBanner1.offsetTop);
       }
 
       pagination.innerHTML += '<li onclick="nextPage()">Next</li>';
@@ -942,6 +944,8 @@ keyword = keyword.toUpperCase();
             };
         }
     }
+    const bBanner1 = document.querySelector('.add');
+  window.scrollTo(0, bBanner1.offsetTop);
     pages[currentPage].classList.add("active");
 }
 
@@ -952,6 +956,8 @@ keyword = keyword.toUpperCase();
           showPage(currentPage);
           updatePagination();
       }
+      const bBanner1 = document.querySelector('.add');
+  window.scrollTo(0, bBanner1.offsetTop);
   }
 
   // Function to go to the next page
@@ -964,8 +970,10 @@ keyword = keyword.toUpperCase();
           showPage(currentPage);
           updatePagination();
       }
+      const bBanner1 = document.querySelector('.add');
+  window.scrollTo(0, bBanner1.offsetTop);
   }
-
+  
   // Call the initial setup
   showPage(currentPage);
   generatePagination();
