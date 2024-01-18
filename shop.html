@@ -207,13 +207,16 @@
         <span id="count-cart-add1" style="  font-size: 14px; color:white; font-weight: 500; margin: 0; letter-spacing: 1px;">0</span>
       </div>
     </a>
-   
+    <a id="glass-search" onclick="showbar()" ><i class="fa-solid fa-magnifying-glass"></i> </a>
   <a href="register.html"><i class="fa-regular fa-circle-user fa-lg" ></i></a>
   
   <i id="bar" class="fa-solid fa-bars" style="color: #000000;"></i>
   
   </div>
-
+  <div class="search-bars">
+    <input type="text" placeholder="SEARCH...">
+    <i class="fa-solid fa-xmark" id="xmark" onclick="closebar()"></i>
+    </div>
   
 
    </section>
@@ -238,17 +241,22 @@
 
     <i class="fa-solid fa-x" id="cart-close"></i>
 </div>
+
 <section id="slidersss-section">
   <div class="slidersss">
   <div class="listsss">
-
+  <div class="itemsss">
+          <img src="assets/images/pic/banner-pep.png" alt="">
+      </div>
       <div class="itemsss">
           <img src="assets/images/pic/coca-banner4.png" alt="">
       </div>
       <div class="itemsss">
-          <img src="assets/images/pic/pepsi-banner2.png" alt="">
+          <img src="assets/images/pic/banner-pep1.png" alt="">
       </div>
-  
+      <div class="itemsss">
+          <img src="assets/images/pic/banner-sprite.png" alt="">
+      </div>
   </div>
   <div class="buttonsss">
       <button id="prevsss"><i class="fa-solid fa-arrow-left"></i></button>
@@ -257,8 +265,8 @@
   <ul class="dotsss">
       <li class="activesss"></li>
       <li></li>
-   
-  
+      <li></li>
+      <li></li>
   </ul>
 </div>
 </section>
@@ -319,12 +327,12 @@
     <h2 style="display: none;">Co Pepsi</h2>
     <h4 class="product-price">$12.00</h4>
      
-    <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
+  
     
 
-  <div id="buttonshop">
-    <button onclick="window.location.href='product1.html'">LEARN MORE</button>
-  </div>
+ 
+    <button class="add-cart" id="cart-plus">ADD TO CART</button>
+
   </div> 
 
   <div class="pro1 pepsi" class="product-box">
@@ -335,12 +343,7 @@
       <h2 style="display: none;">Co zero calories no calo Pepsi Gas</h2>
      <h4 class="product-price">$10.00</h4>
         
-      <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-    
-
-    <div id="buttonshop">
-      <button onclick="window.location.href='product2.html'">LEARN MORE</button>
-    </div>
+     <button class="add-cart" id="cart-plus">ADD TO CART</button>
     </div> 
 
     <div class="pro1 coca" class="product-box">
@@ -350,10 +353,7 @@
         <h5 class="product-title">Coca Original </h5>
         <h2 style="display: none;">Co Coca-cola Gas</h2>
         <h4 class="product-price">$13.00</h4>
-        <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-      <div id="buttonshop">
-        <button onclick="window.location.href='product3.html'">LEARN MORE</button>
-      </div>
+        <button class="add-cart" id="cart-plus">ADD TO CART</button>
       </div> 
 
 
@@ -364,11 +364,8 @@
         <h5 class="product-title">Coca Zero Sugar</h5>
         <h2 style="display: none;">Co Coca</h2>
         <h4 class="product-price">$10.00</h4>
-        <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
- 
-      <div id="buttonshop">
-        <button onclick="window.location.href='product4.html'">LEARN MORE</button>
-      </div>
+      
+        <button class="add-cart" id="cart-plus">ADD TO CART</button>
       </div> 
      
       <div class="pro1 pepsi" class="product-box">
@@ -378,10 +375,7 @@
           <h5 class="product-title">Pepsi Lemon</h5>
           <h2 style="display: none;">Co zero calories no calo pepsi</h2>
           <h4 class="product-price">$10.00</h4>
-          <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-        <div id="buttonshop">
-          <button onclick="window.location.href='product21.html'">LEARN MORE</button>
-        </div>
+          <button class="add-cart" id="cart-plus">ADD TO CART</button>
         </div> 
 
         <div class="pro1 pepsi" class="product-box">
@@ -391,10 +385,7 @@
             <h5 class="product-title">Pepsi Nitro</h5>
             <h2 style="display: none;">Co pepsi</h2>
             <h4 class="product-price">$14.00</h4>
-            <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-          <div id="buttonshop">
-            <button onclick="window.location.href='product22.html'">LEARN MORE</button>
-          </div>
+            <button class="add-cart" id="cart-plus">ADD TO CART</button>
           </div> 
 
           <div class="pro1 coca" class="product-box">
@@ -404,10 +395,7 @@
               <h5 class="product-title">Coca Plus Fiber</h5>
               <h2 style="display: none;">Co sugar-free no sugar coca</h2>
               <h4 class="product-price">$12.00</h4>
-              <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-            <div id="buttonshop">
-              <button onclick="window.location.href='product23.html'">LEARN MORE</button>
-            </div>
+          <button class="add-cart" id="cart-plus">ADD TO CART</button>
             </div> 
 
 
@@ -418,10 +406,7 @@
                 <h5 class="product-title">Fanta Orange</h5>
                 <h2 style="display: none;">Co Fanta</h2>
                 <h4 class="product-price">$10.00</h4>
-                <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-              <div id="buttonshop">
-                <button onclick="window.location.href='product9.html'">LEARN MORE</button>
-              </div>
+                <button class="add-cart" id="cart-plus">ADD TO CART</button>
               </div> 
 
               <div class="pro1 fanta" class="product-box">
@@ -431,10 +416,7 @@
                   <h5 class="product-title">Fanta Grape</h5>
                   <h2 style="display: none;">Co Fanta</h2>
                   <h4 class="product-price">$10.00</h4>
-                  <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                <div id="buttonshop">
-                  <button onclick="window.location.href='product10.html'">LEARN MORE</button>
-                </div>
+                  <button class="add-cart" id="cart-plus">ADD TO CART</button>
                 </div> 
 
                 <div class="pro1 fanta" class="product-box">
@@ -444,10 +426,7 @@
                     <h5 class="product-title">Fanta Sassafras</h5>
                     <h2 style="display: none;">Co Fanta</h2>
                     <h4 class="product-price">$10.00</h4>
-                    <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                  <div id="buttonshop">
-                    <button onclick="window.location.href='product11.html'">LEARN MORE</button>
-                  </div>
+                    <button class="add-cart" id="cart-plus">ADD TO CART</button>
                   </div> 
 
                   <div class="pro1 coca" class="product-box">
@@ -457,10 +436,7 @@
                       <h5 class="product-title">Coca Light </h5>
                       <h2 style="display: none;">Co sugar-free no sugar zero calories no calo Coca</h2>
                       <h4 class="product-price">$15.00</h4>
-                      <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                    <div id="buttonshop">
-                      <button onclick="window.location.href='product17.html'">LEARN MORE</button>
-                    </div>
+                      <button class="add-cart" id="cart-plus">ADD TO CART</button>
                     </div> 
                   
                     <div class="pro1 fanta" class="product-box">
@@ -470,10 +446,7 @@
                         <h5 class="product-title">Fanta Cream Soda </h5>
                         <h2 style="display: none;">Co Fanta</h2>
                         <h4 class="product-price">$17.00</h4>
-                        <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                      <div id="buttonshop">
-                        <button onclick="window.location.href='product18.html'">LEARN MORE</button>
-                      </div>
+                        <button class="add-cart" id="cart-plus">ADD TO CART</button>
                       </div> 
 
         <div class="pro1" class="product-box">
@@ -483,10 +456,7 @@
             <h5 class="product-title">Peach Tea</h5>
             <h2 style="display: none;">Ko Sweetened beverages Fuzetea No gas</h2>
             <h4 class="product-price">$16.00</h4>
-            <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-          <div id="buttonshop">
-            <button onclick="window.location.href='product5.html'">LEARN MORE</button>
-          </div>
+            <button class="add-cart" id="cart-plus">ADD TO CART</button>
           </div> 
 
             <div class="pro1" class="product-box">
@@ -496,10 +466,7 @@
                 <h5 class="product-title">Lemon Tea</h5>
                 <h2 style="display: none;">Ko Sweetened beverages Fuzetea</h2>
                 <h4 class="product-price">$16.00</h4>
-                <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-              <div id="buttonshop">
-                <button onclick="window.location.href='product6.html'">LEARN MORE</button>
-              </div>
+                <button class="add-cart" id="cart-plus">ADD TO CART</button>
               </div> 
 
                 <div class="pro1" class="product-box">
@@ -509,10 +476,7 @@
                     <h5 class="product-title">Dasani Water</h5>
                     <h2 style="display: none;">Ko Water Dansani</h2>
                     <h4 class="product-price">$14.00</h4>
-                    <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                  <div id="buttonshop">
-                    <button onclick="window.location.href='product7.html'">LEARN MORE</button>
-                  </div>
+                    <button class="add-cart" id="cart-plus">ADD TO CART</button>
                   </div> 
 
                   <div class="pro1" class="product-box">
@@ -522,10 +486,7 @@
                       <h5 class="product-title">Dasani Mineralized</h5>
                       <h2 style="display: none;">Ko Mineral Dasani</h2>
                       <h4 class="product-price">$12.00</h4>
-                      <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                    <div id="buttonshop">
-                      <button onclick="window.location.href='product8.html'">LEARN MORE</button>
-                    </div>
+                      <button class="add-cart" id="cart-plus">ADD TO CART</button>
                     </div> 
 
 
@@ -536,10 +497,7 @@
                               <h5 class="product-title">Thumbs Kiwi</h5>
                               <h2 style="display: none;">Co Thumbs up</h2>
                               <h4 class="product-price">$10.00</h4>
-                              <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                            <div id="buttonshop">
-                              <button onclick="window.location.href='product12.html'">LEARN MORE</button>
-                            </div>
+                              <button class="add-cart" id="cart-plus">ADD TO CART</button>
                             </div> 
 
                             <div class="pro1" class="product-box">
@@ -549,10 +507,7 @@
                                 <h5 class="product-title">Thumbs Strawberry</h5>
                                 <h2 style="display: none;">Co Thumbs up</h2>
                                 <h4 class="product-price">$10.00</h4>
-                                <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                              <div id="buttonshop">
-                                <button onclick="window.location.href='product13.html'">LEARN MORE</button>
-                              </div>
+                                <button class="add-cart" id="cart-plus">ADD TO CART</button>
                               </div> 
   
                               <div class="pro1" class="product-box">
@@ -562,10 +517,7 @@
                                   <h5 class="product-title">Aquarius Gas </h5>
                                   <h2 style="display: none;">Co Aquarius</h2>
                                   <h4 class="product-price">$10.00</h4>
-                                  <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                                <div id="buttonshop">
-                                  <button onclick="window.location.href='product14.html'">LEARN MORE</button>
-                                </div>
+                                  <button class="add-cart" id="cart-plus">ADD TO CART</button>
                                 </div> 
        
                                 <div class="pro1" class="product-box">
@@ -575,11 +527,7 @@
                                     <h5 class="product-title">Sprite Bottle </h5>
                                     <h2 style="display: none;">Co Sprite</h2> 
                                     <h4 class="product-price">$10.00</h4>
-                                    <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                              
-                                  <div id="buttonshop">
-                                    <button onclick="window.location.href='product15.html'">LEARN MORE</button>
-                                  </div>
+                                    <button class="add-cart" id="cart-plus">ADD TO CART</button>
                                   </div> 
 
                                   <div class="pro1" class="product-box">
@@ -589,10 +537,7 @@
                                       <h5 class="product-title">Nutri Orange</h5>
                                       <h2 style="display: none;">Ko Sweetened beverages Nutriboost</h2>
                                       <h4 class="product-price">$10.00</h4>
-                                      <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                                    <div id="buttonshop">
-                                      <button onclick="window.location.href='product16.html'">LEARN MORE</button>
-                                    </div>
+                                      <button class="add-cart" id="cart-plus">ADD TO CART</button>
                                     </div> 
 
                                    
@@ -604,10 +549,7 @@
                                             <h5 class="product-title">Winter Melon</h5>
                                             <h2 style="display: none;">Ko Fuzetea</h2>
                                             <h4 class="product-price">$10.00</h4>
-                                            <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                                          <div id="buttonshop">
-                                            <button onclick="window.location.href='product19.html'">LEARN MORE</button>
-                                          </div>
+                                            <button class="add-cart" id="cart-plus">ADD TO CART</button>
                                           </div> 
                                     
                                     
@@ -618,10 +560,8 @@
                                             <h5 class="product-title">Nutri Greek Orange</h5>
                                             <h2 style="display: none;">Ko Sweetened beverages Nutriboost</h2>
                                             <h4 class="product-price">$15.00</h4>
-                                            <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                                          <div id="buttonshop">
-                                            <button onclick="window.location.href='product20.html'">LEARN MORE</button>
-                                          </div>
+                                            
+                                            <button class="add-cart" id="cart-plus">ADD TO CART</button>
                                           </div> 
                                          
                                           
@@ -633,10 +573,7 @@
                                                     <h5 class="product-title">Nutri Biscuits</h5>
                                                     <h2 style="display: none;">Ko Sweetened beverages Nutriboost</h2>
                                                     <h4 class="product-price">$10.00</h4>
-                                                    <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                                                  <div id="buttonshop">
-                                                    <button onclick="window.location.href='product24.html'">LEARN MORE</button>
-                                                  </div>
+                                                    <button class="add-cart" id="cart-plus">ADD TO CART</button>
                                                   </div> 
 
                                                   <div class="pro1" class="product-box">
@@ -646,10 +583,7 @@
                                                       <h5 class="product-title">Passion Tea</h5>
                                                       <h2 style="display: none;">Ko Sweetened beverages Fuzetea</h2>
                                                       <h4 class="product-price">$14.00</h4>
-                                                      <i class='bx bx-cart-add add-cart' id="cart-plus"></i>
-                                                    <div id="buttonshop">
-                                                      <button onclick="window.location.href='product25.html'">LEARN MORE</button>
-                                                    </div>
+                                                      <button class="add-cart" id="cart-plus">ADD TO CART</button>
                                                     </div> 
 
                                                    
@@ -738,7 +672,9 @@
      </footer>
 </body>
 </html>
- <script>
+
+
+<script>
   const bar = document.getElementById('bar');
   const icon = document.getElementById('icons');
  
@@ -746,34 +682,57 @@
     bar.addEventListener('click',() =>{
   icon.classList.add('active');
     })}
-   
-  
-  
-   </script>
-
-<script>
-   
-const icons = document.getElementById("icons");
+ 
+  const icons = document.getElementById("icons");
 const dong = document.getElementById("close");
 const barmenu = document.getElementById('bar');
 dong.addEventListener("click", function() {
- 
-  icons.style.right = "-300px";
+
+icons.style.right = "-300px";
 });
 barmenu.addEventListener("click", function() {
-  icons.style.right = "0px";
+icons.style.right = "0";
+htmlElement.style.overflowY = 'scroll';
+searchbars.classList.remove("active25");
+      searchbars.style.opacity="0";
+      searchbars.style.pointerEvents = 'none';
 });
+
+
 window.addEventListener("resize", function() {
 
-if (window.innerWidth >= 1138) {
-  icons.classList.remove('active');
-}
-else{
-    icons.style.right="-300px";
-   }
-}
+  if (window.innerWidth >= 1136) {
+      searchbars.classList.remove("active25");
+      searchbars.style.opacity="0";
+      searchbars.style.pointerEvents = 'none';
+    icons.classList.remove('active');
+    htmlElement.style.overflowY = "scroll";
+  }
+ else{
+  icons.style.right="-300px";
+ }
+  }
 );
-</script>
+   </script>
+
+<script>
+  var htmlElement = document.querySelector('html');
+const searchbars=document.querySelector(".search-bars");
+  const glasssearch=document.getElementById("glass-search");
+function showbar(){
+      searchbars.classList.add('active25');
+      searchbars.style.pointerEvents = 'all';
+      htmlElement.style.overflow = 'hidden';
+      searchbars.style.opacity="1";
+  }
+  function closebar(){
+
+      searchbars.classList.remove('active25');
+      htmlElement.style.overflowY = 'scroll';
+      searchbars.style.opacity="0";
+      searchbars.style.pointerEvents = 'none';
+  }
+  </script>
 
 <script>
  
@@ -907,7 +866,8 @@ searchbox.addEventListener("keyup", (event) => {
 </script>
 
 <script>
-  const cartIcon=document.querySelector("#cart-icon");
+
+const cartIcon=document.querySelector("#cart-icon");
 const cart=document.querySelector(".cart");
 const closeCart=document.querySelector("#cart-close");
 const cartIcon1=document.querySelector("#cart-icon1");
