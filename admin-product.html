@@ -410,7 +410,7 @@ Coca Original
         <div class="divider"></div>
         <p><span><span class="bold">Total Fat</span> <input min="0" placeholder="?">g</span> <span ><input min="0" min="0" placeholder="?">%</span></p>
         <p><span><span class="bold">Sodium</span> <input min="0" placeholder="?">mg</span> <span ><input min="0" min="0" placeholder="?">%</span></p>
-        <p><span><span class="bold">Total Carbohydrate</span> <input min="0" type="number" placeholder="?">g</span> <span ><input min="0" placeholder="?">%</span></p>
+        <p><span><span class="bold">Total Carbohydrate</span> <input min="0" placeholder="?">g</span> <span ><input min="0" placeholder="?">%</span></p>
         <p><span><span class="bold">Sugars</span> <input min="0" placeholder="?">g</span> </p>
         <p style="border: none;"><span><span class="bold">Protein</span> <input min="0" placeholder="?">g</span> </p>
       
@@ -419,29 +419,43 @@ Coca Original
   
   <div class="divider medium"></div>
   <p class="note"> *The Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</p>
-    </div>
+  <i type="submit" class="fa-solid fa-check" id="submit-ic"></i>
+</div>
 
 
-    <script>
-      const popup = document.querySelector('.popup');
-     
-     
-       var htmlElement = document.querySelector('html');
-       const inputFields = document.querySelectorAll('.popup input');
-       function showPopup() {
-         popup.style.display = 'block';
-         window.scrollTo(0,0);
-         htmlElement.style.overflow = 'hidden';
-       }
-     
-       function hidePopup() {
-         popup.style.display = 'none';
-         htmlElement.style.overflow = 'auto';
-         inputFields.forEach(input => (input.value = ''));
-       }
-     
-     
-     </script>
+<script>
+  const popup = document.querySelector('.popup');
+ const submitic = document.querySelector('#submit-ic');
+ 
+   var htmlElement = document.querySelector('html');
+   const inputFields = document.querySelectorAll('.popup input');
+   function showPopup() {
+     popup.style.display = 'block';
+     window.scrollTo(0,0);
+     htmlElement.style.overflow = 'hidden';
+   }
+ 
+   function hidePopup() {
+    submitic.style.visibility="hidden";
+     popup.style.display = 'none';
+     htmlElement.style.overflow = 'auto';
+     inputFields.forEach(input => (input.value = ''));
+   }
+   submitic.onclick=function(){
+     submitic.style.visibility="hidden";
+     popup.style.display = 'none';
+     htmlElement.style.overflow = 'auto';
+     inputFields.forEach(input => (input.value = ''));
+   }
+   function checkInputsNotEmpty() {
+ 
+   const allFilled = Array.from(inputFields).every(input => input.value.trim() !== '');
+ 
+   submitic.style.visibility = allFilled ? 'visible' : 'hidden';
+ }
+ inputFields.forEach(input => input.addEventListener('input', checkInputsNotEmpty));
+ checkInputsNotEmpty();
+ </script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
