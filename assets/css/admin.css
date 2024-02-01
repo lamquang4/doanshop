@@ -712,12 +712,11 @@ padding: 3px 0;
     
     }
 
-    .pagination li.active a {
-        color: white;
-    }
+   
     
     .pagination li.active {
         background-color: #076FFE;
+        color: white;
     }
  
   
