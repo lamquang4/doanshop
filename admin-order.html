@@ -107,7 +107,9 @@
                 <div class="add">
                     <span>Entries</span>
                     <select name="" id="">
-                        <option value="">ID</option>
+                        <option value="">10</option>
+                        <option value="">16</option>
+                        <option value="">20</option>
                     </select>
                     
                 </div>
@@ -118,14 +120,25 @@
             <div>
                 <table width="100%" id="table-order">
                     <thead>
-                        <tr>
+                        <tr id="select-filter">
                             <th>ID ORDER</th>                          
                            
                             <th><span class="las la-sort"></span>DELIVERY ADDRESS</th>
-                            <th><span class="las la-sort"></span> ORDER DATE</th>
-                            <th><span class="las la-sort"></span> DELIVERY DATE</th>
-                            <th><span class="las la-sort"></span>TOTAL</th>
-                            <th><span class="las la-sort"></span> ORDER STATUS</th>
+                            <th><span class="las la-sort"></span> ORDER DATE <select><option></option>
+                              <option>Newest</option>
+                              <option>Latest</option>
+                            </select></th>
+                            <th><span class="las la-sort"></span> DELIVERY DATE <select>
+                              <option></option>
+                              <option>Newest</option>
+                              <option>Latest</option>
+                            </select></th>
+                            
+                            <th><span class="las la-sort"></span> ORDER STATUS <select>
+                              <option></option>
+                              <option>Processed</option>
+                              <option >Unprocessed</option>
+                            </select></th>
                             <th><span class="las la-sort"></span> ACTION</th>
                           
                         </tr>
@@ -146,9 +159,7 @@
 <td>
 2023/05/22                        
 </td>
-<td>
-  $50.00
-</td>
+
                             <td>
                             <select>
                               <option selected>Processed</option>
@@ -177,9 +188,7 @@
                             <td>
                               2023/01/15
                             </td>
-                            <td>
-                              $64.00
-                            </td>
+                         
                             <td>
                               <select>
                                 <option >Processed</option>
@@ -207,9 +216,7 @@
                             <td>
                               2023/02/10
                             </td>
-                            <td>
-                              $42.00
-                            </td>
+                         
                             <td>
                               <select>
                                 <option selected>Processed</option>
@@ -238,9 +245,7 @@
                             <td>
                               2023/04/21
                             </td>
-                            <td>
-                              $32.00
-                            </td>
+                           
                             <td>
                               <select>
                                 <option selected>Processed</option>
@@ -269,9 +274,7 @@
                             <td>
                               2023/02/26
                             </td>
-                            <td>
-                              $60.00
-                            </td>
+                          
                             <td>
                               <select>
                                 <option selected>Processed</option>
@@ -292,7 +295,7 @@
 
                 <ul class="pagination" id="pagination">
                   <li onclick="prevPage()">Prev</li>
-                  <!-- Pagination Numbers Will Be Appended Here Dynamically -->
+                  <li class="active">1</li>
                   <li onclick="nextPage()">Next</li>
                 </ul>
             </div>
@@ -307,90 +310,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
 
 
-<script>
-  const itemsPerPage = 8;
-  const table = document.getElementById("table-order");
-  const pagination = document.getElementById("pagination");
-
-  let currentPage = 1;
-
-
-  function showPage(page) {
-      const rows = table.getElementsByTagName("tbody")[0].rows;
-      const startIndex = (page - 1) * itemsPerPage;
-      const endIndex = startIndex + itemsPerPage;
-
-      for (let i = 0; i < rows.length; i++) {
-          rows[i].style.display = (i >= startIndex && i < endIndex) ? "" : "none";
-      }
-  }
-
-  // Function to generate pagination numbers
-  function generatePagination() {
-      const totalItems = table.getElementsByTagName("tbody")[0].rows.length;
-      const totalPages = Math.ceil(totalItems / itemsPerPage);
-
-      pagination.innerHTML = '<li onclick="prevPage()">Prev</li>';
-
-      for (let i = 1; i <= totalPages; i++) {
-          const li = document.createElement("li");
-          li.textContent = i;
-          li.onclick = function () {
-              currentPage = i;
-              showPage(currentPage);
-              updatePagination();
-          };
-          pagination.appendChild(li);
-      }
-
-      pagination.innerHTML += '<li onclick="nextPage()">Next</li>';
-      updatePagination();
-  }
-
-  function updatePagination() {
-    const pages = pagination.getElementsByTagName("li");
-    for (let i = 0; i < pages.length; i++) {
-        pages[i].classList.remove("active");
-
-        // Add an event listener to each pagination number
-        if (i !== 0 && i !== pages.length - 1) {
-            pages[i].onclick = function () {
-                currentPage = i;
-                showPage(currentPage);
-                updatePagination();
-            };
-        }
-    }
-    pages[currentPage].classList.add("active");
-}
-
-  // Function to go to the previous page
-  function prevPage() {
-      if (currentPage > 1) {
-          currentPage--;
-          showPage(currentPage);
-          updatePagination();
-      }
-  }
-
-  // Function to go to the next page
-  function nextPage() {
-      const totalItems = table.getElementsByTagName("tbody")[0].rows.length;
-      const totalPages = Math.ceil(totalItems / itemsPerPage);
-
-      if (currentPage < totalPages) {
-          currentPage++;
-          showPage(currentPage);
-          updatePagination();
-      }
-  }
-
-  // Call the initial setup
-  showPage(currentPage);
-  generatePagination();
-
-  
-</script>
 
  
 
