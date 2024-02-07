@@ -98,7 +98,7 @@
         
     <h1 style="padding: 1.3rem 0rem;color: #74767d;" id="product">Products</h1>
     <div>
-      <button id="showadd">Add New</button>
+      <button style="margin-bottom: 8px;" id="showadd" onclick="showadd()">Add New</button>
     </div>
 </div>
           
@@ -765,16 +765,19 @@ for (const imageProductAdminDiv of imageProductAdminDivs) {
 
 
 <script>
-  const showadd= document.getElementById('showadd');
+
+
   const containerinputs=document.querySelector('#container-inputs');
   const usertab = document.querySelector('.usertab');
-  showadd.onclick=function(){
+ function showadd(){
     containerinputs.style.display="block";
     usertab.style.display="block";
+    htmlElement.style.overflow = 'hidden';
   }
   function hideadd(){
     containerinputs.style.display="none";
     usertab.style.display="none";
+    htmlElement.style.overflow = 'auto';
   }
   </script>
 

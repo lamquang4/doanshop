@@ -98,7 +98,7 @@
         <div class="page-content" style="margin-top: 50px;">
             <h1 style="padding: 1.3rem 0rem;color: #74767d;" id="customer">Customers</h1>
             <div >
-                <button id="showadd" style="margin-bottom: 8px;">Add New</button>
+                <button id="showadd" style="margin-bottom: 8px;" onclick="showadd()">Add New</button>
                        
         </div>
         </div>
@@ -565,17 +565,19 @@ function selectedRowToInput()
 
 
 <script>
-    const showadd= document.getElementById('showadd');
-    const containerinputs=document.querySelector('#container-inputs');
-    const usertab = document.querySelector('.usertab');
-    showadd.onclick=function(){
-      containerinputs.style.display="block";
-      usertab.style.display="block";
-    }
-    function hideadd(){
-      containerinputs.style.display="none";
-      usertab.style.display="none";
-    }
-    </script>
-
+    const htmlElement = document.querySelector('html');
+      const containerinputs=document.querySelector('#container-inputs');
+      const usertab = document.querySelector('.usertab');
+     function showadd(){
+        containerinputs.style.display="block";
+        usertab.style.display="block";
+        htmlElement.style.overflow = 'hidden';
+      }
+      function hideadd(){
+        containerinputs.style.display="none";
+        usertab.style.display="none";
+        htmlElement.style.overflow = 'auto';
+      }
+        </script>
+    
 

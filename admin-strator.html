@@ -100,7 +100,7 @@
     
                 <h1 style="padding: 1.3rem 0rem;color: #74767d;" id="adminstrator">Administrators</h1>
                 <div >
-                    <button style="margin-bottom: 8px;" id="showadd">Add New</button>
+                    <button style="margin-bottom: 8px;" id="showadd" onclick="showadd()">Add New</button>
                            
             </div>
             </div>
@@ -351,6 +351,23 @@ QWERT48
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <script>
+
+    const containerinputs=document.querySelector('#container-inputs');
+    const usertab = document.querySelector('.usertab');
+    const htmlElement = document.querySelector('html');
+   function showadd(){
+      containerinputs.style.display="block";
+      usertab.style.display="block";
+    htmlElement.style.overflow='hidden';
+    }
+    function hideadd(){
+      containerinputs.style.display="none";
+      usertab.style.display="none";
+      htmlElement.style.overflow = 'auto';
+    }
+      </script>
+
+<script>
     window.addEventListener("DOMContentLoaded", function() {
       var predefinedContent = 'Normal';
       document.getElementById("status").value = predefinedContent;
@@ -561,18 +578,6 @@ function selectedRowToInput()
   </script>
 
 
-<script>
-    const showadd= document.getElementById('showadd');
-    const containerinputs=document.querySelector('#container-inputs');
-    const usertab = document.querySelector('.usertab');
-    showadd.onclick=function(){
-      containerinputs.style.display="block";
-      usertab.style.display="block";
-    }
-    function hideadd(){
-      containerinputs.style.display="none";
-      usertab.style.display="none";
-    }
-    </script>
+
 
 
