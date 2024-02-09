@@ -301,8 +301,6 @@ QWERT48
         
     </div>
 </body>
-</html>
-
 <div id="container-inputs">
 
     <div class="user-tab">
@@ -345,6 +343,9 @@ QWERT48
   
   </div>
   </div>
+</html>
+
+
 
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -361,6 +362,14 @@ QWERT48
     htmlElement.style.overflow='hidden';
     }
     function hideadd(){
+        var container = document.getElementById('container-inputs');
+    var inputs = container.querySelectorAll('input, select, textarea');
+
+    inputs.forEach(function (input) {
+        if (input.type !== 'button') {
+            input.value = '';
+        }
+    });
       containerinputs.style.display="none";
       usertab.style.display="none";
       htmlElement.style.overflow = 'auto';
