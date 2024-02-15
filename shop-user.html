@@ -870,7 +870,7 @@ function checkCartEmpty() {
   }
 }
 function updateCartCount() {
-  // Update the countCartAdd1 and countCartAdd elements based on the length of the itemsAdded array
+
   const countCartAdd1 = document.querySelector("#count-cart-add1");
   const countCartAdd = document.querySelector("#count-cart-add");
 
@@ -894,7 +894,7 @@ function handle_buyOrder() {
   const payment=document.querySelector('.containers');
   const cartContent = cart.querySelector(".cart-content");
 const buybutton=document.querySelector('.btn-buy');
-
+simplyCart.style.display = "none";
 window.location.href="pay.html";
    itemsAdded = [];
  update();
