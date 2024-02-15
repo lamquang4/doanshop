@@ -917,10 +917,9 @@ function updateTotal() {
     total += price * quantity;
   });
 
-  // keep 2 digits after the decimal point
+
   total = total.toFixed(2);
-  // or you can use also
-  // total = Math.round(total * 100) / 100;
+
 
   totalElement.innerHTML = "$" + total;
 }
