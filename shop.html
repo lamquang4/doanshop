@@ -68,22 +68,19 @@
 
 
    <div class="cart">
+
     <h2 class="cart-title">Your Cart</h2>
 
-
     <div class="cart-content">
-
-
+<div class="simply-cart">
+  <img src="assets/images/pic/empty-cart.png">
+</div>
     </div>
-
-
     <div class="total">
         <div class="total-title">Total</div>
         <div class="total-price">$0</div>
     </div>
-
     <button type="button" class="btn-buy">Buy Now</button>
-
     <i class="fa-solid fa-x" id="cart-close"></i>
 </div>
 
@@ -742,8 +739,8 @@ function start() {
 function update() {
   addEvents();
   updateTotal();
+  checkCartEmpty();
 }
-
 
 function addEvents() {
   // Remove items from cart
@@ -799,11 +796,12 @@ function handle_addCartItem() {
 
   // handle item is already exist
   if (itemsAdded.find((el) => el.title == newToAdd.title)) {
+   
     alert("This Item Is Already Exist!");
     return;
   } else  {
     countCartAdd1.innerHTML="!";
-  
+   
       countCartAdd.innerHTML="!";
     itemsAdded.push(newToAdd);
   }
@@ -865,14 +863,14 @@ function updateCartCount() {
   }
 }
 
+
 function handle_buyOrder() {
   if (itemsAdded.length <= 0) {
     alert("There is No Order to Place Yet! \nPlease Make an Order first.");
-  
+
     return;
   }
- 
-  
+
   const payment=document.querySelector('.containers');
   const cartContent = cart.querySelector(".cart-content");
 const buybutton=document.querySelector('.btn-buy');
@@ -906,7 +904,15 @@ function updateTotal() {
 
   totalElement.innerHTML = "$" + total;
 }
+function checkCartEmpty() {
+  const simplyCart = document.querySelector(".simply-cart");
 
+  if (itemsAdded.length > 0) {
+    simplyCart.style.display = "none";
+  } else {
+    simplyCart.style.display = "flex";
+  }
+}
 // ============= HTML COMPONENTS =============
 function CartBoxComponent(title, price, imgSrc) {
   return `

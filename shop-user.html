@@ -96,7 +96,9 @@
 
 
     <div class="cart-content">
-
+      <div class="simply-cart">
+        <img src="assets/images/pic/empty-cart.png">
+      </div>
 
     </div>
 
@@ -756,6 +758,7 @@ function start() {
 function update() {
   addEvents();
   updateTotal();
+  checkCartEmpty();
 }
 
 
@@ -857,7 +860,15 @@ function handle_changeItemQuantity() {
 
   update();
 }
+function checkCartEmpty() {
+  const simplyCart = document.querySelector(".simply-cart");
 
+  if (itemsAdded.length > 0) {
+    simplyCart.style.display = "none";
+  } else {
+    simplyCart.style.display = "flex";
+  }
+}
 function updateCartCount() {
   // Update the countCartAdd1 and countCartAdd elements based on the length of the itemsAdded array
   const countCartAdd1 = document.querySelector("#count-cart-add1");

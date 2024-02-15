@@ -35,6 +35,21 @@ button{
   cursor: pointer;
 }
 
+.simply-cart{
+  display: flex;
+  flex-direction: column;
+  margin: 7.5rem 25px;
+  text-align: center;
+  align-items: center;
+}
+.simply-cart img{
+  width:60%;
+}
+.simply-cart p{
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
 
 /*profile menu dropdown*/
 .sub-menu-wrap{
@@ -1380,7 +1395,8 @@ background-color: #ffffff;
   border: 1.2px solid black;
 }
 
-}.cart{
+}
+.cart{
   position: fixed;
   top:0;
   right:-200%;
@@ -1529,6 +1545,8 @@ border: 1.2px solid black;
 }
 .cart{
   transition: 0.6s;
+  width: 100%;
+border:none;
 }
 }
 @media(max-width:400px){
@@ -3106,7 +3124,7 @@ display: none;
   position: absolute;
   right: 28px;
   top: 66%;
-  font-size: 32px;
+ 
 }
 .pro1 button {
   width: 110px;
