@@ -113,6 +113,12 @@ font-weight: 500;
   font-size: 20px;
 
 }
+.sub-menu-index-link:hover p{
+  color:#0AC2A8;
+}
+.sub-menu-index-link:hover span{
+  color:#0AC2A8;
+}
 @media(max-width:480px){
   .sub-menu-wrap{
   
@@ -311,7 +317,6 @@ transform: translate(0, -50%);
 
 .commercial-index{
   margin-top: 126px;
-
   width: 100%;
 background-color: #FDF2E9;
   padding: 15px 200px 0px 200px;
