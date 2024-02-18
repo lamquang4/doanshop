@@ -131,5 +131,8 @@ a:hover{
 @media(max-width:480px){
  #logo-history img{
 width: 35%;
-}   
+}  
+.container{
+    margin-top: 0px; 
+}  
 }
