@@ -248,6 +248,9 @@ width: 35%;
 .container{
     margin: 12px 0 12px 0;
 }  
+hr{
+    display: none;
+}
 }
 .flex-container p{
    display: inline;
