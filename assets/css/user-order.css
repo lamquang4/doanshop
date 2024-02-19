@@ -248,8 +248,8 @@ width: 35%;
 .container{
     margin: 12px 0 12px 0;
 }  
-hr{
-    visibility: hidden;
+.track .text{
+    display: none;
 }
 }
 .flex-container p{
