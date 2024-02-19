@@ -249,7 +249,7 @@ width: 35%;
     margin: 12px 0 12px 0;
 }  
 hr{
-    display: none;
+    visibility: hidden;
 }
 }
 .flex-container p{
