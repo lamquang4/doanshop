@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <link rel="icon" type="image/png" href="assets/images/pic/logo.png">
 <link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/header.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <html>
 <head>
@@ -203,29 +204,55 @@ GET HELP
       })}
    
     const icons = document.getElementById("icons");
-const dong = document.getElementById("close");
-const barmenu = document.getElementById('bar');
-dong.addEventListener("click", function() {
- 
+  const dong = document.getElementById("close");
+  const barmenu = document.getElementById('bar');
+  dong.addEventListener("click", function() {
+  
   icons.style.right = "-300px";
-});
-barmenu.addEventListener("click", function() {
+  });
+  barmenu.addEventListener("click", function() {
   icons.style.right = "0";
-
-});
-
-
-window.addEventListener("resize", function() {
-
-    if (window.innerWidth >= 1138) {
+  htmlElement.style.overflowY = 'scroll';
+  searchbars.classList.remove("active25");
+        searchbars.style.opacity="0";
+        searchbars.style.pointerEvents = 'none';
+  });
+  
+  
+  window.addEventListener("resize", function() {
+  
+    if (window.innerWidth >= 1136) {
+        searchbars.classList.remove("active25");
+        searchbars.style.opacity="0";
+        searchbars.style.pointerEvents = 'none';
       icons.classList.remove('active');
+      htmlElement.style.overflowY = "scroll";
     }
    else{
     icons.style.right="-300px";
    }
     }
-);
+  );
      </script>
+  
+  <script>
+    var htmlElement = document.querySelector('html');
+  const searchbars=document.querySelector(".search-bars");
+    const glasssearch=document.getElementById("glass-search");
+  function showbar(){
+        searchbars.classList.add('active25');
+        searchbars.style.pointerEvents = 'all';
+        htmlElement.style.overflow = 'hidden';
+        searchbars.style.opacity="1";
+    }
+    function closebar(){
+  
+        searchbars.classList.remove('active25');
+        htmlElement.style.overflowY = 'scroll';
+        searchbars.style.opacity="0";
+        searchbars.style.pointerEvents = 'none';
+    }
+    </script>
 
   <script>
     const carousel = document.querySelector(".carousel"),
@@ -312,23 +339,6 @@ window.location.href='shop.html';
 
 
 
-<script>
-  var htmlElement = document.querySelector('html');
-const searchbars=document.querySelector(".search-bars");
-  const glasssearch=document.getElementById("glass-search");
-function showbar(){
-      searchbars.classList.add('active25');
-      searchbars.style.pointerEvents = 'all';
-      htmlElement.style.overflow = 'hidden';
-      searchbars.style.opacity="1";
-  }
-  function closebar(){
 
-      searchbars.classList.remove('active25');
-      htmlElement.style.overflowY = 'scroll';
-      searchbars.style.opacity="0";
-      searchbars.style.pointerEvents = 'none';
-  }
-  </script>
 
 
