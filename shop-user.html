@@ -149,41 +149,15 @@
  <section id="product11" class="section-p11" class="shop container">
   <h2>FEATURED PRODUCTS</h2> 
 
-  <div style="margin-top: 20px; margin-bottom: 15px;"> 
-    <h1 id="show-advan-searh-h1">Advanced Search </h1>
-    <i id="toggle-icon" class="fa-solid fa-chevron-up fa-rotate-180" ></i>
-  </div>
 
-  <div class="search-container" style="display: none;">
-    <div id="search-advan-input">
-    <label for="min-price">Min Price:</label>
-    <input type="number" id="min-price" min="10" max="20">
-  
-    <label for="max-price">Max Price:</label>
-    <input type="number" id="max-price" min="10" max="20">
-  </div>
-  <div id="search-advan-input">
-      <label for="product-name"> Name:</label>
-    <input  type="text" id="product-name">
-    
-    <label for="product-type">Product Type:</label>
-    <select id="product-type"> 
-          <option value="all">All</option>
-      <option value="carbonated">Carbonated</option>
-      <option value="non-carbonated">Non-Carbonated</option>
-    </select>
-    <button class="learn-more" onclick="searchProducts()"> Search <i class="fa-solid fa-magnifying-glass"></i></button>
-  
-  </div>
-  
-  </div>
-
-  <div  id="filter-buttons">
+  <div  id="filter-buttons" style="margin-top: 12px;">
        
-    <button class="btn on" id="backnormal" onclick="filterObjects('all')">Show all</button>
+  
     <button class="btn" id="btnfil" id="back1" onclick="filterObjects('coca')">Coca-cola</button>
     <button class="btn" id="btnfil" id="back2" onclick="filterObjects('pepsi')">Pepsi</button>
     <button class="btn" id="btnfil" id="back3" onclick="filterObjects('fanta')">Fanta</button>
+
+  <button id="btn-ad-search">Search <i class="fa-solid fa-magnifying-glass"></i></button>
 
 </div>
 
@@ -579,6 +553,21 @@ window.addEventListener("resize", function() {
    </script>
 
 <script>
+
+  const filterButtons = document.querySelectorAll("#filter-buttons button");
+  
+  // Function to filter cards based on filter buttons
+  const filterCards = (e) => {
+      document.querySelector("#filter-buttons .on").classList.remove("on");
+      e.target.classList.add("on");
+  
+  }
+  
+  filterButtons.forEach(button => button.addEventListener("click", filterCards));
+  </script>
+  
+
+<script>
   var htmlElement = document.querySelector('html');
 const searchbars=document.querySelector(".search-bars");
   const glasssearch=document.getElementById("glass-search");
@@ -944,95 +933,7 @@ function CartBoxComponent(title, price, imgSrc) {
 
 </script>
 
-<script>
 
-const filterButtons = document.querySelectorAll("#filter-buttons button");
-
-// Function to filter cards based on filter buttons
-const filterCards = (e) => {
-    document.querySelector("#filter-buttons .on").classList.remove("on");
-    e.target.classList.add("on");
-
-}
-
-filterButtons.forEach(button => button.addEventListener("click", filterCards));
-</script>
-
-<script>
-    
-  filterObjects("all");
-
-  function filterObjects(c){
-    
-    var x,i;
-    x = document.getElementsByClassName("pro1");
-    if(c=="all") c = "";
-    for(i=0;i<x.length;i++){
-      removeClass(x[i], "show");
-      if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
-     
-    }
-
-  }
-function addClass(element, name){
-  var i,arr1,arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for(i=0;i< arr2.length;i++){
-    if(arr1.indexOf(arr2[i]) == -1){
-      element.className += " " + arr2[i];
- 
-    }
-  }
-
-
-}
-function removeClass(element, name){
-  var i,arr1,arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for(i=0;i<arr2.length;i++){
-    while(arr1.indexOf(arr2[i])> -1){
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
- 
-    }
-  }
-  element.className = arr1.join(" ");
-
-
-}
-
-
-
-</script>
-
-<script>
-  
-  const back1=document.querySelectorAll('#btnfil');
-  const back2=document.getElementById('backnormal');
- const page = document.querySelector('#containerpage');
-  for (const button of back1) {
-  button.addEventListener('click', () => {
-    thisPage = 1; 
-        loadItem();
-        window.scrollTo(0, bBanner1.offsetTop);
- page.style.visibility = "hidden";
-    
-  });
-}
-  back2.addEventListener('click',()=>{
-    window.scrollTo(0, bBanner1.offsetTop);
-    page.style.visibility = "visible";
-  });
-
-
-
-back2.addEventListener("click", () => {
-  document.getElementById('filterselect').value = "Default";
-});
-
-
-</script>
 
 <script>
   let subMenu = document.getElementById("subMenu");
@@ -1047,17 +948,7 @@ countCartAdd1.textContent = 0;
 const countCartAdd = document.getElementById("count-cart-add");
 countCartAdd.textContent = 0;
 
-// Thêm sự kiện click vào icon "+"
-const cartadds = document.querySelectorAll("#cart-plus");
-cartadds.forEach((cartadd)=> {
-  let isClicked = false;
-  cartadd.addEventListener("click", (event) => {
-    if (!isClicked) {
-      isClicked = true;
-    
-    }
-  });
-});
+
   
   </script>
 
@@ -1097,24 +988,7 @@ cartadds.forEach((cartadd)=> {
   
     </script>
 
-<script>
-  var toggleIcon = document.getElementById('toggle-icon');
-   var searchContainer = document.querySelector('.search-container');
- 
-   toggleIcon.addEventListener('click', function() {
-     if (searchContainer.style.display === 'none' || searchContainer.style.display === '') {
-       searchContainer.style.display = 'block';
-       toggleIcon.style.transform = 'rotate(0deg)';
-       toggleIcon.style.transition = '0.5s';
-     } else {
-       searchContainer.style.display = 'none';
-       toggleIcon.style.transform = 'rotate(180deg)';
-       toggleIcon.style.transition = '0.5s';
-     }
-   });
- 
- 
- </script>
+
  <script>
   let slider = document.querySelector('.slidersss .listsss');
 let items = document.querySelectorAll('.slidersss .listsss .itemsss');

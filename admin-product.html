@@ -379,9 +379,15 @@ Coca Original
     <h1>ADD PRODUCT</h1>
   <i class="fa-solid fa-xmark" id="closeadd" onclick="hideadd()"></i>
   
+  <form>
 <div class="user-input" style="margin-top: 32px;">
 <label> ID:</label>
     <input type="text" name="id-product" id="id-product" >         
+</div>
+
+<div class="user-input">
+  <label>Name:</label>
+<input type="text" name="name" id="name">
 </div>
 
 <div class="user-input" >
@@ -392,11 +398,6 @@ Coca Original
 
           <img id="preview-image" src="" alt="Preview Image" width="30%" style="display: none; margin-bottom: 5px;">
       
-
-<div class="user-input" style="display: none;">
-    Url:<input type="text" name="fimage" id="fimage" >
-         </div>
-
          <div class="user-input">
           <label> Type:</label>
          <select style="padding: 2px 0px;">
@@ -405,20 +406,17 @@ Coca Original
             <option>Non-carbonated</option>
           </select>
                </div>
-<div class="user-input">
-  <label>Name:</label>
-<input type="text" name="name" id="name">
-</div>
+
+
 
 <div class="user-input">
   <label>Price:</label>
 <input type="number" name="price" id="price">     
-</div>
-
-<div class="user-input">
-  <label>Quantity:</label>
+<label>Quantity:</label>
 <input type="number" name="soluong" id="soluong" min="1" >
 </div>
+
+
 
 <div class="user-input">
   <label>Date Add:</label>
@@ -431,12 +429,12 @@ Coca Original
 <div class="user-input" style="display: none;">
 Action:<input type="text" name="action" id="action" >
 </div>
-
-<div style="text-align: center;">
+ 
+<div style="text-align: center;" id="button-submit">
   <button>Submit</button>
 
 </div>
-
+</form>
 
 </div>
 </html>
