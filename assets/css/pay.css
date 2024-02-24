@@ -236,6 +236,11 @@ body{margin-top:20px;
     .logo-img{
         cursor: pointer;
     }
+       @media (min-width: 1200px){
+     .container{
+    max-width: 1400px;
+    }   
+    }
     @media(max-width:768px) {
         .logo-img{
             width: 15%;
@@ -246,3 +251,9 @@ body{margin-top:20px;
             width: 28%;
         }
     }
+    @media(max-width:400px){
+        #continue-shopping-btn{
+            font-size: 14px;
+        }
+    }
+ 
