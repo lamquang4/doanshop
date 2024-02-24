@@ -87,7 +87,7 @@ font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 80px;
+    padding: 12px 80px 12px 50px;
     background-color: white;
     box-shadow: 0.5px 5px 15px rgba(0,0,0,0.09);
     position: fixed;
@@ -116,11 +116,8 @@ font-size: 18px;
     color: black;
     }
     .logo{
-    position: relative;
-    right:21%;
-    
-       height: 96px;
-       width: 120px;
+
+  width: 118px;
     }
     
     #mobile{
@@ -311,13 +308,11 @@ font-size: 18px;
           padding:30px 0 0 10px;
           transition: 0.3s ease;
           }
-          
+          #header{
+            padding: 12px 15px 12px 5px;
+          }
           #header .logo {
-            position: relative;
-            right:69%;
-          
-            height: 75px;
-            width: 99px;
+      width: 100px;
           }
           
           
@@ -387,10 +382,10 @@ font-size: 18px;
     }
     @media(max-width:400px){
         #header .logo {
-            position: relative;
-            right:69%;
-            height: 73px;
-            width: 100px;
+       width: 89px;
+            }
+            #header{
+              padding: 12px 10px 12px 5px;
             }
             #mobile i {
             padding-left:8px;
