@@ -20,7 +20,7 @@ li{
 list-style: none;
 }
 html{
-  overflow-x: hidden;
+
  
 }
 * {
@@ -2653,7 +2653,7 @@ cursor: pointer;
 @media(max-width:768px){
   .slidersss{
     height: 400px;
-   
+   width: 100%;
 }
 }
 @media (max-width:700px){
