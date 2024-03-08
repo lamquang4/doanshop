@@ -62,7 +62,7 @@ button{
 /*index.html*/
 
 .commercial-index{
-  margin-top: 126px;
+  margin-top: 118px;
   width: 100%;
 background-color: #FDF2E9;
   padding: 15px 200px 0px 200px;
@@ -111,7 +111,7 @@ margin-top: 35px;
 
 }
 .textBox-index a{
-
+  border:2px solid black;
 font-size: 20px;
 padding: 15px 25px;
 color:white;
@@ -119,12 +119,13 @@ background-color: black;
 font-weight: 600;
 word-spacing: 1px;
 letter-spacing: 1px;
+border-radius: 6px;
 }
 
 .textBox-index a:hover {
 color: black;
 background: transparent;
-border:1.5px solid black;
+
 transition: 0.5s ease;
 }
 
