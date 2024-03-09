@@ -1094,9 +1094,9 @@ margin-top: 20px;
 @media(max-width:480px){
   #filter-buttons .btn {
  
-    width: 44px;
-    height: 44px;
-    margin: 4px 15px;
+    width: 45px;
+    height: 45px;
+    margin: 4px 16px;
 
 }
 
@@ -1112,9 +1112,9 @@ border:none;
 @media(max-width:400px){
   #filter-buttons .btn {
     
-  width: 38px;
-  height: 38px;
-    margin: 4px 12px;
+  width: 40px;
+  height: 40px;
+    margin: 4px 13px;
 
 }
 
