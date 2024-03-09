@@ -1066,7 +1066,7 @@ cursor: pointer;
 width: 64px;
 height: 64px;
 border: none;
-margin: 20px 22px;
+margin: 20px 24px;
 
 }
 .btn img{
@@ -1078,7 +1078,7 @@ margin: 20px 22px;
 }
 
 #btn-ad-search{
-align-self: center;
+
   border: 1px solid black;
   background: white;
   padding: 10px 19px;
@@ -1089,14 +1089,22 @@ margin-top: 20px;
 
   font-size: 17px;
 }
+@media(481px <= width <= 680px){
+  #filter-buttons .btn {
+ 
+    width: 48px;
+    height: 48px;
+    margin: 6px 14px;
 
+}
+}
 
 @media(max-width:480px){
   #filter-buttons .btn {
  
     width: 46px;
     height: 46px;
-    margin: 4px 16px;
+    margin: 4px 12px;
 
 }
 
@@ -1114,7 +1122,7 @@ border:none;
     
   width: 42px;
   height: 42px;
-    margin: 4px 13px;
+    margin: 4px 10px;
 
 }
 
