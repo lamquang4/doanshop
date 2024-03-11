@@ -65,7 +65,7 @@ button{
   margin-top: 118px;
   width: 100%;
 background-color: #FDF2E9;
-  padding: 15px 200px 0px 200px;
+  padding: 18px 120px 0px 180px;
    display: flex;
   justify-content: center;
 
@@ -78,17 +78,23 @@ display: flex;
 justify-content: space-between;
 
 }
+.imgBox-index {
+  flex: 0.5;
+}
 .imgBox-index img{
-width: 100%;
+width: 510px;
+height: 520px;
 margin-top: 40px;
-margin-bottom: 50px;
+
+
 }
 .textBox-index{
+  flex: 0.5;
 margin-bottom: 55px;
 }
 .textBox-index h2{
 font-size: 60px;
-
+margin-bottom: 14px;
 letter-spacing: 1.2px;
 color: #e1961d;
 }
@@ -99,8 +105,8 @@ color:#18a186;
 
 .textBox-index p{
 margin-top: 5px;
-font-size: 21px;
-margin-bottom: 6px;
+font-size: 20px;
+margin-bottom: 10px;
 font-weight: 500;
 font-family: Poppins;
 letter-spacing: 1px;
@@ -128,29 +134,136 @@ background: transparent;
 
 transition: 0.5s ease;
 }
+@media(max-width:1250px){
+  .commercial-index{
 
+    padding: 10px 160px 0px 160px;
+  
+  }
 
-@media(max-width:768px){
-
-.commercial-index{
-
-  padding: 40px 0px 0px 60px;
-
-}
 .textBox-index h2{
-font-size: 45px;
+font-size: 42px;
 }
 
 .textBox-index p{
 
 font-size: 17px;
 }
+
 .imgBox-index img{
-width: 80%;
-
+width: 100%;
+height: 430px;
 }
 }
+@media(max-width:1000px){
+  
+.commercial-index{
 
+  padding: 10px 65px 0px 65px;
+
+}
+.textBox-index h2{
+font-size: 42px;
+}
+
+.textBox-index p{
+
+font-size: 17px;
+}
+
+.imgBox-index img{
+width: 400px;
+height: 420px;
+}
+}
+@media(max-width:900px){
+  .commercial-index{
+
+    padding: 10px 40px 0px 40px;
+  
+  }
+}
+@media(max-width:768px){
+
+.commercial-index{
+
+  padding: 24px 20px 0px 20px;
+
+}
+.textBox-index h2{
+font-size: 42px;
+}
+
+.textBox-index p{
+
+font-size: 17px;
+}
+
+.imgBox-index img{
+width: 390px;
+height: 430px;
+}
+}
+@media (max-width:700px){
+  .imgBox-index img{
+    width: 100%;
+height: 380px;
+    
+    }
+
+    .textBox-index h2{
+      font-size: 38px;
+  
+      }
+}
+@media (max-width:600px){
+ 
+  .commercial-index{
+    margin-top: 120px;
+    padding: 40px 0px 0px 0px;
+    
+    }
+    .content-index {
+    
+    display: block;
+     
+    }
+    .imgBox-index{
+    margin-top: 30px;
+    }
+    .textBox-index {
+    margin-top: 5px;
+       margin-bottom: 0px;
+    }
+    .textBox-index h2{
+    font-size: 35px;
+    text-align: center;
+    }
+    
+    .textBox-index p{
+    margin-top: 7px;
+    font-size: 17px;
+    text-align: center;
+    }
+    .imgBox-index{
+    display: flex;
+    justify-content: center;
+    }
+    .imgBox-index img{
+    width: 85%;
+    height: auto;
+    
+    } 
+    #text-link-index {
+    text-align: center;
+    }
+    .textBox-index a {
+      font-size: 19px;
+      margin-top: 15px;
+    
+    
+    }
+}
 @media(max-width:480px){
 .commercial-index{
 margin-top: 99px;
@@ -184,8 +297,9 @@ display: flex;
 justify-content: center;
 }
 .imgBox-index img{
-width: 80%;
-margin: 0;
+width: 85%;
+height: auto;
+
 } 
 #text-link-index {
 text-align: center;
@@ -209,142 +323,6 @@ text-align: center;
     
     
     }
-}
-@media(1001px <= width <=1176px){
-
-.commercial-index{
-
- padding: 40px 60px 0px 90px;
-
-}
-.textBox-index h2{
-font-size: 48px;
-}
-
-.textBox-index p{
-margin-top: 8px;
-font-size: 22px;
-}
-.imgBox-index img{
-width: 80%;
-
-}
-}
-@media(769px<= width <=1001px){
-
-.commercial-index{
-
- padding: 50px 40px 0px 40px;
-
-}
-.textBox-index h2{
-font-size: 48px;
-}
-
-.textBox-index p{
-margin-top: 8px;
-font-size: 22px;
-}
-.imgBox-index img{
-width: 80%;
-
-}
-}
-
-@media(601px<= width <=694px){
-
-.commercial-index{
-
- padding: 50px 30px 0px 40px;
-
-}
-.textBox-index h2{
-font-size: 35px;
-}
-
-.textBox-index p{
-margin-top: 8px;
-font-size: 18px;
-}
-.imgBox-index img{
-width: 80%;
-
-}
-.textBox-index a {
-
-
-  margin-top: 15px;
-
-
-}
-}
-@media(581px<= width <=600px){
-
-.commercial-index{
-
- padding: 40px 30px 0px 40px;
-
-}
-.textBox-index h2{
-font-size: 35px;
-}
-
-.textBox-index p{
-margin-top: 8px;
-font-size: 18px;
-}
-.imgBox-index img{
-width: 80%;
-
-}
-
-.textBox-index a {
- 
-  margin-top: 15px;
-
-
-}
-}
-@media(481px<= width <=580px){
-.commercial-index{
-margin-top: 120px;
-padding: 50px 0px 0px 0px;
-
-}
-.content-index {
-
-display: block;
- 
-}
-.imgBox-index{
-margin-top: 35px;
-}
-
-.textBox-index h2{
-font-size: 38px;
-text-align: center;
-font-weight: 600;
-}
-
-.textBox-index p{
-margin-top: 7px;
-font-size: 16px;
-text-align: center;
-}
-.textBox-index{
-  margin-bottom: 0;
-}
-.imgBox-index img{
-width: 75%;
-margin: 0;
-} 
-#text-link-index {
-text-align: center;
-}
-.imgBox-index{
-display: flex;
-justify-content: center;
-}
 }
 
 #all{
