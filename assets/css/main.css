@@ -137,7 +137,7 @@ transition: 0.5s ease;
 @media(max-width:1250px){
   .commercial-index{
 
-    padding: 10px 160px 0px 160px;
+    padding: 10px 120px 0px 120px;
   
   }
 
@@ -151,15 +151,15 @@ font-size: 17px;
 }
 
 .imgBox-index img{
-width: 100%;
-height: 430px;
+width: 420px;
+height: 510px;
 }
 }
 @media(max-width:1000px){
   
 .commercial-index{
 
-  padding: 10px 65px 0px 65px;
+  padding: 25px 65px 0px 65px;
 
 }
 .textBox-index h2{
@@ -173,7 +173,7 @@ font-size: 17px;
 
 .imgBox-index img{
 width: 400px;
-height: 420px;
+height: 480px;
 }
 }
 @media(max-width:900px){
@@ -187,21 +187,25 @@ height: 420px;
 
 .commercial-index{
 
-  padding: 24px 20px 0px 20px;
+  padding: 25px 20px 0px 20px;
 
 }
 .textBox-index h2{
-font-size: 42px;
+font-size: 40px;
 }
 
 .textBox-index p{
 
-font-size: 17px;
+font-size: 16px;
 }
 
 .imgBox-index img{
 width: 390px;
 height: 430px;
+}
+.textBox-index a {
+  font-size: 16px;
+
 }
 }
 @media (max-width:700px){
@@ -214,6 +218,10 @@ height: 380px;
     .textBox-index h2{
       font-size: 38px;
   
+      }
+      .textBox-index a {
+        font-size: 16px;
+
       }
 }
 @media (max-width:600px){
@@ -236,7 +244,7 @@ height: 380px;
        margin-bottom: 0px;
     }
     .textBox-index h2{
-    font-size: 35px;
+    font-size: 40px;
     text-align: center;
     }
     
@@ -250,8 +258,8 @@ height: 380px;
     justify-content: center;
     }
     .imgBox-index img{
-    width: 85%;
-    height: auto;
+    width: 84%;
+height: 455px;
     
     } 
     #text-link-index {
@@ -283,13 +291,13 @@ margin-top: 5px;
    margin-bottom: 0px;
 }
 .textBox-index h2{
-font-size: 38px;
+font-size: 39px;
 text-align: center;
 }
 
 .textBox-index p{
 margin-top: 7px;
-font-size: 17px;
+font-size: 16px;
 text-align: center;
 }
 .imgBox-index{
@@ -298,37 +306,28 @@ justify-content: center;
 }
 .imgBox-index img{
 width: 84%;
-height: auto;
+height: 400px;
 
 } 
 #text-link-index {
 text-align: center;
 }
 .textBox-index a {
-  font-size: 19px;
+  font-size: 17px;
   margin-top: 15px;
 
 
 }
 }
 @media(max-width:400px){
-  .textBox-index p{
-    margin-top: 7px;
-    font-size: 15px;
-    text-align: center;
-    }
-    .textBox-index a {
-      font-size: 17px;
-      margin-top: 15px;
-    
-    
-    }
+ 
     .imgBox-index{
       margin-top: 20px;
       }
     .imgBox-index img{
-      width: 83%;
-      height: auto;
+      width: 84%;
+      height: 360px;
+
       
       } 
 }
