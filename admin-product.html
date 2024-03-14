@@ -386,14 +386,20 @@ Coca Original
 <input type="text" name="name" id="name">
 </div>
 
-<div class="user-input" >
+<div class="user-input" style="margin-bottom: 10px;">
   <label>Image:</label>
- <input type="file" name="fimage1" id="fimage1" onchange="previewImage()">
+  <div class="upload-btn-wrapper">
+    <button class="btn-upload">Upload Image <br> <i class="fa-solid fa-cloud-arrow-up"></i></button>
+    
+    <input type="file" name="fimage1" id="fimage1" onchange="previewImage()" />
+    
+  </div>
 
         </div>
+<div style="display: flex; justify-content: center; margin-bottom: 10px;">
 
-          <img id="preview-image" src="" alt="Preview Image" width="30%" style="display: none; margin-bottom: 5px;">
-      
+          <img id="preview-image" src="" alt="Preview Image" width="25%" style="display: none; ">
+       </div>     
          <div class="user-input">
           <label> Type:</label>
          <select style="padding: 2px 0px;">
