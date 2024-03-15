@@ -820,7 +820,11 @@ border: none;
  color: white;
  border-radius: 4px;
 }
-
+#image-pre-container{
+    display: flex; 
+    justify-content: center;
+   
+}
 
 @media(max-width:480px){
     .user-tab{
