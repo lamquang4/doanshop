@@ -19,6 +19,8 @@ hr{
     border-radius: 1rem;
 }
 .text-reset {
+    font-size: 16px;
+    font-weight: 500;
     --bs-text-opacity: 1;
     color: inherit!important;
 }
