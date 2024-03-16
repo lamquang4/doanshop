@@ -7,9 +7,10 @@ html{
 }
 .containerz{
   
-    padding: 0 40px;
-max-width: 1140px;
-    margin: 0 auto;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+margin: 0 auto;
 
     }
 
@@ -160,18 +161,42 @@ a:hover{
    .logo-user{
     width: 110px;
    }
-@media(max-width:768px){
+   @media (min-width: 576px){
+    .containerz{
+        max-width: 540px;
+    }    
+    }
+    @media (min-width: 768px){
+        .containerz {
+           max-width: 720px;
+       }   
+       }
+       
+       @media(min-width: 992px){
+        .containerz{
+          max-width: 960px;
+      }  
+      }
+      
+@media(min-width:1200px){
+    .containerz{
+        max-width: 1140px;
+    } 
+}
  
+
+
+@media(max-width:768px){
+    .containerz{
+        max-width: 680px;
+    }   
 }
 
 @media(max-width:480px){
     html{
         margin: 0;
       }
-.containerz{
-    max-width: 450px;
-   padding: 0px; 
-}  
+
 .logo-user{
     width: 100px;
    }
@@ -183,9 +208,6 @@ a:hover{
     .logo-user{
         width: 95px;
        }
-       .containerz{
-        max-width: 390px;
-       padding: 0px; 
-    }
+ 
 }
 
