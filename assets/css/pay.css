@@ -239,7 +239,7 @@ body{margin-top:20px;
         cursor: pointer;
     }
    .logo-img{
-    width: 110px;
+    width: 105px;
    }
     @media(max-width:768px) {
       
@@ -248,7 +248,7 @@ body{margin-top:20px;
 
     @media(max-width:480px) {
         .logo-img{
-            width: 100px;
+            width: 95px;
         }
     }
     @media(max-width:400px){
@@ -256,7 +256,7 @@ body{margin-top:20px;
             font-size: 14px;
         }
         .logo-img{
-            width: 95px;
+            width: 90px;
         }
     }
  

@@ -57,7 +57,7 @@ button{
 /*index.html*/
 
 .commercial-index{
-  margin-top: 118px;
+  margin-top: 100px;
   width: 100%;
 background-color: #FDF2E9;
   padding: 18px 120px 0px 180px;
@@ -222,7 +222,7 @@ height: 380px;
 @media (max-width:600px){
  
   .commercial-index{
-    margin-top: 120px;
+    margin-top: 85px;
     padding: 40px 0px 0px 0px;
     
     }
@@ -269,7 +269,7 @@ height: 455px;
 }
 @media(max-width:480px){
 .commercial-index{
-margin-top: 99px;
+margin-top: 90px;
 padding: 20px 0px 0px 0px;
 
 }
@@ -732,7 +732,7 @@ font-size: 15px;
 #product1{
 margin-bottom: 55px;
 align-items: center;
-margin-top: 210px;
+margin-top: 175px;
 }
 #product1 h6{
 margin-top: 4%;
@@ -1278,7 +1278,7 @@ transform: translate(0,-10px);
   /*contact*/
   #contact-all{
     min-height: 80vh;
-    margin-top: 130px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1519,8 +1519,8 @@ box-shadow: 0.35em 0.32em;
 
   display: flex;
 
-  margin-top: 160px;
-  margin-bottom: 30px;
+  margin-top: 150px;
+  margin-bottom: 25px;
   }
   #prodetails .single-pro-details{
 
@@ -1852,7 +1852,7 @@ margin-top: 120px;
     }
     #prodetails{
     margin-bottom: 0px;
-    margin-top: 145px;
+    margin-top: 135px;
     }
     #prodetails .single-pro-details h2 {
     
@@ -1974,7 +1974,7 @@ margin-top: 0px;
 }
 #prodetails{
 margin-bottom: 0px;
-margin-top: 145px;
+margin-top: 135px;
 }
 #prodetails .single-pro-details h2 {
 
@@ -2025,7 +2025,7 @@ padding-top: 10px;
 
   #product1 {
   
-    margin-top: 168px;
+    margin-top: 145px;
 }
 #b-banner1 {
 
@@ -2215,7 +2215,7 @@ border-radius: 15px;
   }
   #prodetails{
   margin-bottom: 0px;
-  margin-top: 145px;
+  margin-top: 115px;
   }
   #prodetails .single-pro-details h2 {
   
@@ -2432,7 +2432,7 @@ cursor: pointer;
 }
 }
 #slidersss-section{
-  margin-top: 140px;
+  margin-top: 120px;
 }
 .slidersss{
  
@@ -2652,7 +2652,7 @@ cursor: pointer;
 }
 @media (max-width:480px){
   #slidersss-section{
-    margin-top: 112px;
+    margin-top: 105px;
   }
   .slidersss{
    
