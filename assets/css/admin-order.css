@@ -78,9 +78,17 @@ height: 40px;
         #order-detail-table{
             width: 150%;
         }
+        .container-order-detail{
+     max-width: 430px;
+            padding: 0;
+        }
     }
     @media(max-width:400px){
         #order-detail-table{
             width: 180%;
+        }
+        .container-order-detail{
+            max-width: 370px;
+ 
         }
     }
