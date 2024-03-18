@@ -252,6 +252,9 @@ body{
         .logo-img{
             width: 95px;
         }
+        .containerx{
+            margin-top: 125px;
+        }
     }
     @media(max-width:400px){
         #continue-shopping-btn{
@@ -259,6 +262,9 @@ body{
         }
         .logo-img{
             width: 90px;
+        }
+        .containerx{
+            margin-top: 120px;
         }
     }
  
