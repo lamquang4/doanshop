@@ -11,7 +11,7 @@
   <title>Home</title>
 </head>
 <body style="background: #F8F8F8;">
- <section id="header">
+ <section id="header" style="z-index: 1000;">
   <a href="index.html">
     <img src="assets/images/pic/logo.png" class="logo" alt="" >
  </a>
@@ -56,7 +56,7 @@
   <i class="fa-solid fa-xmark" id="xmark" onclick="closebar()"></i>
   </div>
  </section>
-
+ <div id="overlay"></div>
  <section class="commercial-index" >
   <div class="content-index">
   <div class="textBox-index">
@@ -240,11 +240,13 @@ GET HELP
     var htmlElement = document.querySelector('html');
   const searchbars=document.querySelector(".search-bars");
     const glasssearch=document.getElementById("glass-search");
+    var overlay = document.getElementById('overlay');
   function showbar(){
         searchbars.classList.add('active25');
         searchbars.style.pointerEvents = 'all';
         htmlElement.style.overflow = 'hidden';
         searchbars.style.opacity="1";
+        overlay.style.display = 'block';
     }
     function closebar(){
   
@@ -252,7 +254,12 @@ GET HELP
         htmlElement.style.overflowY = 'scroll';
         searchbars.style.opacity="0";
         searchbars.style.pointerEvents = 'none';
+        overlay.style.display = 'none';
     }
+    document.getElementById('overlay').addEventListener('click', function() {
+  closebar();
+
+});
     </script>
 
   <script>

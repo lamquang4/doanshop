@@ -13,7 +13,7 @@
   <title>Shop</title>
 </head>
 <body>
-  <section id="header">
+  <section id="header" style="z-index: 1000;">
     <a href="index-user.html">
   <img src="assets/images/pic/logo.png" class="logo" alt="" >
    </a>
@@ -630,6 +630,7 @@ function showbar(){
       searchbars.style.pointerEvents = 'all';
       htmlElement.style.overflow = 'hidden';
       searchbars.style.opacity="1";
+      overlay.style.display='block';
   }
   function closebar(){
 
@@ -637,6 +638,7 @@ function showbar(){
       htmlElement.style.overflowY = 'scroll';
       searchbars.style.opacity="0";
       searchbars.style.pointerEvents = 'none';
+      overlay.style.display='none';
   }
   </script>
 
@@ -1103,9 +1105,11 @@ window.onresize = function(event) {
   
   document.getElementById('overlay').addEventListener('click', function() {
     hideOverlayAndSearchBox();
+    closebar();
   });
   document.getElementById('x-icon-close').addEventListener('click', function() {
     hideOverlayAndSearchBox();
+  
   });
   function toggleSearchBox() {
     var overlay = document.getElementById('overlay');
