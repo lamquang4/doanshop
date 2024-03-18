@@ -16,38 +16,36 @@
     
 </head>
 <body>
-    <section id="header">
-      <a href="index-user.html">
-        <img src="assets/images/pic/logo.png" class="logo" alt="" > 
-      </a>
-         
- 
+    <section id="header" style="z-index: 1000;">
+        <a href="index-user.html">
+      <img src="assets/images/pic/logo.png" class="logo" alt="" >
+       </a>
       <div>
-      
        <ul id="icons">
         
-      <li id="menu"><a href="index-user.html"  class="choose" ><span >Home</span></a></li>
-              <li id="menu" ><a href="brand-user.html" class="choose"><span>Brands</span></a></li>
+      <li id="menu"><a href="index-user.html"  class="choose" ><span>Home</span></a></li>
+              <li id="menu"><a href="brand-user.html" class="choose"><span>Brands</span></a></li>
              
-              <li id="menu" ><a href="shop-user.html" class="choose"><span>Shop</span></a></li>
+              <li id="menu" ><a href="shop-user.html" class="choose" ><span>Shop</span></a></li>
               <li id="menu"><a href="contact-user.html" class="choose"><span>Contact</span></a></li>
         
           <div class="group" id="search">
-          <input type="text" placeholder="Search" name="text" class="input" onkeyup="search()">
+          <input id="search-item" type="text" placeholder="Search" name="text" class="input" onkeyup="search()" >
         <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
           <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
       </svg>
       </div> 
-          <li id="menu" id="lg-bag"><a href="shop-user.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          <li id="menu" ><a id="cart-icon">  <div class="cart-follow-icon">
+            <i class="fa-solid fa-cart-shopping add-cart"></i>
+            <span id="count-cart-add" style="  font-size: 14px; color:white; font-weight: 500; margin: 0; letter-spacing: 1px;">0</span>
+          </div></a>
           </li>
-         <li id="menu" id="lg-user"><a id="userlogin" onclick="toggleMenu()"><i class="fa-solid fa-circle-user"></i></a>
+          <li id="menu" id="lg-bag"> <a onclick="toggleMenu()" id="userlogin"><i class="fa-solid fa-circle-user"></i></a>
           </li>
-      
-         
-          <a id="close"><i class="fa-solid fa-x"></i></a>
+       
+          <a  id="close"><i class="fa-solid fa-x"></i></a>
        </ul>
       </div>
-      
       <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
       <div class="user-info">
@@ -75,17 +73,29 @@
       
         </div>
       </div>
-      
       <div id="mobile"> 
       
-        <a href="shop-user.html" ><i class="fa-solid fa-cart-shopping"></i></a>
-        <a  id="userlogin" onclick="toggleMenu()"><i class="fa-solid fa-circle-user"></i></a>
+        <a id="cart-icon1">
+          <div class="cart-follow-icon">
+            <i class="fa-solid fa-cart-shopping add-cart"></i>
+            <span id="count-cart-add1" style="  font-size: 14px; color:white; font-weight: 500; margin: 0; letter-spacing: 1px;">0</span>
+          </div>
+        </a>
+        <a id="glass-search" onclick="showbar()" ><i class="fa-solid fa-magnifying-glass"></i> </a>
+        <a onclick="toggleMenu()" id="userlogin"><i class="fa-solid fa-circle-user"></i></a>
       
       
       <i id="bar" class="fa-solid fa-bars" style="color: #000000;"></i>
       
       </div>
+      <div class="search-bars">
+        <input type="text" placeholder="SEARCH...">
+        <i class="fa-solid fa-xmark" id="xmark" onclick="closebar()"></i>
+        </div>
+      
+    
        </section>
+       <div id="overlay"></div>
   <div class="containerx">
 
       <div class="row">
@@ -586,11 +596,13 @@ disappearaddress.style.display="none";
     var htmlElement = document.querySelector('html');
   const searchbars=document.querySelector(".search-bars");
     const glasssearch=document.getElementById("glass-search");
+    var overlay = document.getElementById('overlay');
   function showbar(){
         searchbars.classList.add('active25');
         searchbars.style.pointerEvents = 'all';
         htmlElement.style.overflow = 'hidden';
         searchbars.style.opacity="1";
+        overlay.style.display = 'block';
     }
     function closebar(){
   
@@ -598,7 +610,12 @@ disappearaddress.style.display="none";
         htmlElement.style.overflowY = 'scroll';
         searchbars.style.opacity="0";
         searchbars.style.pointerEvents = 'none';
+        overlay.style.display = 'none';
     }
+    document.getElementById('overlay').addEventListener('click', function() {
+  closebar();
+
+});
     </script>
 
 <style>
