@@ -16,7 +16,7 @@
     
 </head>
 <body>
-    <section id="header" style="z-index: 1000;">
+    <section id="header">
         <a href="index-user.html">
       <img src="assets/images/pic/logo.png" class="logo" alt="" >
        </a>
@@ -492,7 +492,6 @@
 </body>
 </html>
 
-
 <script>
 
   const cod=document.getElementById("pay-methodoption3");
@@ -524,6 +523,11 @@ cod.addEventListener('click',()=>{
     let subMenu = document.getElementById("subMenu");
     function toggleMenu(){
       subMenu.classList.toggle("open-menu");
+    overlay.style.display = 'none';
+htmlElement.style.overflowY = 'scroll';
+searchbars.classList.remove("active25");
+searchbars.style.opacity="0";
+      searchbars.style.pointerEvents = 'none';
     }
     
       </script>
@@ -573,6 +577,8 @@ disappearaddress.style.display="none";
   searchbars.classList.remove("active25");
         searchbars.style.opacity="0";
         searchbars.style.pointerEvents = 'none';
+        overlay.style.display = 'none';
+        subMenu.classList.remove("open-menu");
   });
   
   
@@ -581,9 +587,11 @@ disappearaddress.style.display="none";
     if (window.innerWidth >= 1136) {
         searchbars.classList.remove("active25");
         searchbars.style.opacity="0";
+        icons.style.right = "-300px";
         searchbars.style.pointerEvents = 'none';
       icons.classList.remove('active');
       htmlElement.style.overflowY = "scroll";
+      overlay.style.display='none';
     }
    else{
     icons.style.right="-300px";
@@ -598,19 +606,21 @@ disappearaddress.style.display="none";
     const glasssearch=document.getElementById("glass-search");
     var overlay = document.getElementById('overlay');
   function showbar(){
-        searchbars.classList.add('active25');
-        searchbars.style.pointerEvents = 'all';
-        htmlElement.style.overflow = 'hidden';
-        searchbars.style.opacity="1";
-        overlay.style.display = 'block';
+    searchbars.classList.add('active25');
+      searchbars.style.pointerEvents = 'all';
+      htmlElement.style.overflow = 'hidden';
+      searchbars.style.opacity="1";
+      overlay.style.display='block';
+      overlay.style.zIndex = '98';
+      subMenu.classList.remove("open-menu");
     }
     function closebar(){
-  
-        searchbars.classList.remove('active25');
-        htmlElement.style.overflowY = 'scroll';
-        searchbars.style.opacity="0";
-        searchbars.style.pointerEvents = 'none';
-        overlay.style.display = 'none';
+
+      searchbars.classList.remove('active25');
+      htmlElement.style.overflowY = 'scroll';
+      searchbars.style.opacity="0";
+      searchbars.style.pointerEvents = 'none';
+      overlay.style.display='none';
     }
     document.getElementById('overlay').addEventListener('click', function() {
   closebar();

@@ -13,7 +13,7 @@
   <title>Shop</title>
 </head>
 <body >
-  <section id="header" style="z-index: 1000;">
+  <section id="header">
     <a href="index.html">
   <img src="assets/images/pic/logo.png" class="logo" alt="" >
    </a>
@@ -68,7 +68,7 @@
    </section>
 
 
-   <div class="cart" style="z-index: 999;">
+   <div class="cart">
 
     <h2 class="cart-title">Your Cart</h2>
 
@@ -546,7 +546,6 @@
 </body>
 </html>
 
-
 <script>
   const bar = document.getElementById('bar');
   const icon = document.getElementById('icons');
@@ -564,17 +563,23 @@ dong.addEventListener("click", function() {
 icons.style.right = "-300px";
 });
 barmenu.addEventListener("click", function() {
-icons.style.right = "0";
+
+icons.style.right = "0"; 
+ overlay.style.display = 'none';
 htmlElement.style.overflowY = 'scroll';
 searchbars.classList.remove("active25");
       searchbars.style.opacity="0";
       searchbars.style.pointerEvents = 'none';
+  
 });
 
 
 window.addEventListener("resize", function() {
 
   if (window.innerWidth >= 1136) {
+    overlay.style.display = 'none';
+    cart.classList.remove("act");
+    icons.style.right="-300px";
       searchbars.classList.remove("active25");
       searchbars.style.opacity="0";
       searchbars.style.pointerEvents = 'none';
@@ -597,7 +602,8 @@ function showbar(){
       searchbars.style.pointerEvents = 'all';
       htmlElement.style.overflow = 'hidden';
       searchbars.style.opacity="1";
-      overlay.style.display = 'block';
+      overlay.style.display='block';
+      overlay.style.zIndex = '98';
   }
   function closebar(){
 
@@ -605,7 +611,7 @@ function showbar(){
       htmlElement.style.overflowY = 'scroll';
       searchbars.style.opacity="0";
       searchbars.style.pointerEvents = 'none';
-      overlay.style.display = 'none';
+      overlay.style.display='none';
   }
   </script>
 
@@ -751,11 +757,23 @@ cartIcon.addEventListener('click',()=>{
   cart.classList.add("act");
   htmlElement.style.overflow = 'hidden';
   overlay.style.display = 'block';
+  overlay.style.zIndex = '100';
+  searchbars.classList.remove('active25');
+      htmlElement.style.overflowY = 'scroll';
+      searchbars.style.opacity="0";
+      searchbars.style.pointerEvents = 'none';
+      icons.style.right = "-300px";
 });
 cartIcon1.addEventListener('click',()=>{
   cart.classList.add("act");
   htmlElement.style.overflow = 'hidden';
   overlay.style.display = 'block';
+  overlay.style.zIndex = '100';
+  searchbars.classList.remove('active25');
+      htmlElement.style.overflowY = 'scroll';
+      searchbars.style.opacity="0";
+      searchbars.style.pointerEvents = 'none';
+      icons.style.right = "-300px";
 });
 closeCart.addEventListener('click',()=>{
   cart.classList.remove("act");
@@ -978,43 +996,6 @@ const countCartAdd = document.getElementById("count-cart-add");
 countCartAdd.textContent = 0;
 
 </script>
-
-<script>
-function searchProducts() {
-  var minPrice = parseFloat(document.getElementById("min-price").value) || 0;
-  var maxPrice = parseFloat(document.getElementById("max-price").value) || Infinity;
-  var productName = document.getElementById("product-name").value.toLowerCase();
-  var productType = document.getElementById("product-type").value.toLowerCase();
-
-
-  var allInputsEmpty = minPrice === 0 && maxPrice === Infinity && productName === '' && productType === 'all';
-
-  limit = allInputsEmpty ? 12 : 25;
-
-  var productContainers = document.querySelectorAll('.pro1');
-
-  productContainers.forEach(function (product) {
-    var price = parseFloat(product.querySelector('.product-price').textContent.replace('$', ''));
-    var name = product.querySelector('.product-title').textContent.toLowerCase();
-    var type = product.querySelector('h2').textContent.toLowerCase();
-
-    var priceInRange = price >= minPrice && price <= maxPrice;
-    var nameMatches = name.includes(productName);
-    var typeMatches = productType === 'all' || (productType === 'carbonated' && type.includes('co')) || (productType === 'non-carbonated' && type.includes('ko'));
-
-    if (priceInRange && nameMatches && typeMatches) {
-      product.style.display = '';
-    } else {
-      product.style.display = 'none';
-    }
-  });
-  window.scrollTo(0, bBanner1.offsetTop);
-  thisPage = 1;
-  loadItem();
-}
-
-  </script>
-
 
 
 <script>
