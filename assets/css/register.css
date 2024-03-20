@@ -53,13 +53,13 @@ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   display: flex;
   flex-wrap: wrap;
   width: 50%;
-  padding-bottom: 15px;
+margin-bottom: 20px;
 }
 .input-field select{
   width: 95%;
   height: 40px;
   padding-left: 10px;
-  margin-bottom: 9px;
+
   border: 2px solid #e5e5e5;
   border-radius: 7px;
 }
@@ -70,7 +70,7 @@ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   outline: none;
   border: 2px solid #e5e5e5;
 padding-left: 12px;
-  margin-bottom: 9px;
+
 
 }
 
@@ -121,7 +121,8 @@ box-shadow: 0.35em 0.32em;
   }
 
   .input-field{
-      margin-bottom: 12px;
+    padding: 0;
+      margin-bottom: 16px;
       width: 100%;
   }
 
