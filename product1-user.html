@@ -95,7 +95,11 @@
   <div class="single-pro-details">
   <h6 id="text1">Pepsi Original</h6>
   <h2 id="text2">$12.00</h2>
-
+  <div class="button-de-increase">
+    <div class="minus"><i class="fa-solid fa-minus" style="font-size: 18px;"></i></div>
+    <div><input type="text" maxlength="2" class="numbers" value="1"></div>
+    <div class="plus"><i class="fa-solid fa-plus" style="font-size: 18px;"></i></div>
+  </div>
   
  <div id="infor-nutri">
   <h3>Nutriton</h3>
@@ -348,6 +352,64 @@ MainImg.src = small[3].src;
 window.location.href='shop-user.html';
     }};
     </script>
+
+<script>
+  const plus = document.querySelector(".plus"),
+   minus = document.querySelector(".minus"),
+   num = document.querySelector(".numbers");
+   let a = 1;
+   plus.addEventListener("click", () => {
+   if (a < 10) { 
+     a++;
+     num.value = a; 
+   }
+ });
+
+ minus.addEventListener("click", () => {
+   if (a > 1) {
+     a--;
+     num.value = a; 
+   }
+ });
+ </script>
+
+ 
+<style>
+  .button-de-increase{
+  height: 48px;
+width: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+margin-bottom: 20px;
+  border: 1px solid black;
+}
+.button-de-increase div{
+  width: 100%;
+
+  text-align: center;
+  align-items: center;
+font-weight: 400;
+  cursor: pointer;
+  user-select: none;
+}
+.button-de-increase .numbers{
+  font-size: 21px;
+  font-weight: 400;
+border: none;
+width: 30px;
+text-align: center;
+
+}
+
+</style>
+
+
+
+
+
+
 
 
 
